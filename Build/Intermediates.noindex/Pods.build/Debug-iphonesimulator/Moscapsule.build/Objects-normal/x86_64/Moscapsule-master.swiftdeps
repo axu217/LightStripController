@@ -1,0 +1,5 @@
+version: "Apple Swift version 4.0.1 (swiftlang-900.0.68 clang-900.0.38)"
+options: "17da6f2b32e9df1aaa9178d8bf8f9267"
+build_time: [1508223255, 403919000]
+inputs:
+  "/Volumes/Database/iOS Projects/LightStripApp/Pods/Moscapsule/Moscapsule/Moscapsule.swift": [1508222869, 0]

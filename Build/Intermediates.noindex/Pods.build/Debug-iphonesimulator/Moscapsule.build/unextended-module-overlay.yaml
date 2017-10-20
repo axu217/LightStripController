@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/Moscapsule/Moscapsule.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Volumes/Database/iOS Projects/LightStripApp/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Moscapsule.build/unextended-module.modulemap',
+    }]
+  }]
+}

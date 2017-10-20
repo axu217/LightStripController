@@ -1,0 +1,332 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "MQTTSession"
+provides-nominal:
+- "13LightStripApp11MQTTSessionC"
+provides-member:
+- ["13LightStripApp11MQTTSessionC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "+"
+- "AssignmentPrecedence"
+- "CocoaMQTT"
+- !private "MQTTDelegate"
+- "MQTTSession"
+- !private "ProcessInfo"
+- !private "String"
+- "StringLiteralType"
+- !private "UInt16"
+depends-member:
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s13BinaryIntegerP", "init"]
+- !private ["s7CVarArgP", "connect"]
+- !private ["s7CVarArgP", "delegate"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "keepAlive"]
+- !private ["s7CVarArgP", "password"]
+- !private ["s7CVarArgP", "processIdentifier"]
+- !private ["s7CVarArgP", "username"]
+- !private ["9CocoaMQTTAAC", "connect"]
+- !private ["9CocoaMQTTAAC", "delegate"]
+- !private ["9CocoaMQTTAAC", "init"]
+- !private ["9CocoaMQTTAAC", "keepAlive"]
+- !private ["9CocoaMQTTAAC", "password"]
+- !private ["9CocoaMQTTAAC", "username"]
+- !private ["9CocoaMQTT0A10MQTTClientP", "connect"]
+- !private ["9CocoaMQTT0A10MQTTClientP", "delegate"]
+- !private ["9CocoaMQTT0A10MQTTClientP", "init"]
+- !private ["9CocoaMQTT0A10MQTTClientP", "keepAlive"]
+- !private ["9CocoaMQTT0A10MQTTClientP", "password"]
+- !private ["9CocoaMQTT0A10MQTTClientP", "username"]
+- !private ["9CocoaMQTT0A12MQTTDelegateP", "init"]
+- !private ["9CocoaMQTT0A23MQTTFrameBufferProtocolP", "connect"]
+- !private ["9CocoaMQTT0A23MQTTFrameBufferProtocolP", "delegate"]
+- !private ["9CocoaMQTT0A23MQTTFrameBufferProtocolP", "init"]
+- !private ["9CocoaMQTT0A23MQTTFrameBufferProtocolP", "keepAlive"]
+- !private ["9CocoaMQTT0A23MQTTFrameBufferProtocolP", "password"]
+- !private ["9CocoaMQTT0A23MQTTFrameBufferProtocolP", "username"]
+- !private ["9CocoaMQTT0A18MQTTReaderDelegateP", "connect"]
+- !private ["9CocoaMQTT0A18MQTTReaderDelegateP", "delegate"]
+- !private ["9CocoaMQTT0A18MQTTReaderDelegateP", "init"]
+- !private ["9CocoaMQTT0A18MQTTReaderDelegateP", "keepAlive"]
+- !private ["9CocoaMQTT0A18MQTTReaderDelegateP", "password"]
+- !private ["9CocoaMQTT0A18MQTTReaderDelegateP", "username"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "connect"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "keepAlive"]
+- !private ["s28CustomDebugStringConvertibleP", "password"]
+- !private ["s28CustomDebugStringConvertibleP", "processIdentifier"]
+- !private ["s28CustomDebugStringConvertibleP", "username"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "connect"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "keepAlive"]
+- !private ["s23CustomStringConvertibleP", "password"]
+- !private ["s23CustomStringConvertibleP", "processIdentifier"]
+- !private ["s23CustomStringConvertibleP", "username"]
+- ["s9DecodableP", "init"]
+- ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "connect"]
+- !private ["s9EquatableP", "delegate"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "keepAlive"]
+- !private ["s9EquatableP", "password"]
+- !private ["s9EquatableP", "processIdentifier"]
+- !private ["s9EquatableP", "username"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["So22GCDAsyncSocketDelegateP", "connect"]
+- !private ["So22GCDAsyncSocketDelegateP", "delegate"]
+- !private ["So22GCDAsyncSocketDelegateP", "init"]
+- !private ["So22GCDAsyncSocketDelegateP", "keepAlive"]
+- !private ["So22GCDAsyncSocketDelegateP", "password"]
+- !private ["So22GCDAsyncSocketDelegateP", "username"]
+- !private ["s8HashableP", "connect"]
+- !private ["s8HashableP", "delegate"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "keepAlive"]
+- !private ["s8HashableP", "password"]
+- !private ["s8HashableP", "processIdentifier"]
+- !private ["s8HashableP", "username"]
+- ["s25LosslessStringConvertibleP", "init"]
+- !private ["13LightStripApp12MQTTDelegateC", "deinit"]
+- !private ["13LightStripApp12MQTTDelegateC", "init"]
+- ["13LightStripApp11MQTTSessionC", "CocoaMQTT"]
+- !private ["13LightStripApp11MQTTSessionC", "MQTTDelegate"]
+- !private ["13LightStripApp11MQTTSessionC", "ProcessInfo"]
+- !private ["13LightStripApp11MQTTSessionC", "String"]
+- !private ["13LightStripApp11MQTTSessionC", "UInt16"]
+- ["13LightStripApp11MQTTSessionC", "deinit"]
+- ["13LightStripApp11MQTTSessionC", "init"]
+- ["13LightStripApp11MQTTSessionC", "mqtt"]
+- ["13LightStripApp11MQTTSessionC", "password"]
+- ["13LightStripApp11MQTTSessionC", "port"]
+- ["13LightStripApp11MQTTSessionC", "server"]
+- ["13LightStripApp11MQTTSessionC", "username"]
+- ["s10MirrorPathP", "init"]
+- ["So8NSCodingP", "init"]
+- ["So9NSCopyingP", "init"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "init"]
+- ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "connect"]
+- !private ["So8NSObjectC", "delegate"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "keepAlive"]
+- !private ["So8NSObjectC", "password"]
+- !private ["So8NSObjectC", "processIdentifier"]
+- !private ["So8NSObjectC", "username"]
+- !private ["So16NSObjectProtocolP", "connect"]
+- !private ["So16NSObjectProtocolP", "delegate"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "keepAlive"]
+- !private ["So16NSObjectProtocolP", "password"]
+- !private ["So16NSObjectProtocolP", "processIdentifier"]
+- !private ["So16NSObjectProtocolP", "username"]
+- ["So14NSSecureCodingP", "init"]
+- ["So8NSStringC", "init"]
+- !private ["s7NumericP", "init"]
+- !private ["So11ProcessInfoC", "init"]
+- !private ["So11ProcessInfoC", "processIdentifier"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s8SequenceP", "init"]
+- !private ["s10StrideableP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s6UInt16V", "init"]
+- !private ["s15UnsignedIntegerP", "init"]
+- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- ["s10_IndexableP", "init"]
+- ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "connect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "keepAlive"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "password"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "processIdentifier"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "username"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s11_StrideableP", "init"]
+- !private ["s14_StringElementP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- "s7CVarArgP"
+- !private "9CocoaMQTTAAC"
+- !private "9CocoaMQTT0A10MQTTClientP"
+- !private "9CocoaMQTT0A12MQTTDelegateP"
+- !private "9CocoaMQTT0A23MQTTFrameBufferProtocolP"
+- !private "9CocoaMQTT0A18MQTTReaderDelegateP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "So22GCDAsyncSocketDelegateP"
+- "s8HashableP"
+- "s25LosslessStringConvertibleP"
+- !private "13LightStripApp12MQTTDelegateC"
+- "13LightStripApp11MQTTSessionC"
+- "s10MirrorPathP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
+- !private "s7NumericP"
+- !private "So11ProcessInfoC"
+- "s26RangeReplaceableCollectionP"
+- "s8SequenceP"
+- !private "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "s6UInt16V"
+- !private "s15UnsignedIntegerP"
+- "s23_BidirectionalIndexableP"
+- !private "s18_BitwiseOperationsP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s26_RangeReplaceableIndexableP"
+- !private "s11_StrideableP"
+- !private "s14_StringElementP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Modules/CocoaMQTT.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Modules/SwiftyTimer.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT-umbrella.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Headers/SwiftyTimer-umbrella.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/CocoaAsyncSocket-umbrella.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/Firebase/Core/Sources/Firebase.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRSetOptions.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncSocket.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncUdpSocket.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT-Swift.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Headers/SwiftyTimer-Swift.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRCoreSwiftNameSupport.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestoreSwiftNameSupport.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthSwiftNameSupport.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRQuery.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/Firebase/Core/Sources/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Modules/module.modulemap"
+interface-hash: "593741071a111047013b38640c0faac6"

@@ -1,0 +1,17 @@
+version: "Apple Swift version 4.0.1 (swiftlang-900.0.68 clang-900.0.38)"
+options: "20d917366b7370091c10071981336d4f"
+build_time: [1508468149, 102314000]
+inputs:
+  "/Volumes/Database/iOS Projects/LightStripApp/LightStripApp/RegisterViewController.swift": [1508146969, 0]
+  "/Volumes/Database/iOS Projects/LightStripApp/LightStripApp/LoginScreenViewController.swift": [1508315765, 0]
+  "/Volumes/Database/iOS Projects/LightStripApp/LightStripApp/MQTTDelegate.swift": [1508315914, 0]
+  "/Volumes/Database/iOS Projects/LightStripApp/LightStripApp/ViewController.swift": [1508212547, 0]
+  "/Volumes/Database/iOS Projects/LightStripApp/LightStripApp/HomeNavigationController.swift": [1507945946, 0]
+  "/Volumes/Database/iOS Projects/LightStripApp/LightStripApp/NetworkHelper.swift": [1508407426, 0]
+  "/Volumes/Database/iOS Projects/LightStripApp/LightStripApp/FavoriteViewController.swift": [1508147390, 0]
+  "/Volumes/Database/iOS Projects/LightStripApp/LightStripApp/SettingsViewController.swift": [1507948015, 0]
+  "/Volumes/Database/iOS Projects/LightStripApp/LightStripApp/HomeTabViewController.swift": [1507877017, 0]
+  "/Volumes/Database/iOS Projects/LightStripApp/LightStripApp/AppDelegate.swift": [1508125726, 0]
+  "/Volumes/Database/iOS Projects/LightStripApp/LightStripApp/DevicesViewController.swift": [1507947968, 0]
+  "/Volumes/Database/iOS Projects/LightStripApp/LightStripApp/MQTTSession.swift": [1508407426, 0]
+  "/Volumes/Database/iOS Projects/LightStripApp/LightStripApp/HomeViewController.swift": [1507892624, 0]
