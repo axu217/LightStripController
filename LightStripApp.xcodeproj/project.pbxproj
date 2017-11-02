@@ -7,30 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E41D3901FA0AF8900CB3B8B /* ColorsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E41D38F1FA0AF8900CB3B8B /* ColorsCollectionViewController.swift */; };
+		3E4FA1BF1FA7F7B100FF585B /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FA1BE1FA7F7B100FF585B /* ColorCell.swift */; };
+		3E531A651FA8269C0061ECB5 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E531A641FA8269C0061ECB5 /* UIColor.swift */; };
+		3E531A671FA8281F0061ECB5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E531A661FA8281F0061ECB5 /* UserViewController.swift */; };
+		3E531A691FA843EC0061ECB5 /* FavoriteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E531A681FA843EC0061ECB5 /* FavoriteStore.swift */; };
 		3E58CC311F95B6C30010236A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E58CC301F95B6C30010236A /* AppDelegate.swift */; };
-		3E58CC331F95B6C30010236A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E58CC321F95B6C30010236A /* ViewController.swift */; };
 		3E58CC361F95B6C30010236A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E58CC341F95B6C30010236A /* Main.storyboard */; };
 		3E58CC381F95B6C30010236A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E58CC371F95B6C30010236A /* Assets.xcassets */; };
 		3E58CC3B1F95B6C30010236A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E58CC391F95B6C30010236A /* LaunchScreen.storyboard */; };
 		3E7D90DF1F97208A00B7B7D7 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D90DE1F97208A00B7B7D7 /* NetworkHelper.swift */; };
 		3E7D90E11F9720FD00B7B7D7 /* MQTTDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D90E01F9720FD00B7B7D7 /* MQTTDelegate.swift */; };
 		3E7D90E31F974A8900B7B7D7 /* MQTTSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D90E21F974A8900B7B7D7 /* MQTTSession.swift */; };
+		3E9C42051FA6930200CB2166 /* ColorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9C42041FA6930200CB2166 /* ColorStore.swift */; };
+		3ED8131E1FABDC4D001F73D0 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8131D1FABDC4D001F73D0 /* UIViewControllerExtensions.swift */; };
 		3EF22F8A1F95BBC200AF4B19 /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F801F95BBC000AF4B19 /* HomeNavigationController.swift */; };
 		3EF22F8C1F95BBC200AF4B19 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F821F95BBC100AF4B19 /* SettingsViewController.swift */; };
-		3EF22F8D1F95BBC200AF4B19 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F831F95BBC100AF4B19 /* HomeViewController.swift */; };
 		3EF22F8E1F95BBC200AF4B19 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F841F95BBC100AF4B19 /* LoginScreenViewController.swift */; };
 		3EF22F8F1F95BBC200AF4B19 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F851F95BBC100AF4B19 /* HomeTabViewController.swift */; };
 		3EF22F901F95BBC200AF4B19 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F861F95BBC100AF4B19 /* DevicesViewController.swift */; };
 		3EF22F911F95BBC200AF4B19 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F871F95BBC100AF4B19 /* FavoriteViewController.swift */; };
 		3EF22F921F95BBC200AF4B19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF22F881F95BBC100AF4B19 /* GoogleService-Info.plist */; };
 		3EF22F931F95BBC200AF4B19 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F891F95BBC200AF4B19 /* RegisterViewController.swift */; };
+		3EF7ED9E1FA954FD00C1B0E9 /* AddColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7ED9D1FA954FD00C1B0E9 /* AddColorViewController.swift */; };
+		3EF7EDA11FA96CA000C1B0E9 /* AddFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7EDA01FA96CA000C1B0E9 /* AddFavoriteViewController.swift */; };
+		3EFA617D1F9D640800FBC94F /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA617C1F9D640800FBC94F /* Device.swift */; };
+		3EFA617F1F9D649700FBC94F /* DeviceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA617E1F9D649700FBC94F /* DeviceStore.swift */; };
+		3EFA61811F9D660100FBC94F /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA61801F9D660100FBC94F /* DeviceCell.swift */; };
+		3EFA61831F9D6B4D00FBC94F /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA61821F9D6B4D00FBC94F /* AddDeviceViewController.swift */; };
+		3EFA61861F9DF45800FBC94F /* HubCommandHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA61851F9DF45800FBC94F /* HubCommandHelper.swift */; };
 		DF0BC81815242501CE9952C4 /* Pods_LightStripApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7DAB9A3CD07A352C60FA3C /* Pods_LightStripApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E41D38F1FA0AF8900CB3B8B /* ColorsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsCollectionViewController.swift; sourceTree = "<group>"; };
+		3E4FA1BE1FA7F7B100FF585B /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
+		3E531A641FA8269C0061ECB5 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		3E531A661FA8281F0061ECB5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		3E531A681FA843EC0061ECB5 /* FavoriteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStore.swift; sourceTree = "<group>"; };
 		3E58CC2D1F95B6C30010236A /* LightStripApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightStripApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E58CC301F95B6C30010236A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3E58CC321F95B6C30010236A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3E58CC351F95B6C30010236A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E58CC371F95B6C30010236A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E58CC3A1F95B6C30010236A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,15 +54,23 @@
 		3E7D90DE1F97208A00B7B7D7 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		3E7D90E01F9720FD00B7B7D7 /* MQTTDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTDelegate.swift; sourceTree = "<group>"; };
 		3E7D90E21F974A8900B7B7D7 /* MQTTSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTSession.swift; sourceTree = "<group>"; };
+		3E9C42041FA6930200CB2166 /* ColorStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStore.swift; sourceTree = "<group>"; };
+		3ED8131D1FABDC4D001F73D0 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		3EF22F801F95BBC000AF4B19 /* HomeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
 		3EF22F821F95BBC100AF4B19 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		3EF22F831F95BBC100AF4B19 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3EF22F841F95BBC100AF4B19 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		3EF22F851F95BBC100AF4B19 /* HomeTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		3EF22F861F95BBC100AF4B19 /* DevicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
 		3EF22F871F95BBC100AF4B19 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		3EF22F881F95BBC100AF4B19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3EF22F891F95BBC200AF4B19 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3EF7ED9D1FA954FD00C1B0E9 /* AddColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddColorViewController.swift; sourceTree = "<group>"; };
+		3EF7EDA01FA96CA000C1B0E9 /* AddFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFavoriteViewController.swift; sourceTree = "<group>"; };
+		3EFA617C1F9D640800FBC94F /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		3EFA617E1F9D649700FBC94F /* DeviceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStore.swift; sourceTree = "<group>"; };
+		3EFA61801F9D660100FBC94F /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
+		3EFA61821F9D6B4D00FBC94F /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
+		3EFA61851F9DF45800FBC94F /* HubCommandHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubCommandHelper.swift; sourceTree = "<group>"; };
 		6E293F856B8142EFE0F5082E /* Pods-LightStripApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightStripApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-LightStripApp/Pods-LightStripApp.release.xcconfig"; sourceTree = "<group>"; };
 		BF134EAEB2A874F9CA6974F8 /* Pods-LightStripApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightStripApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LightStripApp/Pods-LightStripApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DF7DAB9A3CD07A352C60FA3C /* Pods_LightStripApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightStripApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +105,68 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3E4FA1B91FA7F75600FF585B /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				3EF7ED9F1FA96C8C00C1B0E9 /* AddFavorite */,
+				3E4FA1BD1FA7F79800FF585B /* ColorPicker */,
+				3E4FA1BC1FA7F78E00FF585B /* LoginRegis */,
+				3E4FA1BB1FA7F78300FF585B /* AddDevice */,
+				3E4FA1BA1FA7F76F00FF585B /* NavTab */,
+				3EF22F871F95BBC100AF4B19 /* FavoriteViewController.swift */,
+				3EF22F861F95BBC100AF4B19 /* DevicesViewController.swift */,
+				3EF22F821F95BBC100AF4B19 /* SettingsViewController.swift */,
+				3E531A661FA8281F0061ECB5 /* UserViewController.swift */,
+			);
+			name = Rest;
+			sourceTree = "<group>";
+		};
+		3E4FA1BA1FA7F76F00FF585B /* NavTab */ = {
+			isa = PBXGroup;
+			children = (
+				3EF22F851F95BBC100AF4B19 /* HomeTabViewController.swift */,
+				3EF22F801F95BBC000AF4B19 /* HomeNavigationController.swift */,
+			);
+			name = NavTab;
+			sourceTree = "<group>";
+		};
+		3E4FA1BB1FA7F78300FF585B /* AddDevice */ = {
+			isa = PBXGroup;
+			children = (
+				3EFA61821F9D6B4D00FBC94F /* AddDeviceViewController.swift */,
+				3EFA61801F9D660100FBC94F /* DeviceCell.swift */,
+			);
+			name = AddDevice;
+			sourceTree = "<group>";
+		};
+		3E4FA1BC1FA7F78E00FF585B /* LoginRegis */ = {
+			isa = PBXGroup;
+			children = (
+				3EF22F891F95BBC200AF4B19 /* RegisterViewController.swift */,
+				3EF22F841F95BBC100AF4B19 /* LoginScreenViewController.swift */,
+			);
+			name = LoginRegis;
+			sourceTree = "<group>";
+		};
+		3E4FA1BD1FA7F79800FF585B /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				3E41D38F1FA0AF8900CB3B8B /* ColorsCollectionViewController.swift */,
+				3E4FA1BE1FA7F7B100FF585B /* ColorCell.swift */,
+				3EF7ED9D1FA954FD00C1B0E9 /* AddColorViewController.swift */,
+			);
+			name = ColorPicker;
+			sourceTree = "<group>";
+		};
+		3E531A631FA826940061ECB5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3E531A641FA8269C0061ECB5 /* UIColor.swift */,
+				3ED8131D1FABDC4D001F73D0 /* UIViewControllerExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		3E58CC241F95B6C30010236A = {
 			isa = PBXGroup;
 			children = (
@@ -102,17 +188,12 @@
 		3E58CC2F1F95B6C30010236A /* LightStripApp */ = {
 			isa = PBXGroup;
 			children = (
+				3E531A631FA826940061ECB5 /* Extensions */,
+				3EFA61841F9DF43C00FBC94F /* Formatter */,
+				3EFA617B1F9D63F800FBC94F /* Model */,
 				3E7D90DD1F97208200B7B7D7 /* Network */,
 				3EF22F9B1F95C00B00AF4B19 /* Base */,
-				3EF22F871F95BBC100AF4B19 /* FavoriteViewController.swift */,
-				3EF22F821F95BBC100AF4B19 /* SettingsViewController.swift */,
-				3EF22F861F95BBC100AF4B19 /* DevicesViewController.swift */,
-				3E58CC321F95B6C30010236A /* ViewController.swift */,
-				3EF22F801F95BBC000AF4B19 /* HomeNavigationController.swift */,
-				3EF22F851F95BBC100AF4B19 /* HomeTabViewController.swift */,
-				3EF22F831F95BBC100AF4B19 /* HomeViewController.swift */,
-				3EF22F841F95BBC100AF4B19 /* LoginScreenViewController.swift */,
-				3EF22F891F95BBC200AF4B19 /* RegisterViewController.swift */,
+				3E4FA1B91FA7F75600FF585B /* Rest */,
 			);
 			path = LightStripApp;
 			sourceTree = "<group>";
@@ -133,11 +214,38 @@
 				3E58CC371F95B6C30010236A /* Assets.xcassets */,
 				3E58CC301F95B6C30010236A /* AppDelegate.swift */,
 				3EF22F881F95BBC100AF4B19 /* GoogleService-Info.plist */,
-				3E58CC3C1F95B6C30010236A /* Info.plist */,
-				3E58CC391F95B6C30010236A /* LaunchScreen.storyboard */,
 				3E58CC341F95B6C30010236A /* Main.storyboard */,
+				3E58CC391F95B6C30010236A /* LaunchScreen.storyboard */,
+				3E58CC3C1F95B6C30010236A /* Info.plist */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		3EF7ED9F1FA96C8C00C1B0E9 /* AddFavorite */ = {
+			isa = PBXGroup;
+			children = (
+				3EF7EDA01FA96CA000C1B0E9 /* AddFavoriteViewController.swift */,
+			);
+			name = AddFavorite;
+			sourceTree = "<group>";
+		};
+		3EFA617B1F9D63F800FBC94F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3EFA617C1F9D640800FBC94F /* Device.swift */,
+				3EFA617E1F9D649700FBC94F /* DeviceStore.swift */,
+				3E9C42041FA6930200CB2166 /* ColorStore.swift */,
+				3E531A681FA843EC0061ECB5 /* FavoriteStore.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3EFA61841F9DF43C00FBC94F /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				3EFA61851F9DF45800FBC94F /* HubCommandHelper.swift */,
+			);
+			name = Formatter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +328,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LightStripApp/Pods-LightStripApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/ChromaColorPicker/ChromaColorPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -236,6 +345,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChromaColorPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaMQTT.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
@@ -294,19 +404,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E4FA1BF1FA7F7B100FF585B /* ColorCell.swift in Sources */,
+				3E41D3901FA0AF8900CB3B8B /* ColorsCollectionViewController.swift in Sources */,
+				3EFA61831F9D6B4D00FBC94F /* AddDeviceViewController.swift in Sources */,
+				3EFA617D1F9D640800FBC94F /* Device.swift in Sources */,
 				3EF22F931F95BBC200AF4B19 /* RegisterViewController.swift in Sources */,
 				3EF22F8E1F95BBC200AF4B19 /* LoginScreenViewController.swift in Sources */,
 				3E7D90E11F9720FD00B7B7D7 /* MQTTDelegate.swift in Sources */,
-				3E58CC331F95B6C30010236A /* ViewController.swift in Sources */,
+				3E531A671FA8281F0061ECB5 /* UserViewController.swift in Sources */,
 				3EF22F8A1F95BBC200AF4B19 /* HomeNavigationController.swift in Sources */,
 				3E7D90DF1F97208A00B7B7D7 /* NetworkHelper.swift in Sources */,
+				3E531A651FA8269C0061ECB5 /* UIColor.swift in Sources */,
 				3EF22F911F95BBC200AF4B19 /* FavoriteViewController.swift in Sources */,
 				3EF22F8C1F95BBC200AF4B19 /* SettingsViewController.swift in Sources */,
+				3EFA61811F9D660100FBC94F /* DeviceCell.swift in Sources */,
 				3EF22F8F1F95BBC200AF4B19 /* HomeTabViewController.swift in Sources */,
 				3E58CC311F95B6C30010236A /* AppDelegate.swift in Sources */,
 				3EF22F901F95BBC200AF4B19 /* DevicesViewController.swift in Sources */,
+				3ED8131E1FABDC4D001F73D0 /* UIViewControllerExtensions.swift in Sources */,
+				3E531A691FA843EC0061ECB5 /* FavoriteStore.swift in Sources */,
+				3EF7EDA11FA96CA000C1B0E9 /* AddFavoriteViewController.swift in Sources */,
+				3EFA61861F9DF45800FBC94F /* HubCommandHelper.swift in Sources */,
+				3EF7ED9E1FA954FD00C1B0E9 /* AddColorViewController.swift in Sources */,
+				3EFA617F1F9D649700FBC94F /* DeviceStore.swift in Sources */,
+				3E9C42051FA6930200CB2166 /* ColorStore.swift in Sources */,
 				3E7D90E31F974A8900B7B7D7 /* MQTTSession.swift in Sources */,
-				3EF22F8D1F95BBC200AF4B19 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +567,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M4L7J68TY9;
 				INFOPLIST_FILE = LightStripApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhechengxu.LightStripApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -460,7 +584,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M4L7J68TY9;
 				INFOPLIST_FILE = LightStripApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhechengxu.LightStripApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

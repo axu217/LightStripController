@@ -5,6 +5,7 @@ PODS:
   - BoringSSL/Implementation (9.0):
     - BoringSSL/Interface (= 9.0)
   - BoringSSL/Interface (9.0)
+  - ChromaColorPicker (1.5.1)
   - CocoaAsyncSocket (7.5.1):
     - CocoaAsyncSocket/GCD (= 7.5.1)
   - CocoaAsyncSocket/GCD (7.5.1)
@@ -77,22 +78,29 @@ PODS:
   - SwiftyTimer (2.0.0)
 
 DEPENDENCIES:
+  - ChromaColorPicker (from `https://github.com/crunchybananas/ChromaColorPicker.git`)
   - CocoaMQTT (from `https://github.com/manucheri/CocoaMQTT.git`)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Firestore
 
 EXTERNAL SOURCES:
+  ChromaColorPicker:
+    :git: https://github.com/crunchybananas/ChromaColorPicker.git
   CocoaMQTT:
     :git: https://github.com/manucheri/CocoaMQTT.git
 
 CHECKOUT OPTIONS:
+  ChromaColorPicker:
+    :commit: f26bc3a81be9509aff91b78cdf9a2ba1cd640af9
+    :git: https://github.com/crunchybananas/ChromaColorPicker.git
   CocoaMQTT:
     :commit: e8081f3fd64a64f176cf07369eacf738bd6a5d35
     :git: https://github.com/manucheri/CocoaMQTT.git
 
 SPEC CHECKSUMS:
   BoringSSL: 19083b821ef3ae0f758fae15482e183003b1e265
+  ChromaColorPicker: 4d326a41aca4954feb32cf2b231340b4fcf601bb
   CocoaAsyncSocket: e0a7e93b2ffa411592ff87e58524fbbc9b95b4fa
   CocoaMQTT: 4fc6bfecd34268c7695758bf22e5df138b48234a
   Firebase: 83283761a1ef6dc9846e03d08059f51421afbd65
@@ -112,6 +120,6 @@ SPEC CHECKSUMS:
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
   SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
 
-PODFILE CHECKSUM: 2f6596bf89cb584021a90d3820a2703a44a45f77
+PODFILE CHECKSUM: fffc10e3171114a59745b1275ab3ecece3f26dba
 
 COCOAPODS: 1.3.1

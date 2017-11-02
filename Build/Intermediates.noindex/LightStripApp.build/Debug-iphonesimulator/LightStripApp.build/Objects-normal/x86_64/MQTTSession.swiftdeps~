@@ -1,11 +1,206 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "MQTTSession"
 provides-nominal:
+- "13LightStripApp11MQTTSessionC"
 provides-member:
+- ["13LightStripApp11MQTTSessionC", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "+"
+- "AssignmentPrecedence"
+- "CocoaMQTT"
+- "MQTTSession"
+- !private "ProcessInfo"
+- !private "String"
+- "StringLiteralType"
+- !private "UInt16"
 depends-member:
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s13BinaryIntegerP", "init"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "keepAlive"]
+- !private ["s7CVarArgP", "password"]
+- !private ["s7CVarArgP", "processIdentifier"]
+- !private ["s7CVarArgP", "username"]
+- !private ["9CocoaMQTTAAC", "init"]
+- !private ["9CocoaMQTTAAC", "keepAlive"]
+- !private ["9CocoaMQTTAAC", "password"]
+- !private ["9CocoaMQTTAAC", "username"]
+- !private ["9CocoaMQTT0A10MQTTClientP", "init"]
+- !private ["9CocoaMQTT0A10MQTTClientP", "keepAlive"]
+- !private ["9CocoaMQTT0A10MQTTClientP", "password"]
+- !private ["9CocoaMQTT0A10MQTTClientP", "username"]
+- !private ["9CocoaMQTT0A23MQTTFrameBufferProtocolP", "init"]
+- !private ["9CocoaMQTT0A23MQTTFrameBufferProtocolP", "keepAlive"]
+- !private ["9CocoaMQTT0A23MQTTFrameBufferProtocolP", "password"]
+- !private ["9CocoaMQTT0A23MQTTFrameBufferProtocolP", "username"]
+- !private ["9CocoaMQTT0A18MQTTReaderDelegateP", "init"]
+- !private ["9CocoaMQTT0A18MQTTReaderDelegateP", "keepAlive"]
+- !private ["9CocoaMQTT0A18MQTTReaderDelegateP", "password"]
+- !private ["9CocoaMQTT0A18MQTTReaderDelegateP", "username"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "keepAlive"]
+- !private ["s28CustomDebugStringConvertibleP", "password"]
+- !private ["s28CustomDebugStringConvertibleP", "processIdentifier"]
+- !private ["s28CustomDebugStringConvertibleP", "username"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "keepAlive"]
+- !private ["s23CustomStringConvertibleP", "password"]
+- !private ["s23CustomStringConvertibleP", "processIdentifier"]
+- !private ["s23CustomStringConvertibleP", "username"]
+- ["s9DecodableP", "init"]
+- ["s9EncodableP", "init"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "keepAlive"]
+- !private ["s9EquatableP", "password"]
+- !private ["s9EquatableP", "processIdentifier"]
+- !private ["s9EquatableP", "username"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["So22GCDAsyncSocketDelegateP", "init"]
+- !private ["So22GCDAsyncSocketDelegateP", "keepAlive"]
+- !private ["So22GCDAsyncSocketDelegateP", "password"]
+- !private ["So22GCDAsyncSocketDelegateP", "username"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "keepAlive"]
+- !private ["s8HashableP", "password"]
+- !private ["s8HashableP", "processIdentifier"]
+- !private ["s8HashableP", "username"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["13LightStripApp11MQTTSessionC", "CocoaMQTT"]
+- !private ["13LightStripApp11MQTTSessionC", "ProcessInfo"]
+- !private ["13LightStripApp11MQTTSessionC", "String"]
+- !private ["13LightStripApp11MQTTSessionC", "UInt16"]
+- ["13LightStripApp11MQTTSessionC", "deinit"]
+- ["13LightStripApp11MQTTSessionC", "init"]
+- ["13LightStripApp11MQTTSessionC", "mqtt"]
+- ["13LightStripApp11MQTTSessionC", "password"]
+- ["13LightStripApp11MQTTSessionC", "port"]
+- ["13LightStripApp11MQTTSessionC", "server"]
+- ["13LightStripApp11MQTTSessionC", "username"]
+- ["s10MirrorPathP", "init"]
+- ["So8NSCodingP", "init"]
+- ["So9NSCopyingP", "init"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "init"]
+- ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "keepAlive"]
+- !private ["So8NSObjectC", "password"]
+- !private ["So8NSObjectC", "processIdentifier"]
+- !private ["So8NSObjectC", "username"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "keepAlive"]
+- !private ["So16NSObjectProtocolP", "password"]
+- !private ["So16NSObjectProtocolP", "processIdentifier"]
+- !private ["So16NSObjectProtocolP", "username"]
+- ["So14NSSecureCodingP", "init"]
+- ["So8NSStringC", "init"]
+- !private ["s7NumericP", "init"]
+- !private ["So11ProcessInfoC", "init"]
+- !private ["So11ProcessInfoC", "processIdentifier"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s8SequenceP", "init"]
+- !private ["s10StrideableP", "init"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s6UInt16V", "init"]
+- !private ["s15UnsignedIntegerP", "init"]
+- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- ["s10_IndexableP", "init"]
+- ["s14_IndexableBaseP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "keepAlive"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "password"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "processIdentifier"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "username"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s11_StrideableP", "init"]
+- !private ["s14_StringElementP", "init"]
+- ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- "s23BidirectionalCollectionP"
+- !private "s13BinaryIntegerP"
+- "s7CVarArgP"
+- !private "9CocoaMQTTAAC"
+- !private "9CocoaMQTT0A10MQTTClientP"
+- !private "9CocoaMQTT0A23MQTTFrameBufferProtocolP"
+- !private "9CocoaMQTT0A18MQTTReaderDelegateP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "So22GCDAsyncSocketDelegateP"
+- "s8HashableP"
+- "s25LosslessStringConvertibleP"
+- "13LightStripApp11MQTTSessionC"
+- "s10MirrorPathP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
+- !private "s7NumericP"
+- !private "So11ProcessInfoC"
+- "s26RangeReplaceableCollectionP"
+- "s8SequenceP"
+- !private "s10StrideableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "s6UInt16V"
+- !private "s15UnsignedIntegerP"
+- "s23_BidirectionalIndexableP"
+- !private "s18_BitwiseOperationsP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s26_RangeReplaceableIndexableP"
+- !private "s11_StrideableP"
+- !private "s14_StringElementP"
+- "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
@@ -101,4 +296,4 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Modules/module.modulemap"
-interface-hash: "5bf39d8b5f0094ca83c744a0da4fb204"
+interface-hash: "593741071a111047013b38640c0faac6"

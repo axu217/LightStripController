@@ -1,0 +1,382 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ColorStore"
+provides-nominal:
+- "13LightStripApp10ColorStoreC"
+provides-member:
+- ["13LightStripApp10ColorStoreC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- "ColorStore"
+- "FileManager"
+- !private "NSKeyedUnarchiver"
+- "String"
+- "StringLiteralType"
+- "UIColor"
+- "URL"
+depends-member:
+- !private ["Sa", "append"]
+- ["Sa", "first"]
+- !private ["Sa", "init"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- ["s23BidirectionalCollectionP", "first"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s7CVarArgP", "append"]
+- ["s7CVarArgP", "default"]
+- ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "green"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "red"]
+- !private ["s7CVarArgP", "unarchiveObject"]
+- ["s7CVarArgP", "urls"]
+- !private ["s10CollectionP", "append"]
+- ["s10CollectionP", "first"]
+- ["s10CollectionP", "init"]
+- ["13LightStripApp10ColorStoreC", "FileManager"]
+- !private ["13LightStripApp10ColorStoreC", "NSKeyedUnarchiver"]
+- ["13LightStripApp10ColorStoreC", "String"]
+- ["13LightStripApp10ColorStoreC", "UIColor"]
+- ["13LightStripApp10ColorStoreC", "URL"]
+- ["13LightStripApp10ColorStoreC", "addColor"]
+- ["13LightStripApp10ColorStoreC", "allColors"]
+- ["13LightStripApp10ColorStoreC", "colorArchiveURL"]
+- ["13LightStripApp10ColorStoreC", "deinit"]
+- ["13LightStripApp10ColorStoreC", "init"]
+- ["13LightStripApp10ColorStoreC", "saveChanges"]
+- ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- ["s28CustomDebugStringConvertibleP", "appendingPathComponent"]
+- ["s28CustomDebugStringConvertibleP", "default"]
+- ["s28CustomDebugStringConvertibleP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "green"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "path"]
+- !private ["s28CustomDebugStringConvertibleP", "red"]
+- !private ["s28CustomDebugStringConvertibleP", "unarchiveObject"]
+- ["s28CustomDebugStringConvertibleP", "urls"]
+- ["s29CustomPlaygroundQuickLookableP", "appendingPathComponent"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "path"]
+- !private ["s17CustomReflectableP", "append"]
+- ["s17CustomReflectableP", "first"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- ["s23CustomStringConvertibleP", "appendingPathComponent"]
+- ["s23CustomStringConvertibleP", "default"]
+- ["s23CustomStringConvertibleP", "first"]
+- !private ["s23CustomStringConvertibleP", "green"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "path"]
+- !private ["s23CustomStringConvertibleP", "red"]
+- !private ["s23CustomStringConvertibleP", "unarchiveObject"]
+- ["s23CustomStringConvertibleP", "urls"]
+- !private ["s9DecodableP", "append"]
+- ["s9DecodableP", "appendingPathComponent"]
+- ["s9DecodableP", "first"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "path"]
+- !private ["s9EncodableP", "append"]
+- ["s9EncodableP", "appendingPathComponent"]
+- ["s9EncodableP", "first"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "path"]
+- ["s9EquatableP", "appendingPathComponent"]
+- ["s9EquatableP", "default"]
+- ["s9EquatableP", "documentDirectory"]
+- !private ["s9EquatableP", "green"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "path"]
+- !private ["s9EquatableP", "red"]
+- !private ["s9EquatableP", "unarchiveObject"]
+- ["s9EquatableP", "urls"]
+- ["s9EquatableP", "userDomainMask"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- ["s25ExpressibleByArrayLiteralP", "userDomainMask"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["So11FileManagerC", "default"]
+- ["So11FileManagerC", "urls"]
+- ["s8HashableP", "appendingPathComponent"]
+- ["s8HashableP", "default"]
+- ["s8HashableP", "documentDirectory"]
+- !private ["s8HashableP", "green"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "path"]
+- !private ["s8HashableP", "red"]
+- !private ["s8HashableP", "unarchiveObject"]
+- ["s8HashableP", "urls"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- ["s17MutableCollectionP", "first"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["So7NSCoderC", "unarchiveObject"]
+- !private ["So8NSCodingP", "green"]
+- ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "red"]
+- !private ["So9NSCopyingP", "green"]
+- ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "red"]
+- !private ["So21NSItemProviderReadingP", "green"]
+- ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderReadingP", "red"]
+- !private ["So21NSItemProviderWritingP", "green"]
+- ["So21NSItemProviderWritingP", "init"]
+- !private ["So21NSItemProviderWritingP", "red"]
+- !private ["So17NSKeyedUnarchiverC", "unarchiveObject"]
+- ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "default"]
+- !private ["So8NSObjectC", "green"]
+- !private ["So8NSObjectC", "red"]
+- !private ["So8NSObjectC", "unarchiveObject"]
+- ["So8NSObjectC", "urls"]
+- ["So16NSObjectProtocolP", "default"]
+- !private ["So16NSObjectProtocolP", "green"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "red"]
+- !private ["So16NSObjectProtocolP", "unarchiveObject"]
+- ["So16NSObjectProtocolP", "urls"]
+- !private ["So14NSSecureCodingP", "green"]
+- ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "red"]
+- ["So8NSStringC", "init"]
+- ["s9OptionSetP", "userDomainMask"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- ["s22RandomAccessCollectionP", "first"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- ["s26RangeReplaceableCollectionP", "first"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s16RawRepresentableP", "documentDirectory"]
+- ["s16RawRepresentableP", "userDomainMask"]
+- ["10Foundation20ReferenceConvertibleP", "appendingPathComponent"]
+- !private ["10Foundation20ReferenceConvertibleP", "path"]
+- ["So11FileManagerC19SearchPathDirectoryO", "documentDirectory"]
+- ["So11FileManagerC20SearchPathDomainMaskV", "userDomainMask"]
+- !private ["s8SequenceP", "append"]
+- ["s8SequenceP", "first"]
+- ["s8SequenceP", "init"]
+- ["s10SetAlgebraP", "userDomainMask"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["So7UIColorC", "green"]
+- !private ["So7UIColorC", "red"]
+- ["10Foundation3URLV", "appendingPathComponent"]
+- !private ["10Foundation3URLV", "path"]
+- !private ["s14_ArrayProtocolP", "append"]
+- ["s14_ArrayProtocolP", "first"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s23_BidirectionalIndexableP", "append"]
+- ["s23_BidirectionalIndexableP", "first"]
+- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- ["s24_DestructorSafeContainerP", "first"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s26_ExpressibleByColorLiteralP", "green"]
+- !private ["s26_ExpressibleByColorLiteralP", "red"]
+- ["s34_ExpressibleByFileReferenceLiteralP", "appendingPathComponent"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "path"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "append"]
+- ["s10_IndexableP", "first"]
+- ["s10_IndexableP", "init"]
+- !private ["s14_IndexableBaseP", "append"]
+- ["s14_IndexableBaseP", "first"]
+- ["s14_IndexableBaseP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "green"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "red"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "unarchiveObject"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "urls"]
+- !private ["s17_MutableIndexableP", "append"]
+- ["s17_MutableIndexableP", "first"]
+- !private ["s17_MutableIndexableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- ["s21_ObjectiveCBridgeableP", "appendingPathComponent"]
+- ["s21_ObjectiveCBridgeableP", "first"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "path"]
+- !private ["s22_RandomAccessIndexableP", "append"]
+- ["s22_RandomAccessIndexableP", "first"]
+- !private ["s22_RandomAccessIndexableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "append"]
+- ["s26_RangeReplaceableIndexableP", "first"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "Sa"
+- "s23BidirectionalCollectionP"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "13LightStripApp10ColorStoreC"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "So11FileManagerC"
+- "s8HashableP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "s17MutableCollectionP"
+- !private "So7NSCoderC"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- !private "So17NSKeyedUnarchiverC"
+- "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
+- "s9OptionSetP"
+- "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- "10Foundation20ReferenceConvertibleP"
+- "So11FileManagerC19SearchPathDirectoryO"
+- "So11FileManagerC20SearchPathDomainMaskV"
+- "s8SequenceP"
+- "s10SetAlgebraP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "So7UIColorC"
+- "10Foundation3URLV"
+- "s14_ArrayProtocolP"
+- "s23_BidirectionalIndexableP"
+- "s24_DestructorSafeContainerP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByColorLiteralP"
+- "s34_ExpressibleByFileReferenceLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s17_MutableIndexableP"
+- "s21_ObjectiveCBridgeableP"
+- "s22_RandomAccessIndexableP"
+- "s26_RangeReplaceableIndexableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaMQTT/CocoaMQTT.framework/Modules/CocoaMQTT.swiftmodule/arm64.swiftmodule"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/SwiftyTimer/SwiftyTimer.framework/Modules/SwiftyTimer.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT-umbrella.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/SwiftyTimer/SwiftyTimer.framework/Headers/SwiftyTimer-umbrella.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/CocoaAsyncSocket-umbrella.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/Firebase/Core/Sources/Firebase.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRSetOptions.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncSocket.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncUdpSocket.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT-Swift.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/SwiftyTimer/SwiftyTimer.framework/Headers/SwiftyTimer-Swift.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRCoreSwiftNameSupport.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRFirestoreSwiftNameSupport.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthSwiftNameSupport.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRQuery.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/Firebase/Core/Sources/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaMQTT/CocoaMQTT.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/SwiftyTimer/SwiftyTimer.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework/Modules/module.modulemap"
+interface-hash: "9903b70c5aee4ff0988839f1573d0735"

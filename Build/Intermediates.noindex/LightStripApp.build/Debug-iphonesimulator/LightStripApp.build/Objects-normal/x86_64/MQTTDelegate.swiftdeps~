@@ -1,11 +1,45 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "LoginMQTTDelegate"
 provides-nominal:
+- "13LightStripApp17LoginMQTTDelegateC"
 provides-member:
+- ["13LightStripApp17LoginMQTTDelegateC", ""]
 provides-dynamic-lookup:
+- "mqtt"
+- "mqttDidDisconnect"
+- "mqttDidPing"
+- "mqttDidReceivePong"
 depends-top-level:
+- "CocoaMQTT"
+- "CocoaMQTTConnAck"
+- "CocoaMQTTDelegate"
+- "CocoaMQTTMessage"
+- "Error"
+- "LoginMQTTDelegate"
+- "String"
+- "UInt16"
 depends-member:
+- ["9CocoaMQTT0A12MQTTDelegateP", "mqtt"]
+- ["9CocoaMQTT0A12MQTTDelegateP", "mqttDidDisconnect"]
+- ["9CocoaMQTT0A12MQTTDelegateP", "mqttDidPing"]
+- ["9CocoaMQTT0A12MQTTDelegateP", "mqttDidReceivePong"]
+- ["9CocoaMQTT0A12MQTTDelegateP", ""]
+- ["13LightStripApp17LoginMQTTDelegateC", "CocoaMQTT"]
+- ["13LightStripApp17LoginMQTTDelegateC", "CocoaMQTTConnAck"]
+- ["13LightStripApp17LoginMQTTDelegateC", "CocoaMQTTMessage"]
+- ["13LightStripApp17LoginMQTTDelegateC", "Error"]
+- ["13LightStripApp17LoginMQTTDelegateC", "String"]
+- ["13LightStripApp17LoginMQTTDelegateC", "UInt16"]
+- ["13LightStripApp17LoginMQTTDelegateC", "deinit"]
+- ["13LightStripApp17LoginMQTTDelegateC", "init"]
+- ["13LightStripApp17LoginMQTTDelegateC", "mqtt"]
+- ["13LightStripApp17LoginMQTTDelegateC", "mqttDidDisconnect"]
+- ["13LightStripApp17LoginMQTTDelegateC", "mqttDidPing"]
+- ["13LightStripApp17LoginMQTTDelegateC", "mqttDidReceivePong"]
 depends-nominal:
+- "9CocoaMQTT0A12MQTTDelegateP"
+- "13LightStripApp17LoginMQTTDelegateC"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
@@ -101,4 +135,4 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Modules/module.modulemap"
-interface-hash: "5bf39d8b5f0094ca83c744a0da4fb204"
+interface-hash: "392c7400add1b9bd31c2b55d03aeec69"

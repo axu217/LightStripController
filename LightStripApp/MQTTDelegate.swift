@@ -8,10 +8,10 @@
 
 import CocoaMQTT
 
-class MQTTDelegate: CocoaMQTTDelegate {
+class LoginMQTTDelegate: CocoaMQTTDelegate {
     
     func mqtt(_ mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {
-        NetworkHelper.isConnected = true
+        
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didPublishMessage message: CocoaMQTTMessage, id: UInt16) {

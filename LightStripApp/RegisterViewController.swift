@@ -17,7 +17,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet var hubIDField: UITextField!
     
     @IBAction func back(sender: UIButton) {
-        self.performSegue(withIdentifier: "registerBack", sender: self)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func register(sender: UIButton) {
@@ -25,21 +25,39 @@ class RegisterViewController: UIViewController {
         let email = usernameField.text!
         let password = passwordField.text!
         
+        
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if user != nil {
                 Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-                    if error == nil {
-                        
-                        let db = Firestore.firestore()
-                        var ref: DocumentReference? = nil
-                        
-                        let data = ["hubID": self.hubIDField.text!]
-                        
-                        ref = db.collection("users").document(email)
-                        ref?.setData(data)
-                        
-                        self.performSegue(withIdentifier: "registerSuccess", sender: self)
+                    
+                    guard user != nil else {
+                        print(error.debugDescription)
+                        return
                     }
+                    
+                    UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+                    UserDefaults.standard.set(email, forKey: "email")
+                    UserDefaults.standard.set(password, forKey: "password")
+                    UserDefaults.standard.set(self.hubIDField.text!, forKey: "uuid")
+                    UserDefaults.standard.synchronize()
+                    
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    let db = (appDelegate.firebaseDB)!
+                    let ref = db.collection("users").document(email)
+                    let data = ["hubID": self.hubIDField.text!]
+                    ref.setData(data)
+                    
+                    let window = UIApplication.shared.keyWindow!
+                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                    let navigationController: HomeNavigationController = storyboard.instantiateViewController(withIdentifier: "HomeNavigationController") as! HomeNavigationController
+                    navigationController.view.layoutIfNeeded()
+                    
+                    UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                        window.rootViewController = navigationController
+                    }, completion: nil)
+                    
+                    
+                    
                 }
             } else {
                 let str = error?.localizedDescription
@@ -51,5 +69,10 @@ class RegisterViewController: UIViewController {
             }
         }
         
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
     }
 }

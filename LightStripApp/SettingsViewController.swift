@@ -12,8 +12,15 @@ class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(rgb: 0xE8ECEE)
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let tab = self.parent as! HomeTabViewController
+        tab.navigationItem.title = "Settings"
     }
 
     override func didReceiveMemoryWarning() {

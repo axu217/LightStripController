@@ -8,19 +8,27 @@
 
 import Foundation
 import CocoaMQTT
+import Firebase
 
 class NetworkHelper {
     
-    static var isConnected: Bool = false
-    static var mqtt: MQTTSession? = nil
+    static var mqttSession: MQTTSession? = nil
     
-    static func connect(){
-        let mqtt = MQTTSession()
-        self.mqtt = mqtt
-    }
-    
-    static func send(message: String) {
+    static func connectWithDelegate(delegate: CocoaMQTTDelegate){
+        let mqttSession = MQTTSession()
         
+        self.mqttSession = mqttSession
+        
+        mqttSession.mqtt.delegate = delegate
+        mqttSession.mqtt.connect()
     }
+    
+    static func publish(message: String) {
+        let uuid = UserDefaults.standard.object(forKey: "uuid") as! String
+        
+
+        self.mqttSession!.mqtt.publish(uuid + "_cc", withString: message)
+    }
+   
     
 }

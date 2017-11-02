@@ -173,6 +173,10 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if __has_feature(modules)
 @import UIKit;
+@import CocoaMQTT;
+@import Foundation;
+@import CoreGraphics;
+@import ObjectiveC;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -184,11 +188,70 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wnullability"
 
 SWIFT_MODULE_NAMESPACE_PUSH("LightStripApp")
+@class UITextField;
+@class UIButton;
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC13LightStripApp22AddColorViewController")
+@interface AddColorViewController : UIViewController
+@property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified hexCode;
+- (void)viewDidLoad;
+- (IBAction)confirmWithSender:(UIButton * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class CocoaMQTT;
+@class CocoaMQTTMessage;
+
+SWIFT_CLASS("_TtC13LightStripApp23AddDeviceViewController")
+@interface AddDeviceViewController : UIViewController <CocoaMQTTDelegate>
+- (void)viewDidLoad;
+@property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified deviceName;
+- (IBAction)confirmAddWithSender:(UIButton * _Null_unspecified)sender;
+- (void)checkLink;
+- (void)timeOut;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didConnectAck:(enum CocoaMQTTConnAck)ack;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didPublishMessage:(CocoaMQTTMessage * _Nonnull)message id:(uint16_t)id;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didPublishAck:(uint16_t)id;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didReceiveMessage:(CocoaMQTTMessage * _Nonnull)message id:(uint16_t)id;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didSubscribeTopic:(NSString * _Nonnull)topic;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didUnsubscribeTopic:(NSString * _Nonnull)topic;
+- (void)mqttDidPing:(CocoaMQTT * _Nonnull)mqtt;
+- (void)mqttDidReceivePong:(CocoaMQTT * _Nonnull)mqtt;
+- (void)mqttDidDisconnect:(CocoaMQTT * _Nonnull)mqtt withError:(NSError * _Nullable)err;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC13LightStripApp15AddFavoriteCell")
+@interface AddFavoriteCell : UITableViewCell
+@property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified titleTextField;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITableView;
+
+SWIFT_CLASS("_TtC13LightStripApp25AddFavoriteViewController")
+@interface AddFavoriteViewController : UITableViewController
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIWindow;
 @class UIApplication;
 
 SWIFT_CLASS("_TtC13LightStripApp11AppDelegate")
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <CocoaMQTTDelegate, UIApplicationDelegate>
 @property (nonatomic, strong) UIWindow * _Nullable window;
 - (BOOL)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions SWIFT_WARN_UNUSED_RESULT;
 - (void)applicationWillResignActive:(UIApplication * _Nonnull)application;
@@ -196,28 +259,92 @@ SWIFT_CLASS("_TtC13LightStripApp11AppDelegate")
 - (void)applicationWillEnterForeground:(UIApplication * _Nonnull)application;
 - (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
 - (void)applicationWillTerminate:(UIApplication * _Nonnull)application;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didConnectAck:(enum CocoaMQTTConnAck)ack;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didPublishMessage:(CocoaMQTTMessage * _Nonnull)message id:(uint16_t)id;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didPublishAck:(uint16_t)id;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didReceiveMessage:(CocoaMQTTMessage * _Nonnull)message id:(uint16_t)id;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didSubscribeTopic:(NSString * _Nonnull)topic;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didUnsubscribeTopic:(NSString * _Nonnull)topic;
+- (void)mqttDidPing:(CocoaMQTT * _Nonnull)mqtt;
+- (void)mqttDidReceivePong:(CocoaMQTT * _Nonnull)mqtt;
+- (void)mqttDidDisconnect:(CocoaMQTT * _Nonnull)mqtt withError:(NSError * _Nullable)err;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSBundle;
-@class NSCoder;
 
-SWIFT_CLASS("_TtC13LightStripApp21DevicesViewController")
-@interface DevicesViewController : UIViewController
-- (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
+SWIFT_CLASS("_TtC13LightStripApp9ColorCell")
+@interface ColorCell : UICollectionViewCell
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UICollectionView;
+@class UICollectionViewLayout;
+
+SWIFT_CLASS("_TtC13LightStripApp30ColorsCollectionViewController")
+@interface ColorsCollectionViewController : UICollectionViewController
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView * _Nonnull)collectionView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)addColor;
+- (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIButton;
+
+SWIFT_CLASS("_TtC13LightStripApp6Device")
+@interface Device : NSObject <NSCoding>
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)encodeWithCoder:(NSCoder * _Nonnull)aCoder;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+@class UILabel;
+
+SWIFT_CLASS("_TtC13LightStripApp10DeviceCell")
+@interface DeviceCell : UITableViewCell
+@property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified deviceNameLabel;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIBarButtonItem;
+@class UIStoryboardSegue;
+
+SWIFT_CLASS("_TtC13LightStripApp21DevicesViewController")
+@interface DevicesViewController : UITableViewController
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)addItemWithSender:(UIBarButtonItem * _Null_unspecified)sender;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC13LightStripApp22FavoriteViewController")
-@interface FavoriteViewController : UIViewController
+@interface FavoriteViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (IBAction)logoutWithSender:(UIButton * _Nonnull)sender;
+- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC13LightStripApp13FavoritesCell")
+@interface FavoritesCell : UICollectionViewCell
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -242,25 +369,22 @@ SWIFT_CLASS("_TtC13LightStripApp21HomeTabViewController")
 @end
 
 
-SWIFT_CLASS("_TtC13LightStripApp18HomeViewController")
-@interface HomeViewController : UIViewController
-- (IBAction)logoutWithSender:(UIButton * _Nonnull)sender;
-- (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class UITextField;
-
 SWIFT_CLASS("_TtC13LightStripApp25LoginScreenViewController")
-@interface LoginScreenViewController : UIViewController
+@interface LoginScreenViewController : UIViewController <CocoaMQTTDelegate>
 @property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified usernameInput;
 @property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified passwordInput;
 - (IBAction)loginWithSender:(UIButton * _Nonnull)sender;
 - (IBAction)registerWithSender:(UIButton * _Nonnull)sender;
-- (IBAction)testWithSender:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didConnectAck:(enum CocoaMQTTConnAck)ack;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didPublishMessage:(CocoaMQTTMessage * _Nonnull)message id:(uint16_t)id;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didPublishAck:(uint16_t)id;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didReceiveMessage:(CocoaMQTTMessage * _Nonnull)message id:(uint16_t)id;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didSubscribeTopic:(NSString * _Nonnull)topic;
+- (void)mqtt:(CocoaMQTT * _Nonnull)mqtt didUnsubscribeTopic:(NSString * _Nonnull)topic;
+- (void)mqttDidPing:(CocoaMQTT * _Nonnull)mqtt;
+- (void)mqttDidReceivePong:(CocoaMQTT * _Nonnull)mqtt;
+- (void)mqttDidDisconnect:(CocoaMQTT * _Nonnull)mqtt withError:(NSError * _Nullable)err;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -281,16 +405,21 @@ SWIFT_CLASS("_TtC13LightStripApp22RegisterViewController")
 SWIFT_CLASS("_TtC13LightStripApp22SettingsViewController")
 @interface SettingsViewController : UIViewController
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
-SWIFT_CLASS("_TtC13LightStripApp14ViewController")
-@interface ViewController : UIViewController
+
+
+SWIFT_CLASS("_TtC13LightStripApp18UserViewController")
+@interface UserViewController : UIViewController
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified logoutButton;
+- (IBAction)logOutWithSender:(UIButton * _Nonnull)sender;
 - (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
+- (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

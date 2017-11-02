@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>FAKETEAMID.org.cocoapods.gRPCCertificates</string>
+	<string>M4L7J68TY9.org.cocoapods.gRPCCertificates</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>FAKETEAMID.org.cocoapods.gRPCCertificates</string>
+		<string>M4L7J68TY9.org.cocoapods.gRPCCertificates</string>
 	</array>
 </dict>
 </plist>

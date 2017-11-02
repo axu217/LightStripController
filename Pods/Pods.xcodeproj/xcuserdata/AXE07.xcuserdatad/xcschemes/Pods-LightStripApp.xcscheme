@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7CA24A52C64C03DC1BE5F9E5887645D5"
+               BlueprintIdentifier = "F880922F0E7BAE29D85A02E15EB206D4"
                BuildableName = "Pods_LightStripApp.framework"
                BlueprintName = "Pods-LightStripApp"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7CA24A52C64C03DC1BE5F9E5887645D5"
+            BlueprintIdentifier = "F880922F0E7BAE29D85A02E15EB206D4"
             BuildableName = "Pods_LightStripApp.framework"
             BlueprintName = "Pods-LightStripApp"
             ReferencedContainer = "container:Pods.xcodeproj">

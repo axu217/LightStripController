@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>FAKETEAMID.com.zhechengxu.LightStripApp</string>
+	<string>M4L7J68TY9.com.zhechengxu.LightStripApp</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>FAKETEAMID.com.zhechengxu.LightStripApp</string>
+		<string>M4L7J68TY9.com.zhechengxu.LightStripApp</string>
 	</array>
 </dict>
 </plist>

@@ -12,24 +12,32 @@ class HomeTabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBar.isTranslucent = false
+        self.tabBar.tintColor = UIColor(rgb: 0x01A185)
+        
+        let tabFav = tabBar.items![0]
+        tabFav.image=UIImage(named: "favoritesTab.png")?.withRenderingMode(.alwaysOriginal) // deselect image
+        tabFav.selectedImage = UIImage(named: "favoritesTabSelected.png")?.withRenderingMode(.alwaysOriginal) // select image
 
-        // Do any additional setup after loading the view.
+        
+        let tabDevices = tabBar.items![1]
+        tabDevices.image=UIImage(named: "devicesTab.png")?.withRenderingMode(.alwaysOriginal)
+        tabDevices.selectedImage=UIImage(named: "devicesTabSelected.png")?.withRenderingMode(.alwaysOriginal)
+        
+        let tabSettings = tabBar.items![2]
+        tabSettings.image=UIImage(named: "settingsTab.png")?.withRenderingMode(.alwaysOriginal)
+        tabSettings.selectedImage=UIImage(named: "settingsTabSelected.png")?.withRenderingMode(.alwaysOriginal)
+        
+        let tabUser = tabBar.items![3]
+        tabUser.image=UIImage(named: "userTab.png")?.withRenderingMode(.alwaysOriginal)
+        tabUser.selectedImage=UIImage(named: "userTabSelected.png")?.withRenderingMode(.alwaysOriginal)
+
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

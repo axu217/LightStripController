@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1D7B6F5AD5D19C1546175D45CD163CC0"
+               BlueprintIdentifier = "7CA24A52C64C03DC1BE5F9E5887645D5"
                BuildableName = "Pods_LightStripApp.framework"
                BlueprintName = "Pods-LightStripApp"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
