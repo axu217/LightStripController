@@ -35,4 +35,10 @@ class DeviceStore {
         return NSKeyedArchiver.archiveRootObject(allDevices, toFile: deviceArchiveURL.path)
     }
     
+    func deleteDevice(_ device: Device) {
+        if let index = allDevices.index(of: device) {
+            allDevices.remove(at: index)
+        }
+    }
+    
 }

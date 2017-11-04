@@ -16,6 +16,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var hubIDField: UITextField!
     
+    var waitingAlert: UIAlertController?
+    
     @IBAction func back(sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -24,6 +26,7 @@ class RegisterViewController: UIViewController {
         
         let email = usernameField.text!
         let password = passwordField.text!
+        waitingAlert = UIAlertController(title: "Registering", message: "Please wait for the registration process to complete", preferredStyle: .alert)
         
         
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
@@ -47,28 +50,48 @@ class RegisterViewController: UIViewController {
                     let data = ["hubID": self.hubIDField.text!]
                     ref.setData(data)
                     
-                    let window = UIApplication.shared.keyWindow!
-                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                    let navigationController: HomeNavigationController = storyboard.instantiateViewController(withIdentifier: "HomeNavigationController") as! HomeNavigationController
-                    navigationController.view.layoutIfNeeded()
+                    NetworkHelper.connect()
                     
-                    UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
-                        window.rootViewController = navigationController
-                    }, completion: nil)
-                    
-                    
+  
                     
                 }
             } else {
                 let str = error?.localizedDescription
-                let alert = UIAlertController(title: "Registration Failed", message: str, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Bruh"), style: .`default`, handler: { _ in
-                    alert.dismiss(animated: true, completion: nil)
+                self.waitingAlert?.title = "Registration Failed"
+                self.waitingAlert?.message = str
+                self.waitingAlert?.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Bruh"), style: .`default`, handler: { _ in
+                    self.waitingAlert?.dismiss(animated: true, completion: nil)
                 }))
-                self.present(alert, animated: true, completion: nil)
             }
         }
         
+    }
+    
+    @objc func didSubscribe() {
+        waitingAlert?.dismiss(animated: true, completion: {
+            let window = UIApplication.shared.keyWindow!
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let navigationController: HomeNavigationController = storyboard.instantiateViewController(withIdentifier: "HomeNavigationController") as! HomeNavigationController
+            navigationController.view.layoutIfNeeded()
+            
+            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                window.rootViewController = navigationController
+            }, completion: nil)
+            
+        })
+        
+    }
+    
+    // MARK: View Methods
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let name = NSNotification.Name(rawValue: "subscribeAck")
+        NotificationCenter.default.addObserver(self, selector: #selector(didSubscribe), name: name, object: nil)
     }
     
     override func viewDidLoad() {

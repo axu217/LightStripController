@@ -78,8 +78,6 @@ depends-member:
 - !private ["s7CVarArgP", "white"]
 - !private ["s7CVarArgP", "window"]
 - ["s7CVarArgP", ""]
-- !private ["9CocoaMQTT0A12MQTTDelegateP", "view"]
-- !private ["9CocoaMQTT0A12MQTTDelegateP", "window"]
 - !private ["s10CollectionP", "init"]
 - !private ["s10ComparableP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "Auth"]
@@ -707,7 +705,6 @@ depends-nominal:
 - !private "So15CALayerDelegateP"
 - !private "So13CAMediaTimingP"
 - "s7CVarArgP"
-- !private "9CocoaMQTT0A12MQTTDelegateP"
 - !private "s10CollectionP"
 - !private "s10ComparableP"
 - "s28CustomDebugStringConvertibleP"

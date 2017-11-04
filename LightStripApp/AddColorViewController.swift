@@ -16,7 +16,7 @@ class AddColorViewController: UIViewController, ChromaColorPickerDelegate {
         navigationController?.popViewController(animated: true)
     }
     
-    
+    @IBOutlet var pickerView: UIView!
     
     var chromaColorPicker: ChromaColorPicker!
     
@@ -26,6 +26,7 @@ class AddColorViewController: UIViewController, ChromaColorPickerDelegate {
             return appDelegate.colorStore
         }
     }
+    // MARK: View Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +39,14 @@ class AddColorViewController: UIViewController, ChromaColorPickerDelegate {
         neatColorPicker.hexLabel.textColor = UIColor.black
         self.chromaColorPicker = neatColorPicker
         
+        let margins = pickerView.layoutMarginsGuide
+        pickerView.addSubview(neatColorPicker)
+        neatColorPicker.topAnchor.constraint(equalTo: margins.topAnchor).isActive = true
+        neatColorPicker.centerXAnchor.constraint(equalTo: margins.centerXAnchor).isActive = true
        
-        view.addSubview(neatColorPicker)
-        neatColorPicker.center = self.view.center
+        
+        pickerView.backgroundColor = UIColor(rgb: 0xE8ECEE)
+        
         neatColorPicker.layoutIfNeeded()
     }
     

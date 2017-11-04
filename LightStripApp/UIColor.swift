@@ -18,4 +18,8 @@ extension UIColor {
             blue: rgb & 0xFF
         )
     }
+    
+    var redValue: Int{ return Int(CIColor(color: self).red * 255.0) }
+    var greenValue: Int{ return Int(CIColor(color: self).green * 255.0) }
+    var blueValue: Int{ return Int(CIColor(color: self).blue * 255.0) }
 }

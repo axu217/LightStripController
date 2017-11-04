@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import CocoaMQTT
 
-class LoginScreenViewController: UIViewController, CocoaMQTTDelegate, UITextFieldDelegate {
+class LoginScreenViewController: UIViewController, UITextFieldDelegate {
     
     var waitingAlert: UIAlertController?
     
@@ -48,10 +48,7 @@ class LoginScreenViewController: UIViewController, CocoaMQTTDelegate, UITextFiel
                 }
                 UserDefaults.standard.synchronize()
                 
-                NetworkHelper.connectWithDelegate(delegate: self)
-               
-                
-
+                NetworkHelper.connect()
                 
             } else {
                 self.waitingAlert?.dismiss(animated: true, completion: nil)
@@ -71,39 +68,13 @@ class LoginScreenViewController: UIViewController, CocoaMQTTDelegate, UITextFiel
         self.performSegue(withIdentifier: "register", sender: self)
     }
     
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
-        passwordInput.delegate = self
-    }
-    
-    func mqtt(_ mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {
-        let possibleUUID = UserDefaults.standard.object(forKey: "uuid")
-        let uuid = (possibleUUID as! String) + "_cc_r"
-        mqtt.subscribe(uuid)
-    }
-    
-    func mqtt(_ mqtt: CocoaMQTT, didPublishMessage message: CocoaMQTTMessage, id: UInt16) {
-        
-    }
-    
-    func mqtt(_ mqtt: CocoaMQTT, didPublishAck id: UInt16) {
-        
-    }
-    
-    func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16) {
-        
-    }
-    
-    func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopic topic: String) {
-         waitingAlert?.dismiss(animated: true, completion: {
+    @objc func didSubscribe() {
+        waitingAlert?.dismiss(animated: true, completion: {
             
             guard let window = UIApplication.shared.keyWindow else {
                 return
             }
-       
+            
             
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
             let navigationController: HomeNavigationController = storyboard.instantiateViewController(withIdentifier: "HomeNavigationController") as! HomeNavigationController
@@ -111,25 +82,31 @@ class LoginScreenViewController: UIViewController, CocoaMQTTDelegate, UITextFiel
             
             UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
                 window.rootViewController = navigationController
-                }, completion: nil)
+            }, completion: nil)
             
-         })
-        
+        })
+    }
+
+    // MARK: View Methods
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        passwordInput.delegate = self
+      
     }
     
-    func mqtt(_ mqtt: CocoaMQTT, didUnsubscribeTopic topic: String) {
-        
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+        super.viewWillDisappear(animated)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        let name = NSNotification.Name(rawValue: "subscribeAck")
+        NotificationCenter.default.addObserver(self, selector: #selector(didSubscribe), name: name, object: nil)
     }
     
-    func mqttDidPing(_ mqtt: CocoaMQTT) {
-        
-    }
     
-    func mqttDidReceivePong(_ mqtt: CocoaMQTT) {
         
-    }
     
-    func mqttDidDisconnect(_ mqtt: CocoaMQTT, withError err: Error?) {
-        
-    }
 }

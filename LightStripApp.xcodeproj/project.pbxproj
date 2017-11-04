@@ -18,8 +18,8 @@
 		3E58CC3B1F95B6C30010236A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E58CC391F95B6C30010236A /* LaunchScreen.storyboard */; };
 		3E7D90DF1F97208A00B7B7D7 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D90DE1F97208A00B7B7D7 /* NetworkHelper.swift */; };
 		3E7D90E11F9720FD00B7B7D7 /* MQTTDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D90E01F9720FD00B7B7D7 /* MQTTDelegate.swift */; };
-		3E7D90E31F974A8900B7B7D7 /* MQTTSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D90E21F974A8900B7B7D7 /* MQTTSession.swift */; };
 		3E9C42051FA6930200CB2166 /* ColorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9C42041FA6930200CB2166 /* ColorStore.swift */; };
+		3EC9D7491FAD4BB3008E440D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC9D7481FAD4BB3008E440D /* String.swift */; };
 		3ED8131E1FABDC4D001F73D0 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8131D1FABDC4D001F73D0 /* UIViewControllerExtensions.swift */; };
 		3EF22F8A1F95BBC200AF4B19 /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F801F95BBC000AF4B19 /* HomeNavigationController.swift */; };
 		3EF22F8C1F95BBC200AF4B19 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F821F95BBC100AF4B19 /* SettingsViewController.swift */; };
@@ -53,8 +53,8 @@
 		3E58CC3C1F95B6C30010236A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E7D90DE1F97208A00B7B7D7 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		3E7D90E01F9720FD00B7B7D7 /* MQTTDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTDelegate.swift; sourceTree = "<group>"; };
-		3E7D90E21F974A8900B7B7D7 /* MQTTSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTSession.swift; sourceTree = "<group>"; };
 		3E9C42041FA6930200CB2166 /* ColorStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStore.swift; sourceTree = "<group>"; };
+		3EC9D7481FAD4BB3008E440D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3ED8131D1FABDC4D001F73D0 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		3EF22F801F95BBC000AF4B19 /* HomeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
 		3EF22F821F95BBC100AF4B19 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +163,7 @@
 			children = (
 				3E531A641FA8269C0061ECB5 /* UIColor.swift */,
 				3ED8131D1FABDC4D001F73D0 /* UIViewControllerExtensions.swift */,
+				3EC9D7481FAD4BB3008E440D /* String.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -203,7 +204,6 @@
 			children = (
 				3E7D90DE1F97208A00B7B7D7 /* NetworkHelper.swift */,
 				3E7D90E01F9720FD00B7B7D7 /* MQTTDelegate.swift */,
-				3E7D90E21F974A8900B7B7D7 /* MQTTSession.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -418,6 +418,7 @@
 				3EF22F911F95BBC200AF4B19 /* FavoriteViewController.swift in Sources */,
 				3EF22F8C1F95BBC200AF4B19 /* SettingsViewController.swift in Sources */,
 				3EFA61811F9D660100FBC94F /* DeviceCell.swift in Sources */,
+				3EC9D7491FAD4BB3008E440D /* String.swift in Sources */,
 				3EF22F8F1F95BBC200AF4B19 /* HomeTabViewController.swift in Sources */,
 				3E58CC311F95B6C30010236A /* AppDelegate.swift in Sources */,
 				3EF22F901F95BBC200AF4B19 /* DevicesViewController.swift in Sources */,
@@ -428,7 +429,6 @@
 				3EF7ED9E1FA954FD00C1B0E9 /* AddColorViewController.swift in Sources */,
 				3EFA617F1F9D649700FBC94F /* DeviceStore.swift in Sources */,
 				3E9C42051FA6930200CB2166 /* ColorStore.swift in Sources */,
-				3E7D90E31F974A8900B7B7D7 /* MQTTSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

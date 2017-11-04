@@ -142,7 +142,6 @@ depends-member:
 - ["s7CVarArgP", "viewForZoomingInScrollView"]
 - !private ["s7CVarArgP", "viewWillAppear"]
 - ["s7CVarArgP", ""]
-- !private ["9CocoaMQTT0A12MQTTDelegateP", "favoriteStore"]
 - !private ["s10CollectionP", "count"]
 - !private ["s10CollectionP", "init"]
 - !private ["s10CollectionP", "name"]
@@ -1755,7 +1754,6 @@ depends-nominal:
 - "So15CALayerDelegateP"
 - !private "SC6CGSizeV"
 - "s7CVarArgP"
-- !private "9CocoaMQTT0A12MQTTDelegateP"
 - !private "s10CollectionP"
 - !private "s10ComparableP"
 - "s28CustomDebugStringConvertibleP"

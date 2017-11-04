@@ -11,7 +11,7 @@ import Firebase
 import CocoaMQTT
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, CocoaMQTTDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
 
@@ -52,22 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CocoaMQTTDelegate {
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 if user != nil {
                     
-                    NetworkHelper.connectWithDelegate(delegate: self)
                     
-                    
-    
-                    self.window = UIWindow(frame: UIScreen.main.bounds)
-                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                    let navigationController: HomeNavigationController = storyboard.instantiateViewController(withIdentifier: "HomeNavigationController") as! HomeNavigationController
-                    self.window!.makeKeyAndVisible()
-                    navigationController.view.layoutIfNeeded()
-                    UIView.transition(with: self.window!, duration: 0.2, options: .transitionCrossDissolve, animations: {
-                        self.window!.rootViewController = navigationController
-                        
-                    }, completion: nil)
-                    
-                    
-                    
+                    let name = NSNotification.Name(rawValue: "subscribeAck")
+                    NotificationCenter.default.addObserver(self, selector: #selector(self.ackConnect(notification:)), name: name, object: nil)
+                    NetworkHelper.connect()
                     
                 } else {
                     print((error! as NSError).localizedDescription)
@@ -89,6 +77,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CocoaMQTTDelegate {
         
         
         return true
+    }
+    
+    @objc func ackConnect(notification: NSNotification) {
+        
+        NotificationCenter.default.removeObserver(self)
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let navigationController: HomeNavigationController = storyboard.instantiateViewController(withIdentifier: "HomeNavigationController") as! HomeNavigationController
+        self.window!.makeKeyAndVisible()
+        navigationController.view.layoutIfNeeded()
+        UIView.transition(with: self.window!, duration: 0.2, options: .transitionCrossDissolve, animations: {
+            self.window!.rootViewController = navigationController
+            
+        }, completion: nil)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -118,43 +120,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CocoaMQTTDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func mqtt(_ mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {
-        let uuid = UserDefaults.standard.object(forKey: "uuid") as! String
-        let uuidPost = uuid + "_cc_r"
-        mqtt.subscribe(uuidPost)
-    }
-    
-    func mqtt(_ mqtt: CocoaMQTT, didPublishMessage message: CocoaMQTTMessage, id: UInt16) {
-        
-    }
-    
-    func mqtt(_ mqtt: CocoaMQTT, didPublishAck id: UInt16) {
-        
-    }
-    
-    func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16) {
-        
-    }
-    
-    func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopic topic: String) {
-        
-    }
-    
-    func mqtt(_ mqtt: CocoaMQTT, didUnsubscribeTopic topic: String) {
-        
-    }
-    
-    func mqttDidPing(_ mqtt: CocoaMQTT) {
-        
-    }
-    
-    func mqttDidReceivePong(_ mqtt: CocoaMQTT) {
-        
-    }
-    
-    func mqttDidDisconnect(_ mqtt: CocoaMQTT, withError err: Error?) {
-        
-    }
+
 
 
 }

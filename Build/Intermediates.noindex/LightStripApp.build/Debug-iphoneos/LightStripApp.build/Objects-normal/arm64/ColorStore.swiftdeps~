@@ -11,8 +11,8 @@ depends-top-level:
 - "CastingPrecedence"
 - "ColorStore"
 - "FileManager"
+- !private "NSKeyedArchiver"
 - !private "NSKeyedUnarchiver"
-- "String"
 - "StringLiteralType"
 - "UIColor"
 - "URL"
@@ -24,6 +24,7 @@ depends-member:
 - ["s23BidirectionalCollectionP", "first"]
 - ["s23BidirectionalCollectionP", "init"]
 - !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "archiveRootObject"]
 - ["s7CVarArgP", "default"]
 - ["s7CVarArgP", "first"]
 - !private ["s7CVarArgP", "green"]
@@ -35,8 +36,8 @@ depends-member:
 - ["s10CollectionP", "first"]
 - ["s10CollectionP", "init"]
 - ["13LightStripApp10ColorStoreC", "FileManager"]
+- !private ["13LightStripApp10ColorStoreC", "NSKeyedArchiver"]
 - !private ["13LightStripApp10ColorStoreC", "NSKeyedUnarchiver"]
-- ["13LightStripApp10ColorStoreC", "String"]
 - ["13LightStripApp10ColorStoreC", "UIColor"]
 - ["13LightStripApp10ColorStoreC", "URL"]
 - ["13LightStripApp10ColorStoreC", "addColor"]
@@ -48,6 +49,7 @@ depends-member:
 - ["s10ComparableP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
 - ["s28CustomDebugStringConvertibleP", "appendingPathComponent"]
+- !private ["s28CustomDebugStringConvertibleP", "archiveRootObject"]
 - ["s28CustomDebugStringConvertibleP", "default"]
 - ["s28CustomDebugStringConvertibleP", "first"]
 - !private ["s28CustomDebugStringConvertibleP", "green"]
@@ -64,6 +66,7 @@ depends-member:
 - ["s17CustomReflectableP", "init"]
 - !private ["s23CustomStringConvertibleP", "append"]
 - ["s23CustomStringConvertibleP", "appendingPathComponent"]
+- !private ["s23CustomStringConvertibleP", "archiveRootObject"]
 - ["s23CustomStringConvertibleP", "default"]
 - ["s23CustomStringConvertibleP", "first"]
 - !private ["s23CustomStringConvertibleP", "green"]
@@ -83,6 +86,7 @@ depends-member:
 - ["s9EncodableP", "init"]
 - !private ["s9EncodableP", "path"]
 - ["s9EquatableP", "appendingPathComponent"]
+- !private ["s9EquatableP", "archiveRootObject"]
 - ["s9EquatableP", "default"]
 - ["s9EquatableP", "documentDirectory"]
 - !private ["s9EquatableP", "green"]
@@ -102,6 +106,7 @@ depends-member:
 - ["So11FileManagerC", "default"]
 - ["So11FileManagerC", "urls"]
 - ["s8HashableP", "appendingPathComponent"]
+- !private ["s8HashableP", "archiveRootObject"]
 - ["s8HashableP", "default"]
 - ["s8HashableP", "documentDirectory"]
 - !private ["s8HashableP", "green"]
@@ -115,6 +120,7 @@ depends-member:
 - !private ["s17MutableCollectionP", "append"]
 - ["s17MutableCollectionP", "first"]
 - !private ["s17MutableCollectionP", "init"]
+- !private ["So7NSCoderC", "archiveRootObject"]
 - !private ["So7NSCoderC", "unarchiveObject"]
 - !private ["So8NSCodingP", "green"]
 - ["So8NSCodingP", "init"]
@@ -128,13 +134,16 @@ depends-member:
 - !private ["So21NSItemProviderWritingP", "green"]
 - ["So21NSItemProviderWritingP", "init"]
 - !private ["So21NSItemProviderWritingP", "red"]
+- !private ["So15NSKeyedArchiverC", "archiveRootObject"]
 - !private ["So17NSKeyedUnarchiverC", "unarchiveObject"]
 - ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "archiveRootObject"]
 - ["So8NSObjectC", "default"]
 - !private ["So8NSObjectC", "green"]
 - !private ["So8NSObjectC", "red"]
 - !private ["So8NSObjectC", "unarchiveObject"]
 - ["So8NSObjectC", "urls"]
+- !private ["So16NSObjectProtocolP", "archiveRootObject"]
 - ["So16NSObjectProtocolP", "default"]
 - !private ["So16NSObjectProtocolP", "green"]
 - ["So16NSObjectProtocolP", "init"]
@@ -195,6 +204,7 @@ depends-member:
 - !private ["s14_IndexableBaseP", "append"]
 - ["s14_IndexableBaseP", "first"]
 - ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "archiveRootObject"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "default"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "green"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
@@ -244,6 +254,7 @@ depends-nominal:
 - "So9NSCopyingP"
 - "So21NSItemProviderReadingP"
 - "So21NSItemProviderWritingP"
+- !private "So15NSKeyedArchiverC"
 - !private "So17NSKeyedUnarchiverC"
 - "So16NSMutableCopyingP"
 - "So8NSObjectC"
@@ -288,6 +299,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaMQTT/CocoaMQTT.framework/Modules/CocoaMQTT.swiftmodule/arm64.swiftmodule"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/ChromaColorPicker/ChromaColorPicker.framework/Modules/ChromaColorPicker.swiftmodule/arm64.swiftmodule"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/SwiftyTimer/SwiftyTimer.framework/Modules/SwiftyTimer.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
@@ -305,6 +317,7 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT-umbrella.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/ChromaColorPicker/ChromaColorPicker.framework/Headers/ChromaColorPicker-umbrella.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/SwiftyTimer/SwiftyTimer.framework/Headers/SwiftyTimer-umbrella.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/CocoaAsyncSocket-umbrella.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
@@ -344,6 +357,7 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/ChromaColorPicker/ChromaColorPicker.framework/Headers/ChromaColorPicker.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
@@ -360,6 +374,7 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncSocket.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncUdpSocket.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT-Swift.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/ChromaColorPicker/ChromaColorPicker.framework/Headers/ChromaColorPicker-Swift.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/SwiftyTimer/SwiftyTimer.framework/Headers/SwiftyTimer-Swift.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
@@ -376,7 +391,8 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/ChromaColorPicker/ChromaColorPicker.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/SwiftyTimer/SwiftyTimer.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework/Modules/module.modulemap"
-interface-hash: "9903b70c5aee4ff0988839f1573d0735"
+interface-hash: "24879fe484ac24909366c3c93c770f69"

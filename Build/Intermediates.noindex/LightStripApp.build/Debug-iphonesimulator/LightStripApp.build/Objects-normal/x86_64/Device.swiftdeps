@@ -181,6 +181,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Modules/CocoaMQTT.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Modules/ChromaColorPicker.swiftmodule/x86_64.swiftmodule"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Modules/SwiftyTimer.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"

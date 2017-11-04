@@ -83,7 +83,6 @@ depends-member:
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "titleTextField"]
 - ["s7CVarArgP", ""]
-- !private ["9CocoaMQTT0A12MQTTDelegateP", "favoriteStore"]
 - !private ["s10CollectionP", "count"]
 - !private ["s10CollectionP", "init"]
 - !private ["s10CollectionP", "name"]
@@ -520,7 +519,6 @@ depends-nominal:
 - !private "s23BidirectionalCollectionP"
 - "So15CALayerDelegateP"
 - "s7CVarArgP"
-- !private "9CocoaMQTT0A12MQTTDelegateP"
 - !private "s10CollectionP"
 - !private "s10ComparableP"
 - "s28CustomDebugStringConvertibleP"

@@ -40,7 +40,7 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegateFlowLayo
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let tab = self.parent as! HomeTabViewController
-        tab.navigationItem.title = "Favorite"
+        tab.navigationItem.title = "Favorites"
     }
 
     override func didReceiveMemoryWarning() {

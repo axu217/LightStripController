@@ -108,22 +108,10 @@
                         <viewControllerLayoutGuide type="top" id="VAu-zi-B0O"/>
                         <viewControllerLayoutGuide type="bottom" id="6hg-JW-VvH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="PsV-yz-o2J">
+                    <view key="view" contentMode="scaleToFill" id="EFk-Pa-AKX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIt-aS-8yt">
-                                <rect key="frame" x="155" y="323" width="65" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="rIt-aS-8yt" firstAttribute="centerX" secondItem="PsV-yz-o2J" secondAttribute="centerX" id="6XK-Ld-WeB"/>
-                            <constraint firstItem="rIt-aS-8yt" firstAttribute="centerY" secondItem="PsV-yz-o2J" secondAttribute="centerY" id="a8u-BP-OMX"/>
-                        </constraints>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" id="qJl-tC-nhM"/>
                     <connections>
@@ -273,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HzB-zJ-86A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2636" y="3626.5367316341831"/>
+            <point key="canvasLocation" x="-2655" y="3665"/>
         </scene>
         <!--Colors Collection View Controller-->
         <scene sceneID="Fzr-gt-7uj">
@@ -286,7 +274,7 @@
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="726-zS-Wgb">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="50" height="50"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
@@ -299,6 +287,10 @@
                                 </view>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hHw-mq-OKa">
+                            <rect key="frame" x="0.0" y="50" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="lF3-BQ-U1R" id="EYC-dD-7nu"/>
                             <outlet property="delegate" destination="lF3-BQ-U1R" id="eJy-Y9-ohd"/>
@@ -323,8 +315,25 @@
                     <view key="view" contentMode="scaleToFill" id="wea-sS-3Yq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HV8-dJ-bcP">
+                                <rect key="frame" x="37" y="183" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="HMx-dx-1nZ"/>
+                                    <constraint firstAttribute="height" constant="300" id="ZtM-hi-N2G"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HV8-dJ-bcP" firstAttribute="centerX" secondItem="wea-sS-3Yq" secondAttribute="centerX" id="MxO-an-3c5"/>
+                            <constraint firstItem="HV8-dJ-bcP" firstAttribute="centerY" secondItem="wea-sS-3Yq" secondAttribute="centerY" id="RtV-EO-cZf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pickerView" destination="HV8-dJ-bcP" id="MKD-YV-iyO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93Q-nW-TIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

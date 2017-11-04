@@ -12,23 +12,30 @@ import Firebase
 
 class NetworkHelper {
     
-    static var mqttSession: MQTTSession? = nil
+    static var mqtt: CocoaMQTT?
+    static let server = "m10.cloudmqtt.com"
+    static let username = "hgebmcpm"
+    static let password = "5uJEHMv4KHmQ"
+    static let port = 12387
     
-    static func connectWithDelegate(delegate: CocoaMQTTDelegate){
-        let mqttSession = MQTTSession()
+    static func connect(){
         
-        self.mqttSession = mqttSession
+        let clientID = "CocoaMQTT-" + String(ProcessInfo().processIdentifier)
+        let newMQTT = CocoaMQTT(clientID: clientID, host: server, port: UInt16(port))
+        newMQTT.username = username
+        newMQTT.password = password
+        newMQTT.keepAlive = 60
+        newMQTT.delegate = MQTTDelegate()
+        newMQTT.connect()
+        self.mqtt = newMQTT
         
-        mqttSession.mqtt.delegate = delegate
-        mqttSession.mqtt.connect()
     }
     
     static func publish(message: String) {
         let uuid = UserDefaults.standard.object(forKey: "uuid") as! String
-        
-
-        self.mqttSession!.mqtt.publish(uuid + "_cc", withString: message)
+        self.mqtt!.publish(uuid + "_cc", withString: message)
     }
+    
    
     
 }
