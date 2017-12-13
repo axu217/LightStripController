@@ -11,25 +11,23 @@ import Firebase
 
 class UserViewController: UIViewController {
     
+    static let navTitle = "User"
+    
     @IBOutlet var logoutButton: UIButton!
     
     @IBAction func logOut(sender: UIButton) {
         try! Auth.auth().signOut()
         
-        UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
+        let _ = AppMeta.AppDelegate.deviceStore.saveChanges()
+        AppMeta.AppDelegate.colorStore.saveChanges()
         
+        UserDefaults.standard.set(false, forKey: Constants.isUserLoggedIn)
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let loginScreenViewController: LoginScreenViewController = storyboard.instantiateViewController(withIdentifier: "LoginScreenViewController") as! LoginScreenViewController
-        loginScreenViewController.view.layoutIfNeeded()
-        UIView.transition(with: appDelegate.window!, duration: 0.5, options: .transitionCrossDissolve, animations: {
-            appDelegate.window?.rootViewController = loginScreenViewController
-        }, completion: nil)
+        AppMeta.moveToLogin()
         
- 
     }
     
+
 
     
     override func viewDidLoad() {
@@ -45,7 +43,9 @@ class UserViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let tab = self.parent as! HomeTabViewController
-        tab.navigationItem.title = "User"
+        tab.navigationItem.title = UserViewController.navTitle
+        tab.navigationItem.leftBarButtonItem = nil
+        tab.navigationItem.rightBarButtonItem = nil
     }
     
     

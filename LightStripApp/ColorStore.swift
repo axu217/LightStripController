@@ -33,8 +33,22 @@ class ColorStore {
         allColors.append(color)
     }
     
+    func removeColorByIndex(index: Int) {
+        allColors.remove(at: index)
+    }
+    
     
     func saveChanges() {
         NSKeyedArchiver.archiveRootObject(allColors, toFile: colorArchiveURL.path)
     }
+    
+    func count() -> Int {
+        return allColors.count
+    }
+    
+    func getColorByIndex(index: Int) -> UIColor{
+        return allColors[index]
+    }
+    
+    
 }

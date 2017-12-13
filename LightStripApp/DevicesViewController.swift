@@ -10,17 +10,18 @@ import UIKit
 
 class DevicesViewController: UITableViewController {
 
+    static let navTitle = "Devices"
     var deviceStore: DeviceStore!
     
     @objc func addItem(sender: UIBarButtonItem!) {
-        performSegue(withIdentifier: "addDevice", sender: self)
+        performSegue(withIdentifier: Constants.deviceToAddDevice, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addDevice" {
+        if segue.identifier == Constants.deviceToAddDevice {
             let dest = segue.destination as! AddDeviceViewController
             dest.deviceStore = deviceStore
-        } else if segue.identifier == "controlDevice" {
+        } else if segue.identifier == Constants.deviceToControlDevice {
             if let row = tableView.indexPathForSelectedRow?.row {
                 let device = deviceStore.allDevices[row]
                 let detailViewController = segue.destination as! ColorsCollectionViewController
@@ -50,7 +51,7 @@ class DevicesViewController: UITableViewController {
         
         let tab = self.parent as! HomeTabViewController
         tab.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addItem))
-        tab.navigationItem.title = "Devices"
+        tab.navigationItem.title = DevicesViewController.navTitle
         tab.navigationItem.leftBarButtonItem = editButtonItem
         
         tableView.reloadData()
@@ -59,7 +60,6 @@ class DevicesViewController: UITableViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         let tab = self.parent as! HomeTabViewController
-        tab.navigationItem.rightBarButtonItem = nil
         tab.navigationItem.leftBarButtonItem = nil
     }
     
@@ -74,12 +74,12 @@ extension DevicesViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return deviceStore.allDevices.count
+        return deviceStore.count()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DeviceCell", for: indexPath) as! DeviceCell
-        let device = deviceStore.allDevices[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.deviceTableCell, for: indexPath) as! DeviceCell
+        let device = deviceStore.getDeviceByIndex(index: indexPath.row)
         cell.deviceNameLabel?.text = device.name
         
         return cell
@@ -88,9 +88,9 @@ extension DevicesViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
-            let device = deviceStore.allDevices[indexPath.row]
+            let device = deviceStore.getDeviceByIndex(index: indexPath.row)
             
-            let title = "Delete \(device.name)"
+            let title = "Delete \(device.name!)"
             let message = "Are you sure you want to delete this device?"
             let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
             

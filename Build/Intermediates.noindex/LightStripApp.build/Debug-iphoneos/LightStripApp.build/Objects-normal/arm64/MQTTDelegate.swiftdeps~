@@ -19,13 +19,14 @@ depends-top-level:
 - "CocoaMQTTDelegate"
 - "CocoaMQTTMessage"
 - !private "CocoaMQTTQOS"
+- !private "Constants"
 - !private "Dictionary"
 - "Error"
+- !private "HubCommandHelper"
 - "MQTTDelegate"
 - !private "NSNotification"
 - !private "NotificationCenter"
 - "String"
-- !private "StringLiteralType"
 - "UInt16"
 - !private "UserDefaults"
 - !private "print"
@@ -43,6 +44,8 @@ depends-member:
 - !private ["9CocoaMQTTAAC", "subscribe"]
 - !private ["9CocoaMQTT0A10MQTTClientP", "subscribe"]
 - !private ["9CocoaMQTT0A12MQTTDelegateP", "CocoaMQTTQOS"]
+- !private ["9CocoaMQTT0A12MQTTDelegateP", "Constants"]
+- !private ["9CocoaMQTT0A12MQTTDelegateP", "HubCommandHelper"]
 - !private ["9CocoaMQTT0A12MQTTDelegateP", "NSNotification"]
 - !private ["9CocoaMQTT0A12MQTTDelegateP", "NotificationCenter"]
 - !private ["9CocoaMQTT0A12MQTTDelegateP", "UserDefaults"]
@@ -59,6 +62,8 @@ depends-member:
 - !private ["9CocoaMQTT0A18MQTTReaderDelegateP", "subscribe"]
 - !private ["s10CollectionP", "init"]
 - !private ["s10ComparableP", "init"]
+- !private ["13LightStripApp9ConstantsC", "message"]
+- !private ["13LightStripApp9ConstantsC", "uuid"]
 - !private ["s28CustomDebugStringConvertibleP", "Name"]
 - !private ["s28CustomDebugStringConvertibleP", "default"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
@@ -105,12 +110,15 @@ depends-member:
 - !private ["s8HashableP", "string"]
 - !private ["s8HashableP", "subscribe"]
 - !private ["s8HashableP", "topic"]
+- !private ["13LightStripApp16HubCommandHelperC", "getJSONResponse"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - ["13LightStripApp12MQTTDelegateC", "CocoaMQTT"]
 - ["13LightStripApp12MQTTDelegateC", "CocoaMQTTConnAck"]
 - ["13LightStripApp12MQTTDelegateC", "CocoaMQTTMessage"]
 - !private ["13LightStripApp12MQTTDelegateC", "CocoaMQTTQOS"]
+- !private ["13LightStripApp12MQTTDelegateC", "Constants"]
 - ["13LightStripApp12MQTTDelegateC", "Error"]
+- !private ["13LightStripApp12MQTTDelegateC", "HubCommandHelper"]
 - !private ["13LightStripApp12MQTTDelegateC", "NSNotification"]
 - !private ["13LightStripApp12MQTTDelegateC", "NotificationCenter"]
 - ["13LightStripApp12MQTTDelegateC", "String"]
@@ -199,6 +207,7 @@ depends-nominal:
 - !private "9CocoaMQTT0A18MQTTReaderDelegateP"
 - !private "s10CollectionP"
 - !private "s10ComparableP"
+- !private "13LightStripApp9ConstantsC"
 - !private "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
@@ -211,6 +220,7 @@ depends-nominal:
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "So22GCDAsyncSocketDelegateP"
 - !private "s8HashableP"
+- !private "13LightStripApp16HubCommandHelperC"
 - !private "s25LosslessStringConvertibleP"
 - "13LightStripApp12MQTTDelegateC"
 - !private "s10MirrorPathP"
@@ -348,4 +358,4 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/SwiftyTimer/SwiftyTimer.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework/Modules/module.modulemap"
-interface-hash: "3a42043db41b7fe6138753478c585d3e"
+interface-hash: "075e1e1ba1528cf36c76a17ed16433f6"

@@ -2047,5 +2047,4 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/CocoaMQTT.build/unextended-module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/SwiftyTimer.build/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/CocoaAsyncSocket.build/module.modulemap"
-- "/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 interface-hash: "05ab72f7e292ab5b3ebe6c5b1055500b"

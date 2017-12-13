@@ -26,62 +26,37 @@ class RegisterViewController: UIViewController {
         
         let email = usernameField.text!
         let password = passwordField.text!
-        waitingAlert = UIAlertController(title: "Registering", message: "Please wait for the registration process to complete", preferredStyle: .alert)
+        waitingAlert = UIAlertController.createAlertAndPresent(viewController: self, title: "Registering", message: "Please wait for the registration process to complete")
         
         
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if user != nil {
                 Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                     
-                    guard user != nil else {
-                        print(error.debugDescription)
-                        return
-                    }
-                    
-                    UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
-                    UserDefaults.standard.set(email, forKey: "email")
-                    UserDefaults.standard.set(password, forKey: "password")
-                    UserDefaults.standard.set(self.hubIDField.text!, forKey: "uuid")
+                    UserDefaults.standard.set(true, forKey: Constants.isUserLoggedIn)
+                    UserDefaults.standard.set(email, forKey: Constants.email)
+                    UserDefaults.standard.set(password, forKey: Constants.password)
+                    UserDefaults.standard.set(self.hubIDField.text!, forKey: Constants.uuid)
                     UserDefaults.standard.synchronize()
                     
-                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    let db = (appDelegate.firebaseDB)!
-                    let ref = db.collection("users").document(email)
-                    let data = ["hubID": self.hubIDField.text!]
-                    ref.setData(data)
-                    
-                    NetworkHelper.connect()
-                    
-  
+                    FirebaseHelper.setHubID(email: email, hubID: self.hubIDField.text!)
+                    NetworkFacade.connect()
+                    AppMeta.moveToHomeNav()
                     
                 }
             } else {
                 let str = error?.localizedDescription
                 self.waitingAlert?.title = "Registration Failed"
                 self.waitingAlert?.message = str
-                self.waitingAlert?.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Bruh"), style: .`default`, handler: { _ in
+                self.waitingAlert?.customAddAction(title: "Dismiss") {
                     self.waitingAlert?.dismiss(animated: true, completion: nil)
-                }))
+                }
             }
         }
         
     }
     
-    @objc func didSubscribe() {
-        waitingAlert?.dismiss(animated: true, completion: {
-            let window = UIApplication.shared.keyWindow!
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let navigationController: HomeNavigationController = storyboard.instantiateViewController(withIdentifier: "HomeNavigationController") as! HomeNavigationController
-            navigationController.view.layoutIfNeeded()
-            
-            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
-                window.rootViewController = navigationController
-            }, completion: nil)
-            
-        })
-        
-    }
-    
+
     // MARK: View Methods
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -90,12 +65,11 @@ class RegisterViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let name = NSNotification.Name(rawValue: "subscribeAck")
-        NotificationCenter.default.addObserver(self, selector: #selector(didSubscribe), name: name, object: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(rgb: 0xE8ECEE)
         self.hideKeyboardWhenTappedAround()
     }
 }

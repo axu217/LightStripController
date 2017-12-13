@@ -1,0 +1,10 @@
+version: "Apple Swift version 4.0.1 (swiftlang-900.0.68 clang-900.0.38)"
+options: "f86bd0242e5b404edf83fcd32560cebe"
+build_time: [1510144417, 618616000]
+inputs:
+  "/Volumes/Database/iOS Projects/LightStripApp/Pods/ChromaColorPicker/ChromaColorPicker/ChromaAddButton.swift": [9223372036, 854775807]
+  "/Volumes/Database/iOS Projects/LightStripApp/Pods/ChromaColorPicker/ChromaColorPicker/ChromaColorPicker.swift": [9223372036, 854775807]
+  "/Volumes/Database/iOS Projects/LightStripApp/Pods/ChromaColorPicker/ChromaColorPicker/ChromaHandle.swift": [9223372036, 854775807]
+  "/Volumes/Database/iOS Projects/LightStripApp/Pods/ChromaColorPicker/ChromaColorPicker/ChromaShadeSlider.swift": [9223372036, 854775807]
+  "/Volumes/Database/iOS Projects/LightStripApp/Pods/ChromaColorPicker/ChromaColorPicker/ColorModeToggleButton.swift": [9223372036, 854775807]
+  "/Volumes/Database/iOS Projects/LightStripApp/Pods/ChromaColorPicker/ChromaColorPicker/UIColor+Utilities.swift": [9223372036, 854775807]

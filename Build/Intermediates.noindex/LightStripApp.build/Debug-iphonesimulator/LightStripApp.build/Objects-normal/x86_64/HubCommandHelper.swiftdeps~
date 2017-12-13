@@ -1,17 +1,13 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
 - "HubCommandHelper"
-- "HubCommand"
 provides-nominal:
 - "13LightStripApp16HubCommandHelperC"
-- "13LightStripApp10HubCommandV"
 provides-member:
 - ["13LightStripApp16HubCommandHelperC", ""]
-- ["13LightStripApp10HubCommandV", ""]
 provides-dynamic-lookup:
 depends-top-level:
 - !private "Array"
-- "AssignmentPrecedence"
 - "CastingPrecedence"
 - !private "FloatLiteralType"
 - "HubCommand"
@@ -96,15 +92,7 @@ depends-member:
 - !private ["s8HashableP", "init"]
 - !private ["s8HashableP", "jsonObject"]
 - !private ["s8HashableP", "utf8"]
-- ["13LightStripApp10HubCommandV", "String"]
-- ["13LightStripApp10HubCommandV", "as_c"]
-- ["13LightStripApp10HubCommandV", "cmd"]
-- ["13LightStripApp10HubCommandV", "convertToDictionary"]
-- ["13LightStripApp10HubCommandV", "grp"]
-- ["13LightStripApp10HubCommandV", "init"]
-- ["13LightStripApp10HubCommandV", "msgid"]
-- ["13LightStripApp10HubCommandV", "ser"]
-- ["13LightStripApp10HubCommandV", "uuid"]
+- !private ["13LightStripApp10HubCommandV", "convertToDictionary"]
 - ["13LightStripApp16HubCommandHelperC", "HubCommand"]
 - !private ["13LightStripApp16HubCommandHelperC", "JSONSerialization"]
 - ["13LightStripApp16HubCommandHelperC", "String"]
@@ -247,7 +235,7 @@ depends-nominal:
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s8HashableP"
-- "13LightStripApp10HubCommandV"
+- !private "13LightStripApp10HubCommandV"
 - "13LightStripApp16HubCommandHelperC"
 - !private "So17JSONSerializationC"
 - !private "s25LosslessStringConvertibleP"
@@ -294,6 +282,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Modules/CocoaMQTT.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Modules/ChromaColorPicker.swiftmodule/x86_64.swiftmodule"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Modules/SwiftyTimer.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
@@ -311,6 +300,7 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT-umbrella.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Headers/ChromaColorPicker-umbrella.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Headers/SwiftyTimer-umbrella.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/CocoaAsyncSocket-umbrella.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
@@ -350,6 +340,7 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Headers/ChromaColorPicker.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
@@ -366,6 +357,7 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncSocket.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncUdpSocket.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT-Swift.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Headers/ChromaColorPicker-Swift.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Headers/SwiftyTimer-Swift.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
@@ -382,7 +374,8 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Modules/module.modulemap"
-interface-hash: "a2e76af1a35e348da718e7a97c443a19"
+interface-hash: "2a01a5ba1d969bae844a5ba654618827"

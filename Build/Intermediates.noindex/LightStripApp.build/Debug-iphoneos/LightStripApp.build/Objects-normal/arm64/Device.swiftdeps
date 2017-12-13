@@ -6,96 +6,114 @@ provides-nominal:
 provides-member:
 - ["13LightStripApp6DeviceC", ""]
 provides-dynamic-lookup:
-- "encode"
 depends-top-level:
+- !private "+"
 - "AssignmentPrecedence"
-- "CastingPrecedence"
 - "Device"
-- "NSCoder"
-- "NSCoding"
+- "DictionaryConvertible"
+- "Int"
 - "NSObject"
 - "String"
 - !private "StringLiteralType"
 depends-member:
 - !private ["s23BidirectionalCollectionP", "init"]
-- !private ["s7CVarArgP", "decodeObject"]
-- ["s7CVarArgP", "encode"]
-- ["s7CVarArgP", "encodeWithCoder"]
+- !private ["s7CVarArgP", "Device"]
+- !private ["s7CVarArgP", "cloudIDCounter"]
+- !private ["s7CVarArgP", "cloudId"]
+- ["s7CVarArgP", "dict"]
 - !private ["s7CVarArgP", "id"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "name"]
+- !private ["s7CVarArgP", "subscript"]
 - ["s7CVarArgP", ""]
 - !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
 - !private ["s10ComparableP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "decodeObject"]
-- ["s28CustomDebugStringConvertibleP", "encode"]
-- ["s28CustomDebugStringConvertibleP", "encodeWithCoder"]
+- !private ["s28CustomDebugStringConvertibleP", "Device"]
+- !private ["s28CustomDebugStringConvertibleP", "cloudIDCounter"]
+- !private ["s28CustomDebugStringConvertibleP", "cloudId"]
+- ["s28CustomDebugStringConvertibleP", "dict"]
 - !private ["s28CustomDebugStringConvertibleP", "id"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "name"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
-- !private ["s23CustomStringConvertibleP", "decodeObject"]
-- ["s23CustomStringConvertibleP", "encode"]
-- ["s23CustomStringConvertibleP", "encodeWithCoder"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "Device"]
+- !private ["s23CustomStringConvertibleP", "cloudIDCounter"]
+- !private ["s23CustomStringConvertibleP", "cloudId"]
+- ["s23CustomStringConvertibleP", "dict"]
 - !private ["s23CustomStringConvertibleP", "id"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "name"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s9DecodableP", "init"]
-- ["13LightStripApp6DeviceC", "NSCoder"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["13LightStripApp6DeviceC", "Device"]
+- ["13LightStripApp6DeviceC", "Int"]
 - ["13LightStripApp6DeviceC", "String"]
+- ["13LightStripApp6DeviceC", "cloudIDCounter"]
+- ["13LightStripApp6DeviceC", "cloudId"]
 - ["13LightStripApp6DeviceC", "deinit"]
-- ["13LightStripApp6DeviceC", "encode"]
-- ["13LightStripApp6DeviceC", "encodeWithCoder"]
+- ["13LightStripApp6DeviceC", "dict"]
 - ["13LightStripApp6DeviceC", "id"]
 - ["13LightStripApp6DeviceC", "init"]
 - ["13LightStripApp6DeviceC", "name"]
+- !private ["s10DictionaryV", "subscript"]
+- !private ["13LightStripApp21DictionaryConvertibleP", "Device"]
+- !private ["13LightStripApp21DictionaryConvertibleP", "cloudIDCounter"]
+- !private ["13LightStripApp21DictionaryConvertibleP", "cloudId"]
+- ["13LightStripApp21DictionaryConvertibleP", "dict"]
+- !private ["13LightStripApp21DictionaryConvertibleP", "id"]
+- ["13LightStripApp21DictionaryConvertibleP", "init"]
+- !private ["13LightStripApp21DictionaryConvertibleP", "name"]
+- ["13LightStripApp21DictionaryConvertibleP", ""]
 - !private ["s9EncodableP", "init"]
-- !private ["s9EquatableP", "decodeObject"]
-- ["s9EquatableP", "encode"]
-- ["s9EquatableP", "encodeWithCoder"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "Device"]
+- !private ["s9EquatableP", "cloudIDCounter"]
+- !private ["s9EquatableP", "cloudId"]
+- ["s9EquatableP", "dict"]
 - !private ["s9EquatableP", "id"]
 - ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "name"]
 - ["s9EquatableP", ""]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s8HashableP", "decodeObject"]
-- ["s8HashableP", "encode"]
-- ["s8HashableP", "encodeWithCoder"]
+- !private ["s8HashableP", "Device"]
+- !private ["s8HashableP", "cloudIDCounter"]
+- !private ["s8HashableP", "cloudId"]
+- ["s8HashableP", "dict"]
 - !private ["s8HashableP", "id"]
 - ["s8HashableP", "init"]
 - !private ["s8HashableP", "name"]
 - ["s8HashableP", ""]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
-- !private ["So7NSCoderC", "decodeObject"]
-- !private ["So7NSCoderC", "encode"]
-- ["So8NSCodingP", "encode"]
-- ["So8NSCodingP", "encodeWithCoder"]
-- !private ["So8NSCodingP", "id"]
-- ["So8NSCodingP", "init"]
-- !private ["So8NSCodingP", "name"]
-- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "init"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderWritingP", "init"]
 - !private ["So16NSMutableCopyingP", "init"]
-- ["So8NSObjectC", "NSCoder"]
+- !private ["So8NSObjectC", "Device"]
+- ["So8NSObjectC", "Int"]
 - ["So8NSObjectC", "String"]
-- !private ["So8NSObjectC", "decodeObject"]
-- ["So8NSObjectC", "encode"]
-- ["So8NSObjectC", "encodeWithCoder"]
+- ["So8NSObjectC", "cloudIDCounter"]
+- ["So8NSObjectC", "cloudId"]
+- ["So8NSObjectC", "dict"]
 - ["So8NSObjectC", "id"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "name"]
 - ["So8NSObjectC", ""]
-- !private ["So16NSObjectProtocolP", "decodeObject"]
-- ["So16NSObjectProtocolP", "encode"]
-- ["So16NSObjectProtocolP", "encodeWithCoder"]
+- !private ["So16NSObjectProtocolP", "Device"]
+- !private ["So16NSObjectProtocolP", "cloudIDCounter"]
+- !private ["So16NSObjectProtocolP", "cloudId"]
+- ["So16NSObjectProtocolP", "dict"]
 - !private ["So16NSObjectProtocolP", "id"]
 - ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "name"]
@@ -104,6 +122,7 @@ depends-member:
 - !private ["So8NSStringC", "init"]
 - !private ["s26RangeReplaceableCollectionP", "init"]
 - !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
 - !private ["s12StaticStringV", "init"]
 - !private ["SS", "init"]
 - !private ["s14StringProtocolP", "init"]
@@ -117,15 +136,19 @@ depends-member:
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "subscript"]
 - !private ["s14_IndexableBaseP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "decodeObject"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "encode"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "encodeWithCoder"]
+- !private ["s14_IndexableBaseP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Device"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cloudIDCounter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cloudId"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "dict"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "id"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "name"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s26_RangeReplaceableIndexableP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
@@ -139,16 +162,18 @@ depends-nominal:
 - "s23CustomStringConvertibleP"
 - !private "s9DecodableP"
 - "13LightStripApp6DeviceC"
+- !private "s10DictionaryV"
+- "13LightStripApp21DictionaryConvertibleP"
 - !private "s9EncodableP"
 - "s9EquatableP"
+- !private "s30ExpressibleByDictionaryLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "s8HashableP"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
-- !private "So7NSCoderC"
-- "So8NSCodingP"
+- !private "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So21NSItemProviderReadingP"
 - !private "So21NSItemProviderWritingP"
@@ -277,4 +302,4 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/SwiftyTimer/SwiftyTimer.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphoneos/CocoaAsyncSocket/CocoaAsyncSocket.framework/Modules/module.modulemap"
-interface-hash: "526c63337cfb557d9bb7d1febe215ab3"
+interface-hash: "1dcea3b7d676ebe31780800bf961648c"

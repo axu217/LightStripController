@@ -22,12 +22,7 @@ class AddDeviceViewController: UIViewController {
     
     @IBAction func confirmAdd(sender: UIButton!) {
         
-        let uuid = UserDefaults.standard.object(forKey: "uuid") as! String
-
-        
-        let cmd: HubCommand = HubCommand(cmd: "e_l", grp: "01", uuid: uuid, ser: "123", msgid: "123", as_c: "1")
-        let enterLinkingCommand = HubCommandHelper.createHubCommand(hubCommand: cmd)
-        NetworkHelper.publish(message: enterLinkingCommand)
+        NetworkFacade.enterLinkingMode()
         
         linkTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(checkLink), userInfo: nil, repeats: true)
         timeOutTimer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(timeOut), userInfo: nil, repeats: false)
@@ -37,10 +32,7 @@ class AddDeviceViewController: UIViewController {
     }
     
     @objc func checkLink() {
-        let uuid = UserDefaults.standard.object(forKey: "uuid") as! String
-        let cmd: HubCommand = HubCommand(cmd: "g_ls", grp: "01", uuid: uuid, ser: "123", msgid: "123", as_c: "1")
-        let checkLinkingCommand = HubCommandHelper.createHubCommand(hubCommand: cmd)
-        NetworkHelper.publish(message: checkLinkingCommand)
+        NetworkFacade.checkLinkStatus()
     }
     
     @objc func timeOut() {
@@ -53,34 +45,28 @@ class AddDeviceViewController: UIViewController {
     
     @objc func receivedMessage(notification: NSNotification) {
         let userInfo = notification.userInfo as! [String: AnyObject]
-        let message = userInfo["message"] as! CocoaMQTTMessage
+        let dict = userInfo[Constants.message] as! [String: String]
         
-        let dict = HubCommandHelper.getJSONResponse(text: message.string!)
-        if (dict?.keys.contains("link_status"))! {
-            if dict!["link_status"] == "Linked to new device" {
+        if (dict.keys.contains(Constants.linkStatus))  {
+            let linkStatus = dict[Constants.linkStatus]
+            
+            if linkStatus == AddDeviceViewController.LINKINGSUCCESSFULSTATUS || linkStatus == AddDeviceViewController.ALREADYLINKEDSTATUS {
+                
                 linkTimer?.invalidate()
                 timeOutTimer?.invalidate()
-                waitingAlert!.message = "Linking Successful"
+                
+                if linkStatus == AddDeviceViewController.LINKINGSUCCESSFULSTATUS {
+                    waitingAlert!.message = "Linking Successful"
+                } else {
+                    waitingAlert!.message = "Already Linked"
+                }
+                deviceStore.addDevice(newname: deviceName.text!, newID: (dict[Constants.id]))
+                
                 waitingAlert!.addAction(UIAlertAction(title: NSLocalizedString("Dismiss", comment: "lorem ipsum"), style: .`default`, handler: { _ in
                     self.waitingAlert!.dismiss(animated: true, completion: nil)
+                    self.navigationController!.popViewController(animated: true)
                 }))
-                
-                deviceStore.addDevice(newname: deviceName.text!, newID: (dict!["id"]))
-                
-            } else if dict!["link_status"] == "Device was linked before" {
-                linkTimer?.invalidate()
-                timeOutTimer?.invalidate()
-                waitingAlert!.message = "Already Linked"
-                waitingAlert!.addAction(UIAlertAction(title: NSLocalizedString("Dismiss", comment: "lorem ipsum"), style: .`default`, handler: { _ in
-                    self.waitingAlert!.dismiss(animated: true, completion: {
-                        
-                    })
-                    self.deviceStore.addDevice(newname: self.deviceName.text!, newID: (dict!["id"]))
-                    self.navigationController?.popViewController(animated: true)
-                }))
-                
-                
-                
+   
             } else {
                 
             }
@@ -91,7 +77,7 @@ class AddDeviceViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        let name = NSNotification.Name(rawValue: "MQTTMessageNotification")
+        let name = NSNotification.Name(rawValue: Constants.message)
         NotificationCenter.default.addObserver(self, selector: #selector(receivedMessage(notification:)), name: name, object: nil)
     }
     
@@ -100,10 +86,14 @@ class AddDeviceViewController: UIViewController {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
+  
 
+}
 
+extension AddDeviceViewController {
+    static let ALREADYLINKEDSTATUS = "Device was linked before"
+    static let LINKINGSUCCESSFULSTATUS = "Linked to new device"
     
-
 }
 
 

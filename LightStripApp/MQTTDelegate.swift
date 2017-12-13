@@ -2,24 +2,26 @@
 //  MQTTDelegate.swift
 //  LightStripApp
 //
-//  Created by AXE07 on 10/18/17.
+//  Created by AXE07 on 11/5/17.
 //  Copyright © 2017 ZheChengXu. All rights reserved.
 //
 
+import Foundation
 import CocoaMQTT
 
 class MQTTDelegate: CocoaMQTTDelegate {
     
     func mqtt(_ mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {
         
-        let uuid = UserDefaults.standard.object(forKey: "uuid") as! String
+        
+        let uuid = UserDefaults.standard.object(forKey: Constants.uuid) as! String
         let uuidPost = uuid + "_cc_r"
         mqtt.subscribe(uuidPost, qos: CocoaMQTTQOS.qos2)
         print("did connect ack")
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didPublishMessage message: CocoaMQTTMessage, id: UInt16) {
-        print("did publish")
+        print("did publish" )
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didPublishAck id: UInt16) {
@@ -28,13 +30,15 @@ class MQTTDelegate: CocoaMQTTDelegate {
     
     func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16) {
         print("didReceivedMessage: \(message.string ?? "") with id \(id)")
-        let name = NSNotification.Name(rawValue: "MQTTMessageNotification")
-        NotificationCenter.default.post(name: name, object: self, userInfo: ["message": message.string!, "topic": message.topic])
+        let name = NSNotification.Name(rawValue: Constants.message)
+        
+        let dict = HubCommandHelper.getJSONResponse(text: message.string!)!
+        
+        NotificationCenter.default.post(name: name, object: self, userInfo: [Constants.message: dict, "topic": message.topic])
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopic topic: String) {
-        let name = NSNotification.Name(rawValue: "subscribeAck")
-        NotificationCenter.default.post(name: name, object: self)
+        print("did subscribe to \(topic)")
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didUnsubscribeTopic topic: String) {
@@ -51,9 +55,5 @@ class MQTTDelegate: CocoaMQTTDelegate {
     
     func mqttDidDisconnect(_ mqtt: CocoaMQTT, withError err: Error?) {
         print("did disconnect")
-    }
-    
-    init() {
-        
     }
 }

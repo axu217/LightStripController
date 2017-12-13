@@ -1,5 +1,5 @@
 version: "Apple Swift version 4.0.1 (swiftlang-900.0.68 clang-900.0.38)"
 options: "e25e859e7254319e7b1fddbc66bbdb6a"
-build_time: [1509486724, 589827000]
+build_time: [1512054244, 439792000]
 inputs:
   "/Volumes/Database/iOS Projects/LightStripApp/Pods/SwiftyTimer/Sources/SwiftyTimer.swift": [1508293737, 0]

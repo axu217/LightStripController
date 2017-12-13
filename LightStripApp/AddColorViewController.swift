@@ -11,11 +11,6 @@ import ChromaColorPicker
 
 class AddColorViewController: UIViewController, ChromaColorPickerDelegate {
     
-    func colorPickerDidChooseColor(_ colorPicker: ChromaColorPicker, color: UIColor) {
-        colorStore.addColor(color: chromaColorPicker.currentColor)
-        navigationController?.popViewController(animated: true)
-    }
-    
     @IBOutlet var pickerView: UIView!
     
     var chromaColorPicker: ChromaColorPicker!
@@ -25,6 +20,11 @@ class AddColorViewController: UIViewController, ChromaColorPickerDelegate {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             return appDelegate.colorStore
         }
+    }
+    
+    func colorPickerDidChooseColor(_ colorPicker: ChromaColorPicker, color: UIColor) {
+        colorStore.addColor(color: chromaColorPicker.currentColor)
+        navigationController?.popViewController(animated: true)
     }
     // MARK: View Methods
     

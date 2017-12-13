@@ -5,15 +5,20 @@ provides-member:
 - ["So7UIColorC", ""]
 - ["So7UIColorC", "init"]
 - ["So7UIColorC", "init"]
+- ["So7UIColorC", "redValue"]
+- ["So7UIColorC", "greenValue"]
+- ["So7UIColorC", "blueValue"]
 provides-dynamic-lookup:
 depends-top-level:
 - !private "&"
 - !private "&&"
+- !private "*"
 - !private "/"
 - !private "<="
 - !private ">="
 - !private ">>"
 - !private "CGFloat"
+- !private "CIColor"
 - "Int"
 - !private "StringLiteralType"
 - "UIColor"
@@ -21,63 +26,127 @@ depends-top-level:
 depends-member:
 - !private ["s23BidirectionalCollectionP", "init"]
 - !private ["s19BinaryFloatingPointP", "init"]
+- !private ["s13BinaryIntegerP", "init"]
 - !private ["12CoreGraphics7CGFloatV", "init"]
+- !private ["So7CIColorC", "blue"]
+- !private ["So7CIColorC", "green"]
+- !private ["So7CIColorC", "init"]
+- !private ["So7CIColorC", "red"]
 - !private ["s7CVarArgP", "CGFloat"]
+- !private ["s7CVarArgP", "CIColor"]
+- !private ["s7CVarArgP", "Int"]
 - !private ["s7CVarArgP", "assert"]
+- !private ["s7CVarArgP", "blue"]
+- !private ["s7CVarArgP", "green"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "red"]
 - !private ["s10CollectionP", "init"]
 - !private ["s10ComparableP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "CGFloat"]
+- !private ["s28CustomDebugStringConvertibleP", "CIColor"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
 - !private ["s28CustomDebugStringConvertibleP", "assert"]
+- !private ["s28CustomDebugStringConvertibleP", "blue"]
+- !private ["s28CustomDebugStringConvertibleP", "green"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "red"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s23CustomStringConvertibleP", "CGFloat"]
+- !private ["s23CustomStringConvertibleP", "CIColor"]
+- !private ["s23CustomStringConvertibleP", "Int"]
 - !private ["s23CustomStringConvertibleP", "assert"]
+- !private ["s23CustomStringConvertibleP", "blue"]
+- !private ["s23CustomStringConvertibleP", "green"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "red"]
 - !private ["s9DecodableP", "init"]
 - !private ["s9EncodableP", "init"]
 - !private ["s9EquatableP", "CGFloat"]
+- !private ["s9EquatableP", "CIColor"]
+- !private ["s9EquatableP", "Int"]
 - !private ["s9EquatableP", "assert"]
+- !private ["s9EquatableP", "blue"]
+- !private ["s9EquatableP", "green"]
 - !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "red"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s17FixedWidthIntegerP", "init"]
 - !private ["s13FloatingPointP", "init"]
 - !private ["s8HashableP", "CGFloat"]
+- !private ["s8HashableP", "CIColor"]
+- !private ["s8HashableP", "Int"]
 - !private ["s8HashableP", "assert"]
+- !private ["s8HashableP", "blue"]
+- !private ["s8HashableP", "green"]
 - !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "red"]
+- !private ["Si", "init"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["So8NSCodingP", "CGFloat"]
+- !private ["So8NSCodingP", "CIColor"]
+- !private ["So8NSCodingP", "Int"]
 - !private ["So8NSCodingP", "assert"]
+- !private ["So8NSCodingP", "blue"]
+- !private ["So8NSCodingP", "green"]
 - !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "red"]
 - !private ["So9NSCopyingP", "CGFloat"]
+- !private ["So9NSCopyingP", "CIColor"]
+- !private ["So9NSCopyingP", "Int"]
 - !private ["So9NSCopyingP", "assert"]
+- !private ["So9NSCopyingP", "blue"]
+- !private ["So9NSCopyingP", "green"]
 - !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "red"]
 - !private ["So21NSItemProviderReadingP", "CGFloat"]
+- !private ["So21NSItemProviderReadingP", "CIColor"]
+- !private ["So21NSItemProviderReadingP", "Int"]
 - !private ["So21NSItemProviderReadingP", "assert"]
 - !private ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderWritingP", "CGFloat"]
+- !private ["So21NSItemProviderWritingP", "CIColor"]
+- !private ["So21NSItemProviderWritingP", "Int"]
 - !private ["So21NSItemProviderWritingP", "assert"]
 - !private ["So21NSItemProviderWritingP", "init"]
 - !private ["So16NSMutableCopyingP", "init"]
 - !private ["So8NSObjectC", "CGFloat"]
+- !private ["So8NSObjectC", "CIColor"]
 - ["So8NSObjectC", "Int"]
 - !private ["So8NSObjectC", "assert"]
+- !private ["So8NSObjectC", "blue"]
+- ["So8NSObjectC", "blueValue"]
+- !private ["So8NSObjectC", "green"]
+- ["So8NSObjectC", "greenValue"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "red"]
+- ["So8NSObjectC", "redValue"]
 - !private ["So16NSObjectProtocolP", "CGFloat"]
+- !private ["So16NSObjectProtocolP", "CIColor"]
+- !private ["So16NSObjectProtocolP", "Int"]
 - !private ["So16NSObjectProtocolP", "assert"]
+- !private ["So16NSObjectProtocolP", "blue"]
+- !private ["So16NSObjectProtocolP", "green"]
 - !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "red"]
 - !private ["So14NSSecureCodingP", "CGFloat"]
+- !private ["So14NSSecureCodingP", "CIColor"]
+- !private ["So14NSSecureCodingP", "Int"]
 - !private ["So14NSSecureCodingP", "assert"]
+- !private ["So14NSSecureCodingP", "blue"]
+- !private ["So14NSSecureCodingP", "green"]
 - !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "red"]
 - !private ["So8NSStringC", "init"]
 - !private ["s7NumericP", "init"]
 - !private ["s26RangeReplaceableCollectionP", "init"]
 - !private ["s8SequenceP", "init"]
+- !private ["s13SignedIntegerP", "init"]
 - !private ["s13SignedNumericP", "init"]
 - !private ["s12StaticStringV", "init"]
 - !private ["s10StrideableP", "init"]
@@ -86,17 +155,25 @@ depends-member:
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["So7UIColorC", "CGFloat"]
+- !private ["So7UIColorC", "CIColor"]
 - ["So7UIColorC", "Int"]
 - !private ["So7UIColorC", "assert"]
+- ["So7UIColorC", "blueValue"]
+- ["So7UIColorC", "greenValue"]
 - ["So7UIColorC", "init"]
+- ["So7UIColorC", "redValue"]
 - !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
 - !private ["s15_CVarArgAlignedP", "init"]
 - !private ["s22_CVarArgPassedAsDoubleP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "CGFloat"]
+- !private ["s26_ExpressibleByColorLiteralP", "CIColor"]
+- !private ["s26_ExpressibleByColorLiteralP", "Int"]
 - !private ["s26_ExpressibleByColorLiteralP", "assert"]
 - !private ["s26_ExpressibleByColorLiteralP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
@@ -104,8 +181,13 @@ depends-member:
 - !private ["s10_IndexableP", "init"]
 - !private ["s14_IndexableBaseP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGFloat"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CIColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "assert"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "blue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "green"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "red"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s26_RangeReplaceableIndexableP", "init"]
 - !private ["s11_StrideableP", "init"]
@@ -113,7 +195,9 @@ depends-member:
 depends-nominal:
 - !private "s23BidirectionalCollectionP"
 - !private "s19BinaryFloatingPointP"
+- !private "s13BinaryIntegerP"
 - !private "12CoreGraphics7CGFloatV"
+- !private "So7CIColorC"
 - !private "s7CVarArgP"
 - !private "s10CollectionP"
 - !private "s10ComparableP"
@@ -129,8 +213,10 @@ depends-nominal:
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s17FixedWidthIntegerP"
 - !private "s13FloatingPointP"
 - !private "s8HashableP"
+- !private "Si"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - !private "So8NSCodingP"
@@ -145,6 +231,7 @@ depends-nominal:
 - !private "s7NumericP"
 - !private "s26RangeReplaceableCollectionP"
 - !private "s8SequenceP"
+- !private "s13SignedIntegerP"
 - !private "s13SignedNumericP"
 - !private "s12StaticStringV"
 - !private "s10StrideableP"
@@ -154,9 +241,11 @@ depends-nominal:
 - !private "s20TextOutputStreamableP"
 - "So7UIColorC"
 - !private "s23_BidirectionalIndexableP"
+- !private "s18_BitwiseOperationsP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
 - !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
@@ -174,6 +263,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Modules/CocoaMQTT.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Modules/ChromaColorPicker.swiftmodule/x86_64.swiftmodule"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Modules/SwiftyTimer.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
@@ -191,6 +281,7 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT-umbrella.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Headers/ChromaColorPicker-umbrella.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Headers/SwiftyTimer-umbrella.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/CocoaAsyncSocket-umbrella.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
@@ -230,6 +321,7 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Headers/ChromaColorPicker.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
@@ -246,6 +338,7 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncSocket.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncUdpSocket.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT-Swift.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Headers/ChromaColorPicker-Swift.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Headers/SwiftyTimer-Swift.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
@@ -262,7 +355,8 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Modules/module.modulemap"
-interface-hash: "e36c92905f445e91dcb64cbe875666b3"
+interface-hash: "82a0f235570bff5441c1177fbc1cbdd9"

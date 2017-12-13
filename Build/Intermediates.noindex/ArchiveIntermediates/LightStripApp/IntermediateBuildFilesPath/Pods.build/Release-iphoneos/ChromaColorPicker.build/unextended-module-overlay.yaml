@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Volumes/Database/iOS Projects/LightStripApp/Build/Intermediates.noindex/ArchiveIntermediates/LightStripApp/BuildProductsPath/Release-iphoneos/ChromaColorPicker/ChromaColorPicker.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Volumes/Database/iOS Projects/LightStripApp/Build/Intermediates.noindex/ArchiveIntermediates/LightStripApp/IntermediateBuildFilesPath/Pods.build/Release-iphoneos/ChromaColorPicker.build/unextended-module.modulemap',
+    }]
+  }]
+}

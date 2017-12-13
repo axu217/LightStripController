@@ -7,273 +7,230 @@ provides-member:
 - ["13LightStripApp11DeviceStoreC", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "=="
 - "AssignmentPrecedence"
-- "Bool"
-- "CastingPrecedence"
 - "Device"
 - "DeviceStore"
-- "FileManager"
-- !private "NSKeyedArchiver"
-- !private "NSKeyedUnarchiver"
+- !private "FirebaseHelper"
+- "Int"
 - "String"
-- "StringLiteralType"
-- "URL"
 depends-member:
 - !private ["Sa", "append"]
-- ["Sa", "first"]
+- !private ["Sa", "count"]
+- !private ["Sa", "index"]
 - !private ["Sa", "init"]
+- !private ["Sa", "remove"]
+- !private ["Sa", "subscript"]
 - !private ["s23BidirectionalCollectionP", "append"]
-- ["s23BidirectionalCollectionP", "first"]
-- ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "index"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "remove"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "append"]
-- !private ["s7CVarArgP", "archiveRootObject"]
-- ["s7CVarArgP", "default"]
-- ["s7CVarArgP", "first"]
-- ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "unarchiveObject"]
-- ["s7CVarArgP", "urls"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "index"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "remove"]
+- !private ["s7CVarArgP", "subscript"]
 - !private ["s10CollectionP", "append"]
-- ["s10CollectionP", "first"]
-- ["s10CollectionP", "init"]
-- ["s10ComparableP", "init"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "index"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "remove"]
+- !private ["s10CollectionP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
-- ["s28CustomDebugStringConvertibleP", "appendingPathComponent"]
-- !private ["s28CustomDebugStringConvertibleP", "archiveRootObject"]
-- ["s28CustomDebugStringConvertibleP", "default"]
-- ["s28CustomDebugStringConvertibleP", "first"]
-- ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "path"]
-- !private ["s28CustomDebugStringConvertibleP", "unarchiveObject"]
-- ["s28CustomDebugStringConvertibleP", "urls"]
-- ["s29CustomPlaygroundQuickLookableP", "appendingPathComponent"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
-- !private ["s29CustomPlaygroundQuickLookableP", "path"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "index"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "remove"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "append"]
-- ["s17CustomReflectableP", "first"]
-- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "index"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "remove"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "append"]
-- ["s23CustomStringConvertibleP", "appendingPathComponent"]
-- !private ["s23CustomStringConvertibleP", "archiveRootObject"]
-- ["s23CustomStringConvertibleP", "default"]
-- ["s23CustomStringConvertibleP", "first"]
-- ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "path"]
-- !private ["s23CustomStringConvertibleP", "unarchiveObject"]
-- ["s23CustomStringConvertibleP", "urls"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "index"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "remove"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - !private ["s9DecodableP", "append"]
-- ["s9DecodableP", "appendingPathComponent"]
-- ["s9DecodableP", "first"]
-- ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "path"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "index"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "remove"]
+- !private ["s9DecodableP", "subscript"]
 - !private ["13LightStripApp6DeviceC", "deinit"]
 - !private ["13LightStripApp6DeviceC", "init"]
-- ["13LightStripApp11DeviceStoreC", "Bool"]
 - ["13LightStripApp11DeviceStoreC", "Device"]
-- ["13LightStripApp11DeviceStoreC", "FileManager"]
-- !private ["13LightStripApp11DeviceStoreC", "NSKeyedArchiver"]
-- !private ["13LightStripApp11DeviceStoreC", "NSKeyedUnarchiver"]
+- !private ["13LightStripApp11DeviceStoreC", "FirebaseHelper"]
+- ["13LightStripApp11DeviceStoreC", "Int"]
 - ["13LightStripApp11DeviceStoreC", "String"]
-- ["13LightStripApp11DeviceStoreC", "URL"]
 - ["13LightStripApp11DeviceStoreC", "addDevice"]
 - ["13LightStripApp11DeviceStoreC", "allDevices"]
+- ["13LightStripApp11DeviceStoreC", "count"]
 - ["13LightStripApp11DeviceStoreC", "deinit"]
-- ["13LightStripApp11DeviceStoreC", "deviceArchiveURL"]
+- ["13LightStripApp11DeviceStoreC", "deleteDevice"]
+- ["13LightStripApp11DeviceStoreC", "favoriteDevice"]
+- ["13LightStripApp11DeviceStoreC", "getDeviceByIndex"]
+- ["13LightStripApp11DeviceStoreC", "getFavoriteDevice"]
+- ["13LightStripApp11DeviceStoreC", "getFavoriteDeviceIndex"]
 - ["13LightStripApp11DeviceStoreC", "init"]
 - ["13LightStripApp11DeviceStoreC", "saveChanges"]
+- ["13LightStripApp11DeviceStoreC", "setFavoriteDeviceByIndex"]
+- !private ["13LightStripApp21DictionaryConvertibleP", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
 - !private ["s9EncodableP", "append"]
-- ["s9EncodableP", "appendingPathComponent"]
-- ["s9EncodableP", "first"]
-- ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "path"]
-- ["s9EquatableP", "appendingPathComponent"]
-- !private ["s9EquatableP", "archiveRootObject"]
-- ["s9EquatableP", "default"]
-- ["s9EquatableP", "documentDirectory"]
-- ["s9EquatableP", "init"]
-- !private ["s9EquatableP", "path"]
-- !private ["s9EquatableP", "unarchiveObject"]
-- ["s9EquatableP", "urls"]
-- ["s9EquatableP", "userDomainMask"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "index"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "remove"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
-- ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "index"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
-- ["s25ExpressibleByArrayLiteralP", "userDomainMask"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- ["So11FileManagerC", "default"]
-- ["So11FileManagerC", "urls"]
-- ["s8HashableP", "appendingPathComponent"]
-- !private ["s8HashableP", "archiveRootObject"]
-- ["s8HashableP", "default"]
-- ["s8HashableP", "documentDirectory"]
-- ["s8HashableP", "init"]
-- !private ["s8HashableP", "path"]
-- !private ["s8HashableP", "unarchiveObject"]
-- ["s8HashableP", "urls"]
-- ["s25LosslessStringConvertibleP", "init"]
-- ["s10MirrorPathP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "remove"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["13LightStripApp14FirebaseHelperC", "uploadDeviceStore"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s17MutableCollectionP", "append"]
-- ["s17MutableCollectionP", "first"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "index"]
 - !private ["s17MutableCollectionP", "init"]
-- !private ["So7NSCoderC", "archiveRootObject"]
-- !private ["So7NSCoderC", "unarchiveObject"]
-- ["So8NSCodingP", "init"]
-- ["So9NSCopyingP", "init"]
-- ["So21NSItemProviderReadingP", "init"]
-- ["So21NSItemProviderWritingP", "init"]
-- !private ["So15NSKeyedArchiverC", "archiveRootObject"]
-- !private ["So17NSKeyedUnarchiverC", "unarchiveObject"]
-- ["So16NSMutableCopyingP", "init"]
-- !private ["So8NSObjectC", "archiveRootObject"]
-- ["So8NSObjectC", "default"]
-- !private ["So8NSObjectC", "unarchiveObject"]
-- ["So8NSObjectC", "urls"]
-- !private ["So16NSObjectProtocolP", "archiveRootObject"]
-- ["So16NSObjectProtocolP", "default"]
-- ["So16NSObjectProtocolP", "init"]
-- !private ["So16NSObjectProtocolP", "unarchiveObject"]
-- ["So16NSObjectProtocolP", "urls"]
-- ["So14NSSecureCodingP", "init"]
-- ["So8NSStringC", "init"]
-- ["s9OptionSetP", "userDomainMask"]
+- !private ["s17MutableCollectionP", "remove"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["So16NSObjectProtocolP", "init"]
 - !private ["s22RandomAccessCollectionP", "append"]
-- ["s22RandomAccessCollectionP", "first"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "index"]
 - !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "remove"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
 - !private ["s26RangeReplaceableCollectionP", "append"]
-- ["s26RangeReplaceableCollectionP", "first"]
-- ["s26RangeReplaceableCollectionP", "init"]
-- ["s16RawRepresentableP", "documentDirectory"]
-- ["s16RawRepresentableP", "userDomainMask"]
-- ["10Foundation20ReferenceConvertibleP", "appendingPathComponent"]
-- !private ["10Foundation20ReferenceConvertibleP", "path"]
-- ["So11FileManagerC19SearchPathDirectoryO", "documentDirectory"]
-- ["So11FileManagerC20SearchPathDomainMaskV", "userDomainMask"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "index"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "remove"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
 - !private ["s8SequenceP", "append"]
-- ["s8SequenceP", "first"]
-- ["s8SequenceP", "init"]
-- ["s10SetAlgebraP", "userDomainMask"]
-- ["SS", "init"]
-- ["s14StringProtocolP", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s20TextOutputStreamableP", "init"]
-- ["10Foundation3URLV", "appendingPathComponent"]
-- !private ["10Foundation3URLV", "path"]
+- !private ["s8SequenceP", "count"]
+- !private ["s8SequenceP", "index"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "remove"]
+- !private ["s8SequenceP", "subscript"]
 - !private ["s14_ArrayProtocolP", "append"]
-- ["s14_ArrayProtocolP", "first"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "index"]
 - !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "remove"]
+- !private ["s14_ArrayProtocolP", "subscript"]
 - !private ["s23_BidirectionalIndexableP", "append"]
-- ["s23_BidirectionalIndexableP", "first"]
-- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s23_BidirectionalIndexableP", "count"]
+- !private ["s23_BidirectionalIndexableP", "index"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s23_BidirectionalIndexableP", "remove"]
+- !private ["s23_BidirectionalIndexableP", "subscript"]
 - !private ["s24_DestructorSafeContainerP", "append"]
-- ["s24_DestructorSafeContainerP", "first"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "index"]
 - !private ["s24_DestructorSafeContainerP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- ["s34_ExpressibleByFileReferenceLiteralP", "appendingPathComponent"]
-- !private ["s34_ExpressibleByFileReferenceLiteralP", "path"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
-- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s24_DestructorSafeContainerP", "remove"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s10_IndexableP", "append"]
-- ["s10_IndexableP", "first"]
-- ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "count"]
+- !private ["s10_IndexableP", "index"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "remove"]
+- !private ["s10_IndexableP", "subscript"]
 - !private ["s14_IndexableBaseP", "append"]
-- ["s14_IndexableBaseP", "first"]
-- ["s14_IndexableBaseP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "archiveRootObject"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "default"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "unarchiveObject"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "urls"]
+- !private ["s14_IndexableBaseP", "count"]
+- !private ["s14_IndexableBaseP", "index"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "remove"]
+- !private ["s14_IndexableBaseP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["s17_MutableIndexableP", "append"]
-- ["s17_MutableIndexableP", "first"]
+- !private ["s17_MutableIndexableP", "count"]
+- !private ["s17_MutableIndexableP", "index"]
 - !private ["s17_MutableIndexableP", "init"]
+- !private ["s17_MutableIndexableP", "remove"]
+- !private ["s17_MutableIndexableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
-- ["s21_ObjectiveCBridgeableP", "appendingPathComponent"]
-- ["s21_ObjectiveCBridgeableP", "first"]
-- ["s21_ObjectiveCBridgeableP", "init"]
-- !private ["s21_ObjectiveCBridgeableP", "path"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "index"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "remove"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s22_RandomAccessIndexableP", "append"]
-- ["s22_RandomAccessIndexableP", "first"]
+- !private ["s22_RandomAccessIndexableP", "count"]
+- !private ["s22_RandomAccessIndexableP", "index"]
 - !private ["s22_RandomAccessIndexableP", "init"]
+- !private ["s22_RandomAccessIndexableP", "remove"]
+- !private ["s22_RandomAccessIndexableP", "subscript"]
 - !private ["s26_RangeReplaceableIndexableP", "append"]
-- ["s26_RangeReplaceableIndexableP", "first"]
-- ["s26_RangeReplaceableIndexableP", "init"]
-- ["s16_SwiftStringViewP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "count"]
+- !private ["s26_RangeReplaceableIndexableP", "index"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "remove"]
+- !private ["s26_RangeReplaceableIndexableP", "subscript"]
 depends-nominal:
-- "Sa"
-- "s23BidirectionalCollectionP"
-- "s7CVarArgP"
-- "s10CollectionP"
-- "s10ComparableP"
-- "s28CustomDebugStringConvertibleP"
-- "s29CustomPlaygroundQuickLookableP"
-- "s17CustomReflectableP"
-- "s23CustomStringConvertibleP"
-- "s9DecodableP"
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
 - !private "13LightStripApp6DeviceC"
 - "13LightStripApp11DeviceStoreC"
-- "s9EncodableP"
-- "s9EquatableP"
-- "s25ExpressibleByArrayLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
-- "So11FileManagerC"
-- "s8HashableP"
-- "s25LosslessStringConvertibleP"
-- "s10MirrorPathP"
-- "s17MutableCollectionP"
-- !private "So7NSCoderC"
-- "So8NSCodingP"
-- "So9NSCopyingP"
-- "So21NSItemProviderReadingP"
-- "So21NSItemProviderWritingP"
-- !private "So15NSKeyedArchiverC"
-- !private "So17NSKeyedUnarchiverC"
-- "So16NSMutableCopyingP"
-- "So8NSObjectC"
-- "So16NSObjectProtocolP"
-- "So14NSSecureCodingP"
-- "So8NSStringC"
-- "s9OptionSetP"
-- "s22RandomAccessCollectionP"
-- "s26RangeReplaceableCollectionP"
-- "s16RawRepresentableP"
-- "10Foundation20ReferenceConvertibleP"
-- "So11FileManagerC19SearchPathDirectoryO"
-- "So11FileManagerC20SearchPathDomainMaskV"
-- "s8SequenceP"
-- "s10SetAlgebraP"
-- "SS"
-- "s14StringProtocolP"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
-- "10Foundation3URLV"
-- "s14_ArrayProtocolP"
-- "s23_BidirectionalIndexableP"
-- "s24_DestructorSafeContainerP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- "s34_ExpressibleByBuiltinStringLiteralP"
-- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
-- "s34_ExpressibleByFileReferenceLiteralP"
-- "s33_ExpressibleByStringInterpolationP"
-- "s35_HasCustomAnyHashableRepresentationP"
-- "s10_IndexableP"
-- "s14_IndexableBaseP"
-- "10Foundation27_KeyValueCodingAndObservingP"
-- "s17_MutableIndexableP"
-- "s21_ObjectiveCBridgeableP"
-- "s22_RandomAccessIndexableP"
-- "s26_RangeReplaceableIndexableP"
-- "s16_SwiftStringViewP"
+- !private "13LightStripApp21DictionaryConvertibleP"
+- !private "s9EncodableP"
+- !private "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "13LightStripApp14FirebaseHelperC"
+- !private "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s17MutableCollectionP"
+- !private "So16NSObjectProtocolP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "s14_ArrayProtocolP"
+- !private "s23_BidirectionalIndexableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s17_MutableIndexableP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s22_RandomAccessIndexableP"
+- !private "s26_RangeReplaceableIndexableP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Modules/CocoaMQTT.swiftmodule/x86_64.swiftmodule"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Modules/ChromaColorPicker.swiftmodule/x86_64.swiftmodule"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Modules/SwiftyTimer.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
@@ -291,6 +248,7 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT-umbrella.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Headers/ChromaColorPicker-umbrella.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Headers/SwiftyTimer-umbrella.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/CocoaAsyncSocket-umbrella.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
@@ -330,6 +288,7 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Headers/ChromaColorPicker.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
@@ -346,6 +305,7 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncSocket.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Headers/GCDAsyncUdpSocket.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaMQTT/CocoaMQTT.framework/Headers/CocoaMQTT-Swift.h"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Headers/ChromaColorPicker-Swift.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Headers/SwiftyTimer-Swift.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
@@ -362,7 +322,8 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseFirestore/Frameworks/FirebaseFirestore.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/ChromaColorPicker/ChromaColorPicker.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/SwiftyTimer/SwiftyTimer.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Products/Debug-iphonesimulator/CocoaAsyncSocket/CocoaAsyncSocket.framework/Modules/module.modulemap"
-interface-hash: "79e42a3a681e03f3270597c92ba28daa"
+interface-hash: "0feb8f2cd839ceb70c24f32e1000775c"

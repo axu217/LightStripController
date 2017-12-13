@@ -3438,5 +3438,4 @@ depends-external:
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/Target Support Files/ChromaColorPicker/ChromaColorPicker-umbrella.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Pods/ChromaColorPicker/ChromaColorPicker/ChromaColorPicker.h"
 - "/Volumes/Database/iOS Projects/LightStripApp/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/ChromaColorPicker.build/unextended-module.modulemap"
-- "/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 interface-hash: "9a8fb8d6feba854de7f9902baf5cb7e7"

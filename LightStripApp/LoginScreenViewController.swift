@@ -21,8 +21,7 @@ class LoginScreenViewController: UIViewController, UITextFieldDelegate {
         //Pull UUID from server.
         usernameInput.resignFirstResponder()
         passwordInput.resignFirstResponder()
-        waitingAlert = UIAlertController(title: "Logging In", message: "Connecting to the server", preferredStyle: .alert)
-        self.present(waitingAlert!, animated: true, completion: nil)
+        waitingAlert = UIAlertController.createAlertAndPresent(viewController: self, title: "Logging In", message: "Connecting to the Server")
         
         let email = usernameInput.text!
         let password = passwordInput.text!
@@ -31,32 +30,38 @@ class LoginScreenViewController: UIViewController, UITextFieldDelegate {
             
             if user != nil {
                 
-                UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
-                UserDefaults.standard.set(email, forKey: "email")
-                UserDefaults.standard.set(password, forKey: "password")
-                
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                let docRef = appDelegate.firebaseDB!.collection("users").document(email)
-                docRef.getDocument { (document, error) in
-                    if let document = document {
-                        let dict = document.data() as! [String: String]
-                        let uuid = dict["hubID"]
-                        UserDefaults.standard.set(uuid, forKey: "uuid")
-                    } else {
-                        print((error! as NSError).localizedDescription)
-                    }
-                }
+                UserDefaults.standard.set(true, forKey: Constants.isUserLoggedIn)
+                UserDefaults.standard.set(email, forKey: Constants.email)
+                UserDefaults.standard.set(password, forKey: Constants.password)
                 UserDefaults.standard.synchronize()
                 
-                NetworkHelper.connect()
+                let group = DispatchGroup()
+                group.enter()
+                
+                FirebaseHelper.getHubIDAndSetDefault(email: email, completion: {
+                    NetworkFacade.connect()
+                    group.leave()
+                })
+                
+                group.enter()
+                FirebaseHelper.downloadDeviceStore() { deviceStore in
+                    AppMeta.AppDelegate.deviceStore = deviceStore
+                    group.leave()
+                }
+                
+                group.notify(queue: .main) {
+                    AppMeta.moveToHomeNav()
+                }
                 
             } else {
+                let errorText = error!.localizedDescription
                 self.waitingAlert?.dismiss(animated: true, completion: nil)
-                let alert = UIAlertController(title: "Registration Failed", message: error?.localizedDescription, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Bruh"), style: .`default`, handler: { _ in
+                
+                let alert = UIAlertController.createAlertAndPresent(viewController: self, title: "Login Failed", message: errorText)
+                
+                alert.customAddAction(title: "Dismiss") {
                     alert.dismiss(animated: true, completion: nil)
-                }))
-                self.present(alert, animated: true, completion: nil)
+                }
             }
 
         }
@@ -65,27 +70,10 @@ class LoginScreenViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func register(sender: UIButton) {
         passwordInput.resignFirstResponder()
-        self.performSegue(withIdentifier: "register", sender: self)
+        self.performSegue(withIdentifier: Constants.loginToRegister, sender: self)
     }
     
-    @objc func didSubscribe() {
-        waitingAlert?.dismiss(animated: true, completion: {
-            
-            guard let window = UIApplication.shared.keyWindow else {
-                return
-            }
-            
-            
-            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let navigationController: HomeNavigationController = storyboard.instantiateViewController(withIdentifier: "HomeNavigationController") as! HomeNavigationController
-            navigationController.view.layoutIfNeeded()
-            
-            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
-                window.rootViewController = navigationController
-            }, completion: nil)
-            
-        })
-    }
+
 
     // MARK: View Methods
     
@@ -93,20 +81,12 @@ class LoginScreenViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         passwordInput.delegate = self
+        view.backgroundColor = UIColor(rgb: 0xE8ECEE)
       
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
         super.viewWillDisappear(animated)
     }
-    override func viewWillAppear(_ animated: Bool) {
-        let name = NSNotification.Name(rawValue: "subscribeAck")
-        NotificationCenter.default.addObserver(self, selector: #selector(didSubscribe), name: name, object: nil)
-    }
-    
-    
-        
-    
 }

@@ -11,34 +11,53 @@ import Foundation
 class DeviceStore {
     
     var allDevices: [Device]
-    
-    let deviceArchiveURL: URL = {
-        let documentsDirectories = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let documentDirectory = documentsDirectories.first!
-        return documentDirectory.appendingPathComponent("devices.archive")
-    }()
+    var favoriteDevice: Device?
     
     init() {
-        if let archivedItems = NSKeyedUnarchiver.unarchiveObject(withFile: deviceArchiveURL.path) as? [Device] {
-            allDevices = archivedItems
-        } else {
-            allDevices = [Device]()
-        }
-        
+        allDevices = [Device]()   
     }
     
     func addDevice(newname: String!, newID: String!) {
         allDevices.append(Device(newname: newname, newID: newID))
+        
     }
     
-    func saveChanges() -> Bool {
-        return NSKeyedArchiver.archiveRootObject(allDevices, toFile: deviceArchiveURL.path)
+    func saveChanges() {
+        FirebaseHelper.uploadDeviceStore(deviceStore: self)
+    }
+    
+    func getFavoriteDevice() -> Device?{
+        return favoriteDevice
+    }
+    
+    func getFavoriteDeviceIndex() -> Int? {
+        if let existingFavorite = favoriteDevice {
+            return allDevices.index(of: existingFavorite)
+        }
+        return nil
+    }
+    
+    func setFavoriteDeviceByIndex(index: Int) {
+        favoriteDevice = allDevices[index]
     }
     
     func deleteDevice(_ device: Device) {
         if let index = allDevices.index(of: device) {
+            if(allDevices[index] == favoriteDevice) {
+                favoriteDevice = nil
+            }
             allDevices.remove(at: index)
         }
     }
+    
+    func count() -> Int {
+        return allDevices.count
+    }
+    
+    func getDeviceByIndex(index: Int) -> Device{
+        return allDevices[index]
+    }
+    
+
     
 }

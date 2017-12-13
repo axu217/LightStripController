@@ -8,30 +8,34 @@
 
 import Foundation
 
-class Device: NSObject, NSCoding{
+class Device: NSObject, DictionaryConvertible{
     
     var name: String!
+    var cloudId: String!
+    static var cloudIDCounter: Int! = 0
     var id: String!
     
     init(newname: String!, newID: String!) {
         name = newname
+        cloudId = "\(Device.cloudIDCounter)"
+        Device.cloudIDCounter = Device.cloudIDCounter + 1
         id = newID
         super.init()
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        name = aDecoder.decodeObject(forKey: "name") as! String
-        id = aDecoder.decodeObject(forKey: "id") as! String
 
-        
-        super.init()
-        
+    
+    required convenience init?(dict: [String: String]) {
+        guard let name = dict["name"], let id = dict["id"] else {
+            return nil
+        }
+        self.init(newname: name, newID: id)
     }
     
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(name, forKey: "name")
-        aCoder.encode(id, forKey: "id")
-        
+    var dict:[String : String] {
+        return [
+            "name": name,
+            "id": id
+        ]
     }
     
     

@@ -23,12 +23,8 @@ class HomeTabViewController: UITabBarController {
         let tabDevices = tabBar.items![1]
         tabDevices.image=UIImage(named: "devicesTab.png")?.withRenderingMode(.alwaysOriginal)
         tabDevices.selectedImage=UIImage(named: "devicesTabSelected.png")?.withRenderingMode(.alwaysOriginal)
-        
-        let tabSettings = tabBar.items![2]
-        tabSettings.image=UIImage(named: "settingsTab.png")?.withRenderingMode(.alwaysOriginal)
-        tabSettings.selectedImage=UIImage(named: "settingsTabSelected.png")?.withRenderingMode(.alwaysOriginal)
-        
-        let tabUser = tabBar.items![3]
+                
+        let tabUser = tabBar.items![2]
         tabUser.image=UIImage(named: "userTab.png")?.withRenderingMode(.alwaysOriginal)
         tabUser.selectedImage=UIImage(named: "userTabSelected.png")?.withRenderingMode(.alwaysOriginal)
 
