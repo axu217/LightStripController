@@ -39,9 +39,20 @@ class RegisterViewController: UIViewController {
                     UserDefaults.standard.set(self.hubIDField.text!, forKey: Constants.uuid)
                     UserDefaults.standard.synchronize()
                     
-                    FirebaseHelper.setHubID(email: email, hubID: self.hubIDField.text!)
-                    NetworkFacade.connect()
-                    AppMeta.moveToHomeNav()
+                    let group = DispatchGroup()
+                   
+                    group.enter()
+                    FirebaseHelper.getHubIDAndSetDefault(email: email, completion: {
+                        NetworkFacade.connect {
+                            group.leave()
+                        }
+                    })
+                    
+ 
+                    group.notify(queue: .main) {
+                        self.performSegue(withIdentifier: "registerToHome", sender: self)
+                    }
+                    
                     
                 }
             } else {

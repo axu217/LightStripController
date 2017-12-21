@@ -28,24 +28,29 @@ class SetupViewController: UIViewController {
             let group = DispatchGroup()
             group.enter()
             FirebaseHelper.getHubIDAndSetDefault(email: email) {
-                NetworkFacade.connect()
-                group.leave()
+                NetworkFacade.connect() {
+                    print("done hubid")
+                    
+                    group.leave()
+                }
             }
             
             group.enter()
             FirebaseHelper.downloadDeviceStore() {newStore in
                 AppMeta.AppDelegate.deviceStore = newStore
+                print("got store")
                 group.leave()
             }
             
             group.enter()
             Auth.auth().signIn(withEmail: email, password: password) {
                 (user, error) in
+                print("signed in")
                 group.leave()
             }
 
             group.notify(queue: .main) {
-                self.performSegue(withIdentifier: "setupToHomeNav", sender: nil)
+                self.performSegue(withIdentifier: "setupToHome", sender: nil)
             }
  
         } else {

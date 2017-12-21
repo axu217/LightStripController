@@ -36,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         deviceStore.saveChanges()
         colorStore.saveChanges()
+        NetworkFacade.disconnect()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {

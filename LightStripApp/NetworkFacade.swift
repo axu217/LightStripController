@@ -17,22 +17,38 @@ class NetworkFacade {
     static let username = "hgebmcpm"
     static let password = "5uJEHMv4KHmQ"
     static let port = 12387
+    static var completion: (() -> ())?
     
-    static func connect(){
+    static func connect(completion: @escaping () -> ()){
         
         let clientID = "CocoaMQTT-" + String(ProcessInfo().processIdentifier)
         let newMQTT = CocoaMQTT(clientID: clientID, host: server, port: UInt16(port))
         newMQTT.username = username
         newMQTT.password = password
-        newMQTT.keepAlive = 60
+        newMQTT.keepAlive = 300
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         newMQTT.delegate = appDelegate.mqttdelegate
+        
+        self.completion = completion
+        
+        let name = NSNotification.Name(rawValue: "mqqtSetupDone")
+        NotificationCenter.default.addObserver(self, selector: #selector(NetworkFacade.mqttDone(notification:)), name: name, object: nil)
         newMQTT.connect()
         
-        self.mqtt = newMQTT
         
+        self.mqtt = newMQTT
+
     }
     
+    static func disconnect() {
+        mqtt?.disconnect()
+    }
+    
+    @objc static func mqttDone(notification: NSNotification) {
+        NetworkFacade.completion!()
+        NotificationCenter.default.removeObserver(self)
+    }
+
     static func publish(message: String) {
         self.mqtt!.publish(AppMeta.uuid + "_cc", withString: message)
         print("published to " + "\(AppMeta.uuid)" + "_cc")
@@ -71,6 +87,31 @@ class NetworkFacade {
         NetworkFacade.publishDevicePacket(devPacket: devPacket)
         
     }
+    
+    static func setGradientMode(device: Device) {
+        
+        let devID = device.id!
+        let toID = devID.subString(startIndex: 4, length: 8)
+        let fromID = AppMeta.uuid
+        
+        let packet = LightStripSetPacket(fromID: fromID, toID: toID, mode: "01", data: "")
+        let hexStr = packet.getHex()
+        let devPacket = DeviceCommand(data: hexStr)
+        NetworkFacade.publishDevicePacket(devPacket: devPacket)
+    }
+    
+    static func setTwinkleMode(device: Device) {
+        
+        let devID = device.id!
+        let toID = devID.subString(startIndex: 4, length: 8)
+        let fromID = AppMeta.uuid
+        
+        let packet = LightStripSetPacket(fromID: fromID, toID: toID, mode: "02", data: "")
+        let hexStr = packet.getHex()
+        let devPacket = DeviceCommand(data: hexStr)
+        NetworkFacade.publishDevicePacket(devPacket: devPacket)
+    }
+    
     
     static func getStatus(device: Device){
         let devID = device.id!

@@ -32,11 +32,10 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         let index = sender.selectedSegmentIndex
         if(index == 0) {
-            solidColorsCollectionView.isHidden = false
         } else if (index == 1) {
-            solidColorsCollectionView.isHidden = true
+            NetworkFacade.setGradientMode(device: favoriteDevice)
         } else {
-            solidColorsCollectionView.isHidden = true
+            NetworkFacade.setTwinkleMode(device: favoriteDevice)
         }
     }
     
@@ -60,7 +59,6 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(rgb: 0xE8ECEE)
         solidColorsCollectionView.delegate = self
         solidColorsCollectionView.dataSource = self
         
@@ -71,8 +69,8 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
         } else {
             self.noFavoriteView.isHidden = true
             self.fullView.isHidden = false
-            favoriteTitleLabel.text = favoriteDevice.name
             isNoFavoriteState = false
+            favoriteTitleLabel.text = favoriteDevice.name
         }
     }
     
@@ -92,9 +90,8 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let tab = self.parent as! HomeTabViewController
-        tab.navigationItem.title = FavoriteViewController.title
-        tab.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Select", style: .plain, target: self, action: #selector(selectFavorite))
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Select", style: .plain, target: self, action: #selector(selectFavorite))
         
         NotificationCenter.default.addObserver(self, selector: #selector(handleReceivedStatus), name: NSNotification.Name(rawValue: Constants.message), object: nil)
         
@@ -109,7 +106,7 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
             self.fullView.isHidden = false
             isNoFavoriteState = false
             
-            solidColorsCollectionView?.reloadData()
+            solidColorsCollectionView.reloadData()
             favoriteTitleLabel.text = favoriteDevice.name
             
         }

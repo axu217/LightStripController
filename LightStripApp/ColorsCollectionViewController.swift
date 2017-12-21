@@ -9,10 +9,12 @@
 import UIKit
 import CocoaMQTT
 
-class ColorsCollectionViewController: UICollectionViewController, UIGestureRecognizerDelegate {
+class DeviceControlController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate {
     
     
     var alertController: UIAlertController?
+    
+    @IBOutlet var collectionView: UICollectionView!
     
     var colorStore: ColorStore! {
         get {
@@ -51,7 +53,7 @@ class ColorsCollectionViewController: UICollectionViewController, UIGestureRecog
         super.viewWillAppear(animated)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addColor))
         
-        collectionView?.reloadData()
+        collectionView.reloadData()
         
         let name = NSNotification.Name(rawValue: Constants.message)
         NotificationCenter.default.addObserver(self, selector: #selector(receivedMessage(notification:)), name: name, object: nil)
@@ -65,13 +67,13 @@ class ColorsCollectionViewController: UICollectionViewController, UIGestureRecog
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(rgb: 0xE8ECEE)
-        collectionView!.contentInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        collectionView.contentInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
         
         let lpgr = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(gestureRecognizer:)))
         lpgr.minimumPressDuration = 0.5
         lpgr.delaysTouchesBegan = true
         lpgr.delegate = self
-        self.collectionView?.addGestureRecognizer(lpgr)
+        collectionView?.addGestureRecognizer(lpgr)
     }
     
     @objc func handleLongPress(gestureRecognizer: UILongPressGestureRecognizer) {
@@ -85,7 +87,7 @@ class ColorsCollectionViewController: UICollectionViewController, UIGestureRecog
             let confirmAction = UIAlertAction(title: "Yes", style: .destructive, handler: { (UIAlertAction) in
                 self.colorStore.removeColorByIndex(index: index);
                 alertController.dismiss(animated: true, completion: nil)
-                self.collectionView?.reloadData()
+                self.collectionView.reloadData()
             })
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) in
                 alertController.dismiss(animated: true, completion: nil)
@@ -105,13 +107,13 @@ class ColorsCollectionViewController: UICollectionViewController, UIGestureRecog
     
 }
 
-extension ColorsCollectionViewController {
+extension DeviceControlController {
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return colorStore.count()
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.colorCollectionCell, for: indexPath) as! ColorCell
         cell.backgroundColor = colorStore.getColorByIndex(index: indexPath.row)
         
@@ -119,7 +121,7 @@ extension ColorsCollectionViewController {
         
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let color = colorStore.getColorByIndex(index: indexPath.row)
         
         NetworkFacade.setColor(device: device, color: color)
@@ -132,7 +134,4 @@ extension ColorsCollectionViewController {
         self.present(alertController!, animated: true, completion: nil)
     }
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
 }

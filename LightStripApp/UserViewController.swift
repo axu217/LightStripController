@@ -15,11 +15,13 @@ class UserViewController: UIViewController {
     
     @IBOutlet var logoutButton: UIButton!
     
+    let colorStore = AppMeta.AppDelegate.colorStore
+    
     @IBAction func logOut(sender: UIButton) {
         try! Auth.auth().signOut()
         
         let _ = AppMeta.AppDelegate.deviceStore.saveChanges()
-        AppMeta.AppDelegate.colorStore.saveChanges()
+        colorStore.saveChanges()
         
         UserDefaults.standard.set(false, forKey: Constants.isUserLoggedIn)
         
@@ -27,6 +29,17 @@ class UserViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "userToAddColor") {
+            let dest = segue.destination as! AddColorViewController
+            dest.colorStore = colorStore
+        }
+        
+        if(segue.identifier == "userToRemoveColor") {
+            let dest = segue.destination as! RemoveColorViewController
+            dest.colorStore = colorStore
+        }
+    }
 
 
     
@@ -42,10 +55,8 @@ class UserViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let tab = self.parent as! HomeTabViewController
-        tab.navigationItem.title = UserViewController.navTitle
-        tab.navigationItem.leftBarButtonItem = nil
-        tab.navigationItem.rightBarButtonItem = nil
+        navigationItem.title = UserViewController.navTitle
+        
     }
     
     

@@ -13,10 +13,9 @@ class HomeNavigationController: UINavigationController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        self.navigationBar.barTintColor = UIColor.darkGray
-        self.navigationBar.tintColor = UIColor.white
+        self.navigationBar.barTintColor = UIColor.white
+        self.navigationBar.tintColor = UIColor.blue
         self.navigationBar.isTranslucent = false
-        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
 
     }

@@ -22,17 +22,21 @@ class FirebaseHelper {
         let email = UserDefaults.standard.object(forKey: Constants.email) as! String
         let ref = db.collection(Constants.users).document(email).collection("data").document("devices")
         ref.delete()
+        var data: [String: Any] = [:]
         for device in deviceStore.allDevices {
             let deviceDict = device.dict as AnyObject
-            let data = [device.cloudId: deviceDict]
-            ref.setData(data)
+            data[device.cloudId] = deviceDict
+            
         }
         
         if let index = deviceStore.getFavoriteDeviceIndex() {
-            ref.setData(["favorite": index])
+            
+            data["favorite"] = index
+            
         } else {
-            ref.setData(["favorite": -1])
+            data["favorite"] = -1
         }
+        ref.setData(data)
         
     }
 

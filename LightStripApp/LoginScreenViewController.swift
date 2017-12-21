@@ -36,13 +36,16 @@ class LoginScreenViewController: UIViewController, UITextFieldDelegate {
                 UserDefaults.standard.synchronize()
                 
                 let group = DispatchGroup()
+                
                 group.enter()
                 
                 FirebaseHelper.getHubIDAndSetDefault(email: email, completion: {
-                    NetworkFacade.connect()
-                    group.leave()
+                    NetworkFacade.connect() {
+                        group.leave()
+                    }
                 })
                 
+
                 group.enter()
                 FirebaseHelper.downloadDeviceStore() { deviceStore in
                     AppMeta.AppDelegate.deviceStore = deviceStore
@@ -50,7 +53,7 @@ class LoginScreenViewController: UIViewController, UITextFieldDelegate {
                 }
                 
                 group.notify(queue: .main) {
-                    AppMeta.moveToHomeNav()
+                    self.performSegue(withIdentifier: "loginToHome", sender: self)
                 }
                 
             } else {

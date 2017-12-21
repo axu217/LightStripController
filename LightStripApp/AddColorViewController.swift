@@ -14,13 +14,7 @@ class AddColorViewController: UIViewController, ChromaColorPickerDelegate {
     @IBOutlet var pickerView: UIView!
     
     var chromaColorPicker: ChromaColorPicker!
-    
-    var colorStore: ColorStore! {
-        get {
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            return appDelegate.colorStore
-        }
-    }
+    var colorStore: ColorStore!
     
     func colorPickerDidChooseColor(_ colorPicker: ChromaColorPicker, color: UIColor) {
         colorStore.addColor(color: chromaColorPicker.currentColor)

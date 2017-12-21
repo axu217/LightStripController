@@ -23,8 +23,19 @@ class ColorStore {
             allColors = archivedItems
         } else {
             allColors = [UIColor]()
-            allColors.append(UIColor.green)
-            allColors.append(UIColor.red)
+            allColors.append(UIColor(rgb: 0xF5A623))
+            allColors.append(UIColor(rgb: 0xD0021B))
+            allColors.append(UIColor(rgb: 0xF8E71C))
+            allColors.append(UIColor(rgb: 0x8B572A))
+            
+            allColors.append(UIColor(rgb: 0x7ED321))
+            allColors.append(UIColor(rgb: 0x417505))
+            allColors.append(UIColor(rgb: 0xBD10E0))
+            allColors.append(UIColor(rgb: 0x9013FE))
+            
+            allColors.append(UIColor(rgb: 0x4A90E2))
+            allColors.append(UIColor(rgb: 0x50E3C2))
+            allColors.append(UIColor(rgb: 0xB8E986))
         }
         
     }
