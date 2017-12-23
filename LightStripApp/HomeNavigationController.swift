@@ -13,11 +13,9 @@ class HomeNavigationController: UINavigationController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        self.navigationBar.barTintColor = UIColor.white
-        self.navigationBar.tintColor = UIColor.blue
         self.navigationBar.isTranslucent = false
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
         
-
     }
 
     override func didReceiveMemoryWarning() {

@@ -19,6 +19,7 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet var solidColorsCollectionView: UICollectionView!
     @IBOutlet var fullView: UIView!
     @IBOutlet var noFavoriteView: UIView!
+    @IBOutlet var segmentedControl: UISegmentedControl!
     
     @IBAction func userTurnedOn(_ sender: UIButton) {
         NetworkFacade.turnOnOffDevice(device: favoriteDevice, turnOn: true)
@@ -39,28 +40,22 @@ class FavoriteViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
     }
     
-    var deviceStore: DeviceStore! {
-        get {
-            return AppMeta.AppDelegate.deviceStore
-        }
-    }
+    var deviceStore: DeviceStore! = AppMeta.AppDelegate.deviceStore
     
-    var colorStore: ColorStore! {
-        get {
-            return AppMeta.AppDelegate.colorStore
-        }
-    }
+    var colorStore: ColorStore! = AppMeta.AppDelegate.colorStore
     
-    var favoriteDevice: Device! {
-        get {
-            return deviceStore.favoriteDevice
-        }
-    }
+    var favoriteDevice: Device! = AppMeta.AppDelegate.deviceStore.favoriteDevice
 
     override func viewDidLoad() {
         super.viewDidLoad()
         solidColorsCollectionView.delegate = self
         solidColorsCollectionView.dataSource = self
+        
+        segmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+   
+        segmentedControl.setDividerImage(UIImage(), forLeftSegmentState: UIControlState.selected, rightSegmentState: .normal, barMetrics: .default)
+        
+        segmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .selected, barMetrics: .default)
         
         if(favoriteDevice == nil) {
             self.noFavoriteView.isHidden = false

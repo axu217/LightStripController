@@ -47,10 +47,7 @@ class UserViewController: UIViewController {
         super.viewDidLoad()
         
         
-        view.backgroundColor = UIColor(rgb: 0xE8ECEE)
         logoutButton.layer.cornerRadius = 5
-        logoutButton.backgroundColor = UIColor.red
-        logoutButton.tintColor = UIColor.white
     }
     
     override func viewWillAppear(_ animated: Bool) {
