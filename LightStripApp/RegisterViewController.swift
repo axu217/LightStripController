@@ -23,6 +23,14 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func register(sender: UIButton) {
+        let hubID = self.hubIDField.text!
+        if(hubID.count != 8) {
+            let alert = UIAlertController.createAlertAndPresent(viewController: self, title: "Invalid Hub ID", message: "Please enter a valid 8-digit hub ID found on the back of your hub.")
+            alert.customAddAction(title: "Dismiss") {
+                alert.dismiss(animated: true, completion: nil)
+            }
+            return
+        }
         
         let email = usernameField.text!
         let password = passwordField.text!
@@ -42,11 +50,15 @@ class RegisterViewController: UIViewController {
                     let group = DispatchGroup()
                    
                     group.enter()
-                    FirebaseHelper.getHubIDAndSetDefault(email: email, completion: {
-                        NetworkFacade.connect {
-                            group.leave()
-                        }
-                    })
+                    NetworkFacade.connect {
+                        group.leave()
+                    }
+                    
+                    group.enter()
+                    FirebaseHelper.setHubID(email: email, hubID: hubID) {
+                        group.leave()
+                    }
+                    
                     
  
                     group.notify(queue: .main) {

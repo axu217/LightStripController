@@ -27,20 +27,25 @@ class AddDeviceViewController: UIViewController {
         linkTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(checkLink), userInfo: nil, repeats: true)
         timeOutTimer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(timeOut), userInfo: nil, repeats: false)
         
-        waitingAlert = UIAlertController(title: "Linking", message: "Please wait for device to connect", preferredStyle: .alert)
+        waitingAlert = UIAlertController(title: "Linking", message: "Please wait 30 seconds for the device to connect", preferredStyle: .alert)
+        waitingAlert?.customAddAction(title: "Dismiss", lambda: {
+            self.waitingAlert?.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
+        })
         self.present(waitingAlert!, animated: true, completion: nil)
     }
     
+    @IBAction func back(sender: UIButton!) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @objc func checkLink() {
-        NetworkFacade.checkLinkStatus()
+        NetworkFacade.checkLinkingStatus()
     }
     
     @objc func timeOut() {
         linkTimer!.invalidate()
-        waitingAlert!.message = "Linking Failed"
-        waitingAlert!.addAction(UIAlertAction(title: NSLocalizedString("Dismiss", comment: "lorem ipsum"), style: .`default`, handler: { _ in
-            self.waitingAlert!.dismiss(animated: true, completion: nil)
-        }))
+        waitingAlert!.message = "Linking Failed. Check your hub's connectivity and the hub ID number and try again."
     }
     
     @objc func receivedMessage(notification: NSNotification) {
@@ -61,11 +66,6 @@ class AddDeviceViewController: UIViewController {
                     waitingAlert!.message = "Already Linked"
                 }
                 deviceStore.addDevice(newname: deviceName.text!, newID: (dict[Constants.id]))
-                
-                waitingAlert!.addAction(UIAlertAction(title: NSLocalizedString("Dismiss", comment: "lorem ipsum"), style: .`default`, handler: { _ in
-                    self.waitingAlert!.dismiss(animated: true, completion: nil)
-                    self.navigationController!.popViewController(animated: true)
-                }))
    
             } else {
                 

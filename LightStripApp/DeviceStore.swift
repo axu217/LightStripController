@@ -38,6 +38,7 @@ class DeviceStore {
     }
     
     func setFavoriteDeviceByIndex(index: Int) {
+        print(index)
         favoriteDevice = allDevices[index]
     }
     

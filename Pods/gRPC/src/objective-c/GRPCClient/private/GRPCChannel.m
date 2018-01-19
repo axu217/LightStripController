@@ -205,8 +205,10 @@ static grpc_channel_args *BuildChannelArgs(NSDictionary *dictionary) {
                                              serverName ? &host_slice : NULL,
                                              deadline_ms, NULL);
   if (serverName) {
-    grpc_slice_unref(host_slice);
+      host_slice = grpc_slice_from_copied_string(serverName.UTF8String);
+      grpc_slice_unref(host_slice);
   }
+    
   grpc_slice_unref(path_slice);
   return call;
 }

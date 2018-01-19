@@ -7,69 +7,80 @@
 //
 
 import Foundation
+import Firebase
 
 class FirebaseHelper {
     
     static var db = AppMeta.AppDelegate.firebaseDB!
     
-    static func setHubID(email: String, hubID: String) {
+    static func setHubID(email: String, hubID: String, completion: @escaping () -> ()) {
         let ref = db.collection(Constants.users).document(email)
         let data = [Constants.hubID: hubID]
-        ref.setData(data)
+        ref.setData(data, options: SetOptions.merge()) { (error) in
+            if(error == nil) {
+                completion()
+            }
+        }
     }
     
     static func uploadDeviceStore(deviceStore: DeviceStore) {
         let email = UserDefaults.standard.object(forKey: Constants.email) as! String
-        let ref = db.collection(Constants.users).document(email).collection("data").document("devices")
-        ref.delete()
-        var data: [String: Any] = [:]
+        let ref = db.collection(Constants.users).document(email).collection("devices")
+        
+        
         for device in deviceStore.allDevices {
-            let deviceDict = device.dict as AnyObject
-            data[device.cloudId] = deviceDict
-            
+//case when two devices are named same. get rid of it.
+            ref.document(device.name).setData(device.dict)
         }
         
+        let favRef = db.collection(Constants.users).document(email).collection("devices").document("favorite")
+        var data: [String: Any] = [:]
         if let index = deviceStore.getFavoriteDeviceIndex() {
-            
             data["favorite"] = index
             
         } else {
             data["favorite"] = -1
         }
-        ref.setData(data)
+        favRef.setData(data)
         
     }
 
     static func downloadDeviceStore(completionHandler: @escaping (DeviceStore) -> ()) {
         let email = UserDefaults.standard.object(forKey: Constants.email) as! String
-        let docRef = db.collection(Constants.users).document(email).collection("data").document("devices")
+        let devicesRef = db.collection(Constants.users).document(email).collection("devices")
         let newDeviceStore = DeviceStore()
         
-        docRef.getDocument { (document, error) in
-            if (document?.exists)!{
-                let dict = document!.data()
-                for (key, value) in dict {
-                    if( key != "favorite") {
-                        let deviceDictRep = value as! [String: String]
+        devicesRef.getDocuments { (snapshot, error) in
+            if let unwrappedSnapShot = snapshot {
+                for document in unwrappedSnapShot.documents {
+                    if document.documentID != "favorite" {
+                        let data = document.data()
+                        let deviceDictRep = data as! [String: String]
                         let device = Device(dict: deviceDictRep)
                         newDeviceStore.allDevices.append(device!)
-                    } else {
-                        if value as! Int != -1 {
-                            newDeviceStore.setFavoriteDeviceByIndex(index: value as! Int)
-                        } else {
-                            newDeviceStore.favoriteDevice = nil
-                        }
                     }
-                    
                 }
-                completionHandler(newDeviceStore)
             } else {
-                completionHandler(newDeviceStore)
+                print(error?.localizedDescription ?? "error in reading data")
             }
         }
         
+        let favRef = db.collection(Constants.users).document(email).collection("devices").document("favorite")
         
+        favRef.getDocument() { document, error in
+            
+            if let documentExist = document{
+                let data = documentExist.data()
+                let value = data["favorite"] as! Int
+                if(value != -1) {
+                    newDeviceStore.setFavoriteDeviceByIndex(index: value)
+                }
+            } else {
+                print(error?.localizedDescription ?? "error in reading data")
+            }
+        }
         
+        completionHandler(newDeviceStore)
     }
     
     static func getHubIDAndSetDefault(email: String, completion: @escaping () -> () ){
@@ -86,6 +97,7 @@ class FirebaseHelper {
                 print((error! as NSError).localizedDescription)
             }
         }
+        
     }
     
     

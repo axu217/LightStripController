@@ -12,148 +12,95 @@ import CocoaMQTT
 
 class NetworkFacade {
     
-    static var mqtt: CocoaMQTT?
-    static let server = "m10.cloudmqtt.com"
-    static let username = "hgebmcpm"
-    static let password = "5uJEHMv4KHmQ"
-    static let port = 12387
-    static var completion: (() -> ())?
-    
     static func connect(completion: @escaping () -> ()){
-        
-        let clientID = "CocoaMQTT-" + String(ProcessInfo().processIdentifier)
-        let newMQTT = CocoaMQTT(clientID: clientID, host: server, port: UInt16(port))
-        newMQTT.username = username
-        newMQTT.password = password
-        newMQTT.keepAlive = 300
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        newMQTT.delegate = appDelegate.mqttdelegate
-        
-        self.completion = completion
-        
-        let name = NSNotification.Name(rawValue: "mqqtSetupDone")
-        NotificationCenter.default.addObserver(self, selector: #selector(NetworkFacade.mqttDone(notification:)), name: name, object: nil)
-        newMQTT.connect()
-        
-        
-        self.mqtt = newMQTT
-
+        NetworkActual.connect(completion: completion)
     }
     
     static func disconnect() {
-        mqtt?.disconnect()
+        NetworkActual.disconnect()
     }
-    
-    @objc static func mqttDone(notification: NSNotification) {
-        NetworkFacade.completion!()
-        NotificationCenter.default.removeObserver(self)
-    }
-
-    static func publish(message: String) {
-        self.mqtt!.publish(AppMeta.uuid + "_cc", withString: message)
-        print("published to " + "\(AppMeta.uuid)" + "_cc")
-    }
-    
-    
-    //Higher Level Shit That VC calls
     
     static func enterLinkingMode() {
-        let cmd: HubCommand = HubCommand(cmd: "e_l", grp: "01", uuid: AppMeta.uuid, ser: "123", msgid: "123", as_c: "1")
-        let enterLinkingCommand = HubCommandHelper.createHubCommand(hubCommand: cmd)
-        NetworkFacade.publish(message: enterLinkingCommand)
+        NetworkActual.enterLinkingMode()
     }
     
-    static func checkLinkStatus() {
-  
-        let cmd: HubCommand = HubCommand(cmd: "g_ls", grp: "01", uuid: AppMeta.uuid, ser: "123", msgid: "123", as_c: "1")
-        let checkLinkingCommand = HubCommandHelper.createHubCommand(hubCommand: cmd)
-        NetworkFacade.publish(message: checkLinkingCommand)
-    }
-    
-    static func setColor(device: Device, color: UIColor) {
-        let red = String(format:"%02x", color.redValue)
-        let blue = String(format:"%02x", color.blueValue)
-        let green = String(format:"%02x", color.greenValue)
-        
-        let devID = device.id!
-        let toID = devID.subString(startIndex: 4, length: 8)
-        let fromID = AppMeta.uuid
-        
-        
-        let packet = LightStripSetPacket(fromID: fromID, toID: toID, mode: "00", data: red + green + blue)
-        let hexStr = packet.getHex()
-        let devPacket = DeviceCommand(data: hexStr)
-        
-        NetworkFacade.publishDevicePacket(devPacket: devPacket)
-        
-    }
-    
-    static func setGradientMode(device: Device) {
-        
-        let devID = device.id!
-        let toID = devID.subString(startIndex: 4, length: 8)
-        let fromID = AppMeta.uuid
-        
-        let packet = LightStripSetPacket(fromID: fromID, toID: toID, mode: "01", data: "")
-        let hexStr = packet.getHex()
-        let devPacket = DeviceCommand(data: hexStr)
-        NetworkFacade.publishDevicePacket(devPacket: devPacket)
-    }
-    
-    static func setTwinkleMode(device: Device) {
-        
-        let devID = device.id!
-        let toID = devID.subString(startIndex: 4, length: 8)
-        let fromID = AppMeta.uuid
-        
-        let packet = LightStripSetPacket(fromID: fromID, toID: toID, mode: "02", data: "")
-        let hexStr = packet.getHex()
-        let devPacket = DeviceCommand(data: hexStr)
-        NetworkFacade.publishDevicePacket(devPacket: devPacket)
+    static func checkLinkingStatus() {
+        NetworkActual.checkLinkingStatus()
     }
     
     
-    static func getStatus(device: Device){
-        let devID = device.id!
-        let toID = devID.subString(startIndex: 4, length: 8)
-        let fromID = AppMeta.uuid
-        let packet = LightStripPacket(fromID: fromID, toID: toID, command: "getStatus")
-        let hexStr = packet.getHex()
-        
-        let devPacket = DeviceCommand(data: hexStr)
-        NetworkFacade.publishDevicePacket(devPacket: devPacket)
-        
+    static var getWeekDayScheduleClosure: (([Bool]) -> ())? = nil
+    static var getDeviceStartTimeClosure: ((String) -> ())? = nil
+    static var getDeviceEndTimeClosure: ((String) -> ())? = nil
+    
+    
+    static var getDeviceConnectionStatusClosure: ((Bool) -> ())? = nil
+    static var getDeviceModeClosure: ((LightStripSetMode) -> ())? = nil
+    static var getDeviceColorClosure: ((UIColor) -> ())? = nil
+    static var getDeviceSpeedClosure: ((Int) -> ())? = nil
+
+    
+    
+    static func getDeviceConnectionStatus(completion: @escaping (Bool) -> ()){
+        NetworkFacade.getDeviceConnectionStatusClosure = completion
     }
     
-    static func turnOnOffDevice(device: Device, turnOn: Bool) {
-        let devID = device.id!
-        let toID = devID.subString(startIndex: 4, length: 8)
-        let fromID = AppMeta.uuid
+    static func getDeviceMode(completion: @escaping (LightStripSetMode) -> ()){
+        NetworkFacade.getDeviceModeClosure = completion
+    }
+    
+    static func getDeviceColor(completion: @escaping (UIColor) -> ()) {
+        NetworkFacade.getDeviceColorClosure = completion
+    }
+    
+    static func getDeviceSpeed(completion: @escaping (Int) -> ()) {
+        NetworkFacade.getDeviceSpeedClosure = completion
+    }
+    static func getStatusActual(device: Device) {
         
-        var packet: LightStripSetPacket
-        if(turnOn) {
-            packet = LightStripSetPacket(fromID: fromID, toID: toID, mode: "00", data: "FF")
-        } else {
-            packet = LightStripSetPacket(fromID: fromID, toID: toID, mode: "00", data: "")
+        DispatchQueue.global().async {
+            NetworkBridge.getDeviceStatus(device: device) {isConnected, lightMode, color, speed in
+                guard let getDeviceConnectionStatusClosure = NetworkFacade.getDeviceConnectionStatusClosure else { return }
+                guard let getDeviceModeClosure = NetworkFacade.getDeviceModeClosure else { return }
+
+                DispatchQueue.main.async {
+                    getDeviceConnectionStatusClosure(isConnected)
+                    if(isConnected) {
+                        getDeviceModeClosure(lightMode)
+                    }
+                }
+            }
         }
-        
-       
-        let hexStr = packet.getHex()
-        let devPacket = DeviceCommand(data: hexStr)
-        
-        NetworkFacade.publishDevicePacket(devPacket: devPacket)
     }
     
-    static func publishDevicePacket(devPacket: DeviceCommand) {
+    static func getDeviceWeekdaySchedule(completion: @escaping ([Bool]) -> ()) {
+        NetworkFacade.getWeekDayScheduleClosure = completion
+    }
+    
+    static func getDeviceStartTime(completion: @escaping (String) -> ()){
+        NetworkFacade.getDeviceStartTimeClosure = completion
+    }
+    
+    static func getDeviceEndTime(completion: @escaping (String) -> ()) {
+        NetworkFacade.getDeviceEndTimeClosure = completion
+    }
+    
+    //Key Method
+    static func getScheduleActual(device: Device) {
         
-        let deviceCommandArray: [DeviceCommand] = [devPacket]
-        let dicArray = (deviceCommandArray.map { $0.convertToDictionary() })[0]
-        
-        guard let data = try? JSONSerialization.data(withJSONObject: dicArray, options: .prettyPrinted) else {
-            print("yo error here in JSONserializing the device packet")
-            return
+        DispatchQueue.global().async {
+            NetworkBridge.getDeviceSchedule(device: device) {boolArray, onHour, onMinute, offHour, offMinute in
+                guard let getWeekDayScheduleClosure = NetworkFacade.getWeekDayScheduleClosure else { return }
+                guard let getDeviceStartTimeClosure = NetworkFacade.getDeviceStartTimeClosure else { return }
+                guard let getDeviceEndTimeClosure = NetworkFacade.getDeviceEndTimeClosure else { return }
+                
+                DispatchQueue.main.async {
+                    getWeekDayScheduleClosure(boolArray)
+                    getDeviceStartTimeClosure(onHour + ":" + onMinute)
+                    getDeviceEndTimeClosure(offHour + ":" + offMinute)
+                }
+            }
         }
-        NetworkFacade.publish(message: String(bytes: data, encoding: .utf8)!)
         
     }
     

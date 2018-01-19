@@ -9,10 +9,11 @@
 import UIKit
 import Firebase
 import CocoaMQTT
+import SVProgressHUD
 
 class LoginScreenViewController: UIViewController, UITextFieldDelegate {
     
-    var waitingAlert: UIAlertController?
+  
     
     @IBOutlet var usernameInput: UITextField!
     @IBOutlet var passwordInput: UITextField!
@@ -21,7 +22,9 @@ class LoginScreenViewController: UIViewController, UITextFieldDelegate {
         //Pull UUID from server.
         usernameInput.resignFirstResponder()
         passwordInput.resignFirstResponder()
-        waitingAlert = UIAlertController.createAlertAndPresent(viewController: self, title: "Logging In", message: "Connecting to the Server")
+        SVProgressHUD.show(withStatus: "Logging in")
+        SVProgressHUD.setDefaultMaskType(.black)
+        SVProgressHUD.setMinimumDismissTimeInterval(1)
         
         let email = usernameInput.text!
         let password = passwordInput.text!
@@ -53,18 +56,13 @@ class LoginScreenViewController: UIViewController, UITextFieldDelegate {
                 }
                 
                 group.notify(queue: .main) {
+                    SVProgressHUD.dismiss()
                     self.performSegue(withIdentifier: "loginToHome", sender: self)
                 }
                 
             } else {
                 let errorText = error!.localizedDescription
-                self.waitingAlert?.dismiss(animated: true, completion: nil)
-                
-                let alert = UIAlertController.createAlertAndPresent(viewController: self, title: "Login Failed", message: errorText)
-                
-                alert.customAddAction(title: "Dismiss") {
-                    alert.dismiss(animated: true, completion: nil)
-                }
+                SVProgressHUD.showError(withStatus: errorText)
             }
 
         }

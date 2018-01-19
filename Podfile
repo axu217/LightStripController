@@ -11,5 +11,7 @@ target 'LightStripApp' do
   pod 'Firebase/Firestore'
   pod 'CocoaMQTT', :git => 'https://github.com/manucheri/CocoaMQTT.git'
   pod 'ChromaColorPicker', :git => 'https://github.com/crunchybananas/ChromaColorPicker.git'
+  pod 'SVProgressHUD'
+  pod 'NVActivityIndicatorView'
 
 end

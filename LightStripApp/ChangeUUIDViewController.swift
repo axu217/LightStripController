@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ChangeUUIDViewController: UIViewController, UITextFieldDelegate {
     
@@ -15,7 +16,39 @@ class ChangeUUIDViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var newUUIDTextField: UITextField!
     
     @IBAction func confirmChange(sender: UIButton) {
-        UserDefaults.standard.set(newUUIDTextField.text!, forKey: Constants.uuid)
+        
+        if(newUUIDTextField.text?.count != 8) {
+            let alert = UIAlertController.createAlert(title: "Invalid Hub ID", message: "Please enter a valid 8 digit hub ID found on the back of your hub")
+            alert.customAddAction(title: "Dismiss") {
+                alert.dismiss(animated: true, completion: nil)
+            }
+            present(alert, animated: true, completion: nil)
+        } else {
+            SVProgressHUD.show(withStatus: "Updating Hub ID")
+            SVProgressHUD.setDefaultMaskType(.black)
+            SVProgressHUD.setMinimumDismissTimeInterval(1)
+            UserDefaults.standard.set(newUUIDTextField.text!, forKey: Constants.uuid)
+            FirebaseHelper.setHubID(email: UserDefaults.standard.value(forKey: Constants.email) as! String, hubID: newUUIDTextField.text!) {
+                SVProgressHUD.showInfo(withStatus: "Success!")
+                
+            }
+        }
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(success), name: NSNotification.Name(rawValue: "SVProgressHUDDidDisappearNotification"), object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func success() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {

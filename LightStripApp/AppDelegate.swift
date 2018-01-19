@@ -13,8 +13,6 @@ import CocoaMQTT
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    
-
     var window: UIWindow?
     var firebaseDB: Firestore?
     var deviceStore: DeviceStore = DeviceStore()

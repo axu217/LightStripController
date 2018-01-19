@@ -37,8 +37,8 @@ class AppMeta {
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.storyboard, bundle: Bundle.main)
 
         if(location == "HomeNavigation") {
-            var destination: HomeNavigationController!
-            destination = storyboard.instantiateViewController(withIdentifier: Constants.homeNav) as! HomeNavigationController
+            var destination: HomeTabViewController!
+            destination = storyboard.instantiateViewController(withIdentifier: Constants.homeNav) as! HomeTabViewController
             window?.rootViewController = destination
             window?.makeKeyAndVisible()
             destination.view.layoutIfNeeded()

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3E0F7D931FAF0AE700352058 /* NetworkFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0F7D921FAF0AE700352058 /* NetworkFacade.swift */; };
 		3E0F7D951FAF0E4200352058 /* MQTTDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0F7D941FAF0E4200352058 /* MQTTDelegate.swift */; };
-		3E41D3901FA0AF8900CB3B8B /* DeviceControlController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E41D38F1FA0AF8900CB3B8B /* DeviceControlController.swift */; };
-		3E4FA1BF1FA7F7B100FF585B /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FA1BE1FA7F7B100FF585B /* ColorCell.swift */; };
 		3E531A651FA8269C0061ECB5 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E531A641FA8269C0061ECB5 /* UIColor.swift */; };
 		3E531A671FA8281F0061ECB5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E531A661FA8281F0061ECB5 /* UserViewController.swift */; };
 		3E58CC311F95B6C30010236A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E58CC301F95B6C30010236A /* AppDelegate.swift */; };
@@ -21,8 +19,7 @@
 		3E7C24011FD13FE4001D4A5E /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7C24001FD13FE4001D4A5E /* SetupViewController.swift */; };
 		3E800F121FB31B6600357D58 /* ChangeUUIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E800F111FB31B6600357D58 /* ChangeUUIDViewController.swift */; };
 		3E93AFE11FBA88E10074A4E5 /* HubCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E93AFE01FBA88E10074A4E5 /* HubCommand.swift */; };
-		3E93AFE31FBA88FD0074A4E5 /* DeviceCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E93AFE21FBA88FD0074A4E5 /* DeviceCommand.swift */; };
-		3E93AFE71FBA898E0074A4E5 /* LightStripSetPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E93AFE61FBA898E0074A4E5 /* LightStripSetPacket.swift */; };
+		3E93AFE71FBA898E0074A4E5 /* LightStripEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E93AFE61FBA898E0074A4E5 /* LightStripEnums.swift */; };
 		3E9572161FCC21D200A9F394 /* DictionaryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9572151FCC21D200A9F394 /* DictionaryProtocol.swift */; };
 		3E9572181FCC286B00A9F394 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9572171FCC286B00A9F394 /* FirebaseHelper.swift */; };
 		3E9C42051FA6930200CB2166 /* ColorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9C42041FA6930200CB2166 /* ColorStore.swift */; };
@@ -30,29 +27,28 @@
 		3ED8131E1FABDC4D001F73D0 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8131D1FABDC4D001F73D0 /* UIViewControllerExtensions.swift */; };
 		3EEC66CC1FBE8E660033551C /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEC66CB1FBE8E660033551C /* UIAlertController.swift */; };
 		3EEC66CE1FBE8F1C0033551C /* AppMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEC66CD1FBE8F1C0033551C /* AppMeta.swift */; };
-		3EF22F8A1F95BBC200AF4B19 /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F801F95BBC000AF4B19 /* HomeNavigationController.swift */; };
 		3EF22F8E1F95BBC200AF4B19 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F841F95BBC100AF4B19 /* LoginScreenViewController.swift */; };
 		3EF22F8F1F95BBC200AF4B19 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F851F95BBC100AF4B19 /* HomeTabViewController.swift */; };
-		3EF22F901F95BBC200AF4B19 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F861F95BBC100AF4B19 /* DevicesViewController.swift */; };
-		3EF22F911F95BBC200AF4B19 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F871F95BBC100AF4B19 /* FavoriteViewController.swift */; };
 		3EF22F921F95BBC200AF4B19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF22F881F95BBC100AF4B19 /* GoogleService-Info.plist */; };
 		3EF22F931F95BBC200AF4B19 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF22F891F95BBC200AF4B19 /* RegisterViewController.swift */; };
-		3EF7ED9E1FA954FD00C1B0E9 /* AddColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7ED9D1FA954FD00C1B0E9 /* AddColorViewController.swift */; };
-		3EF7EDA11FA96CA000C1B0E9 /* AddFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7EDA01FA96CA000C1B0E9 /* AddFavoriteViewController.swift */; };
 		3EFA617D1F9D640800FBC94F /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA617C1F9D640800FBC94F /* Device.swift */; };
 		3EFA617F1F9D649700FBC94F /* DeviceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA617E1F9D649700FBC94F /* DeviceStore.swift */; };
-		3EFA61811F9D660100FBC94F /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA61801F9D660100FBC94F /* DeviceCell.swift */; };
 		3EFA61831F9D6B4D00FBC94F /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA61821F9D6B4D00FBC94F /* AddDeviceViewController.swift */; };
-		3EFA61861F9DF45800FBC94F /* HubCommandHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFA61851F9DF45800FBC94F /* HubCommandHelper.swift */; };
 		DF0BC81815242501CE9952C4 /* Pods_LightStripApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7DAB9A3CD07A352C60FA3C /* Pods_LightStripApp.framework */; };
-		E986C4771FEB9B5D00766B27 /* RemoveColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E986C4761FEB9B5D00766B27 /* RemoveColorViewController.swift */; };
+		E91228AA1FEE0D12003F101F /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91228A91FEE0D12003F101F /* UISegmentedControl.swift */; };
+		E93228EA1FF5F08F00C60290 /* DeviceCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93228E91FF5F08F00C60290 /* DeviceCommand.swift */; };
+		E981C1451FFF4858005F0638 /* NetworkActual.swift in Sources */ = {isa = PBXBuildFile; fileRef = E981C1441FFF4858005F0638 /* NetworkActual.swift */; };
+		E981C14B2000CAA6005F0638 /* NetworkBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E981C14A2000CAA6005F0638 /* NetworkBridge.swift */; };
+		E981C150200196B6005F0638 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E981C14F200196B6005F0638 /* UIView.swift */; };
+		E981C1542001BE63005F0638 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E981C1532001BE63005F0638 /* HomeViewController.swift */; };
+		E981C1572001C503005F0638 /* ControlDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E981C1562001C503005F0638 /* ControlDeviceViewController.swift */; };
+		E981C1592001C556005F0638 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E981C1582001C556005F0638 /* DeviceTableViewCell.swift */; };
+		E9C21F1620033D0900F6A65B /* IDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C21F1520033D0900F6A65B /* IDGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3E0F7D921FAF0AE700352058 /* NetworkFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFacade.swift; sourceTree = "<group>"; };
 		3E0F7D941FAF0E4200352058 /* MQTTDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTDelegate.swift; sourceTree = "<group>"; };
-		3E41D38F1FA0AF8900CB3B8B /* DeviceControlController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControlController.swift; sourceTree = "<group>"; };
-		3E4FA1BE1FA7F7B100FF585B /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		3E531A641FA8269C0061ECB5 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		3E531A661FA8281F0061ECB5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		3E58CC2D1F95B6C30010236A /* LightStripApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightStripApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,8 +61,7 @@
 		3E7C24001FD13FE4001D4A5E /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		3E800F111FB31B6600357D58 /* ChangeUUIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUUIDViewController.swift; sourceTree = "<group>"; };
 		3E93AFE01FBA88E10074A4E5 /* HubCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubCommand.swift; sourceTree = "<group>"; };
-		3E93AFE21FBA88FD0074A4E5 /* DeviceCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCommand.swift; sourceTree = "<group>"; };
-		3E93AFE61FBA898E0074A4E5 /* LightStripSetPacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightStripSetPacket.swift; sourceTree = "<group>"; };
+		3E93AFE61FBA898E0074A4E5 /* LightStripEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightStripEnums.swift; sourceTree = "<group>"; };
 		3E9572151FCC21D200A9F394 /* DictionaryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryProtocol.swift; sourceTree = "<group>"; };
 		3E9572171FCC286B00A9F394 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		3E9C42041FA6930200CB2166 /* ColorStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStore.swift; sourceTree = "<group>"; };
@@ -74,24 +69,25 @@
 		3ED8131D1FABDC4D001F73D0 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		3EEC66CB1FBE8E660033551C /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		3EEC66CD1FBE8F1C0033551C /* AppMeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMeta.swift; sourceTree = "<group>"; };
-		3EF22F801F95BBC000AF4B19 /* HomeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
 		3EF22F841F95BBC100AF4B19 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		3EF22F851F95BBC100AF4B19 /* HomeTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
-		3EF22F861F95BBC100AF4B19 /* DevicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
-		3EF22F871F95BBC100AF4B19 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		3EF22F881F95BBC100AF4B19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3EF22F891F95BBC200AF4B19 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		3EF7ED9D1FA954FD00C1B0E9 /* AddColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddColorViewController.swift; sourceTree = "<group>"; };
-		3EF7EDA01FA96CA000C1B0E9 /* AddFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFavoriteViewController.swift; sourceTree = "<group>"; };
 		3EFA617C1F9D640800FBC94F /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		3EFA617E1F9D649700FBC94F /* DeviceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStore.swift; sourceTree = "<group>"; };
-		3EFA61801F9D660100FBC94F /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 		3EFA61821F9D6B4D00FBC94F /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
-		3EFA61851F9DF45800FBC94F /* HubCommandHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubCommandHelper.swift; sourceTree = "<group>"; };
 		6E293F856B8142EFE0F5082E /* Pods-LightStripApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightStripApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-LightStripApp/Pods-LightStripApp.release.xcconfig"; sourceTree = "<group>"; };
 		BF134EAEB2A874F9CA6974F8 /* Pods-LightStripApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightStripApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LightStripApp/Pods-LightStripApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DF7DAB9A3CD07A352C60FA3C /* Pods_LightStripApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightStripApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E986C4761FEB9B5D00766B27 /* RemoveColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveColorViewController.swift; sourceTree = "<group>"; };
+		E91228A91FEE0D12003F101F /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
+		E93228E91FF5F08F00C60290 /* DeviceCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCommand.swift; sourceTree = "<group>"; };
+		E981C1441FFF4858005F0638 /* NetworkActual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkActual.swift; sourceTree = "<group>"; };
+		E981C14A2000CAA6005F0638 /* NetworkBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBridge.swift; sourceTree = "<group>"; };
+		E981C14F200196B6005F0638 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		E981C1532001BE63005F0638 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E981C1562001C503005F0638 /* ControlDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlDeviceViewController.swift; sourceTree = "<group>"; };
+		E981C1582001C556005F0638 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		E9C21F1520033D0900F6A65B /* IDGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDGenerator.swift; sourceTree = "<group>"; };
 		E9F103C41FEBD48F0095A763 /* LightStripApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LightStripApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,9 +133,9 @@
 			children = (
 				3E4FA1BC1FA7F78E00FF585B /* LoginRegis */,
 				3E4FA1BA1FA7F76F00FF585B /* NavTab */,
-				3E800F0E1FB31ADE00357D58 /* Favorite */,
-				3E800F0D1FB31AD500357D58 /* User */,
-				3E800F0F1FB31AE800357D58 /* Devices */,
+				E981C1552001C42E005F0638 /* HomeTab */,
+				3E800F0D1FB31AD500357D58 /* UserTab */,
+				E981C15A2001C669005F0638 /* SettingsTab */,
 			);
 			name = Rest;
 			sourceTree = "<group>";
@@ -148,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				3EF22F851F95BBC100AF4B19 /* HomeTabViewController.swift */,
-				3EF22F801F95BBC000AF4B19 /* HomeNavigationController.swift */,
 			);
 			name = NavTab;
 			sourceTree = "<group>";
@@ -170,15 +165,6 @@
 			name = LoginRegis;
 			sourceTree = "<group>";
 		};
-		3E4FA1BD1FA7F79800FF585B /* ColorPicker */ = {
-			isa = PBXGroup;
-			children = (
-				3E41D38F1FA0AF8900CB3B8B /* DeviceControlController.swift */,
-				3E4FA1BE1FA7F7B100FF585B /* ColorCell.swift */,
-			);
-			name = ColorPicker;
-			sourceTree = "<group>";
-		};
 		3E531A631FA826940061ECB5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +172,8 @@
 				3ED8131D1FABDC4D001F73D0 /* UIViewControllerExtensions.swift */,
 				3EC9D7481FAD4BB3008E440D /* String.swift */,
 				3EEC66CB1FBE8E660033551C /* UIAlertController.swift */,
+				E91228A91FEE0D12003F101F /* UISegmentedControl.swift */,
+				E981C14F200196B6005F0638 /* UIView.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -211,6 +199,7 @@
 		3E58CC2F1F95B6C30010236A /* LightStripApp */ = {
 			isa = PBXGroup;
 			children = (
+				E981C14C2000E666005F0638 /* Libraries */,
 				E9F103C41FEBD48F0095A763 /* LightStripApp.entitlements */,
 				3E0F7D961FAF0ECA00352058 /* Constants */,
 				3E531A631FA826940061ECB5 /* Extensions */,
@@ -226,41 +215,25 @@
 			isa = PBXGroup;
 			children = (
 				3E93AFDF1FBA88CB0074A4E5 /* NetworkModel */,
-				3E9572171FCC286B00A9F394 /* FirebaseHelper.swift */,
-				3E0F7D941FAF0E4200352058 /* MQTTDelegate.swift */,
-				3EFA61851F9DF45800FBC94F /* HubCommandHelper.swift */,
-				3E0F7D921FAF0AE700352058 /* NetworkFacade.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
 		};
-		3E800F0D1FB31AD500357D58 /* User */ = {
+		3E800F0D1FB31AD500357D58 /* UserTab */ = {
 			isa = PBXGroup;
 			children = (
 				3E800F101FB31B5700357D58 /* ChangeUUID */,
 				3E531A661FA8281F0061ECB5 /* UserViewController.swift */,
-				3EF7ED9D1FA954FD00C1B0E9 /* AddColorViewController.swift */,
-				E986C4761FEB9B5D00766B27 /* RemoveColorViewController.swift */,
 			);
-			name = User;
-			sourceTree = "<group>";
-		};
-		3E800F0E1FB31ADE00357D58 /* Favorite */ = {
-			isa = PBXGroup;
-			children = (
-				3EF22F871F95BBC100AF4B19 /* FavoriteViewController.swift */,
-				3EF7ED9F1FA96C8C00C1B0E9 /* AddFavorite */,
-			);
-			name = Favorite;
+			name = UserTab;
 			sourceTree = "<group>";
 		};
 		3E800F0F1FB31AE800357D58 /* Devices */ = {
 			isa = PBXGroup;
 			children = (
-				3EF22F861F95BBC100AF4B19 /* DevicesViewController.swift */,
-				3EFA61801F9D660100FBC94F /* DeviceCell.swift */,
-				3E4FA1BD1FA7F79800FF585B /* ColorPicker */,
 				3E4FA1BB1FA7F78300FF585B /* AddDevice */,
+				E981C1562001C503005F0638 /* ControlDeviceViewController.swift */,
+				E981C1582001C556005F0638 /* DeviceTableViewCell.swift */,
 			);
 			name = Devices;
 			sourceTree = "<group>";
@@ -276,19 +249,13 @@
 		3E93AFDF1FBA88CB0074A4E5 /* NetworkModel */ = {
 			isa = PBXGroup;
 			children = (
-				3E93AFE51FBA897D0074A4E5 /* LightStripPackets */,
-				3E93AFE01FBA88E10074A4E5 /* HubCommand.swift */,
-				3E93AFE21FBA88FD0074A4E5 /* DeviceCommand.swift */,
+				E981C1471FFF7995005F0638 /* NetworkFacade */,
+				E981C1492000CA94005F0638 /* NetworkBridge */,
+				E981C1461FFF7989005F0638 /* NetworkActual */,
+				E93228E41FF5EE0100C60290 /* Model */,
+				E9C21F1520033D0900F6A65B /* IDGenerator.swift */,
 			);
 			name = NetworkModel;
-			sourceTree = "<group>";
-		};
-		3E93AFE51FBA897D0074A4E5 /* LightStripPackets */ = {
-			isa = PBXGroup;
-			children = (
-				3E93AFE61FBA898E0074A4E5 /* LightStripSetPacket.swift */,
-			);
-			name = LightStripPackets;
 			sourceTree = "<group>";
 		};
 		3EF22F9B1F95C00B00AF4B19 /* Base */ = {
@@ -306,14 +273,6 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
-		3EF7ED9F1FA96C8C00C1B0E9 /* AddFavorite */ = {
-			isa = PBXGroup;
-			children = (
-				3EF7EDA01FA96CA000C1B0E9 /* AddFavoriteViewController.swift */,
-			);
-			name = AddFavorite;
-			sourceTree = "<group>";
-		};
 		3EFA617B1F9D63F800FBC94F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +282,65 @@
 				3E9572151FCC21D200A9F394 /* DictionaryProtocol.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E93228E41FF5EE0100C60290 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E93AFE61FBA898E0074A4E5 /* LightStripEnums.swift */,
+				E93228E91FF5F08F00C60290 /* DeviceCommand.swift */,
+				3E93AFE01FBA88E10074A4E5 /* HubCommand.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E981C1461FFF7989005F0638 /* NetworkActual */ = {
+			isa = PBXGroup;
+			children = (
+				E981C1441FFF4858005F0638 /* NetworkActual.swift */,
+				3E0F7D941FAF0E4200352058 /* MQTTDelegate.swift */,
+			);
+			name = NetworkActual;
+			sourceTree = "<group>";
+		};
+		E981C1471FFF7995005F0638 /* NetworkFacade */ = {
+			isa = PBXGroup;
+			children = (
+				3E9572171FCC286B00A9F394 /* FirebaseHelper.swift */,
+				3E0F7D921FAF0AE700352058 /* NetworkFacade.swift */,
+			);
+			name = NetworkFacade;
+			sourceTree = "<group>";
+		};
+		E981C1492000CA94005F0638 /* NetworkBridge */ = {
+			isa = PBXGroup;
+			children = (
+				E981C14A2000CAA6005F0638 /* NetworkBridge.swift */,
+			);
+			name = NetworkBridge;
+			sourceTree = "<group>";
+		};
+		E981C14C2000E666005F0638 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		E981C1552001C42E005F0638 /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				E981C1532001BE63005F0638 /* HomeViewController.swift */,
+				3E800F0F1FB31AE800357D58 /* Devices */,
+			);
+			name = HomeTab;
+			sourceTree = "<group>";
+		};
+		E981C15A2001C669005F0638 /* SettingsTab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SettingsTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,7 +433,9 @@
 				"${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyTimer/SwiftyTimer.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -432,7 +452,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaMQTT.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyTimer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -486,39 +508,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E4FA1BF1FA7F7B100FF585B /* ColorCell.swift in Sources */,
-				3E41D3901FA0AF8900CB3B8B /* DeviceControlController.swift in Sources */,
+				E9C21F1620033D0900F6A65B /* IDGenerator.swift in Sources */,
 				3EFA61831F9D6B4D00FBC94F /* AddDeviceViewController.swift in Sources */,
-				3E93AFE31FBA88FD0074A4E5 /* DeviceCommand.swift in Sources */,
+				E981C1592001C556005F0638 /* DeviceTableViewCell.swift in Sources */,
 				3EFA617D1F9D640800FBC94F /* Device.swift in Sources */,
 				3EF22F931F95BBC200AF4B19 /* RegisterViewController.swift in Sources */,
+				E981C1572001C503005F0638 /* ControlDeviceViewController.swift in Sources */,
 				3EF22F8E1F95BBC200AF4B19 /* LoginScreenViewController.swift in Sources */,
 				3E531A671FA8281F0061ECB5 /* UserViewController.swift in Sources */,
-				3EF22F8A1F95BBC200AF4B19 /* HomeNavigationController.swift in Sources */,
 				3E531A651FA8269C0061ECB5 /* UIColor.swift in Sources */,
-				3E93AFE71FBA898E0074A4E5 /* LightStripSetPacket.swift in Sources */,
-				3EF22F911F95BBC200AF4B19 /* FavoriteViewController.swift in Sources */,
+				3E93AFE71FBA898E0074A4E5 /* LightStripEnums.swift in Sources */,
+				E981C1542001BE63005F0638 /* HomeViewController.swift in Sources */,
+				E93228EA1FF5F08F00C60290 /* DeviceCommand.swift in Sources */,
 				3E7C23FF1FD05469001D4A5E /* Constants.swift in Sources */,
+				E91228AA1FEE0D12003F101F /* UISegmentedControl.swift in Sources */,
 				3E93AFE11FBA88E10074A4E5 /* HubCommand.swift in Sources */,
 				3E800F121FB31B6600357D58 /* ChangeUUIDViewController.swift in Sources */,
+				E981C1451FFF4858005F0638 /* NetworkActual.swift in Sources */,
 				3E9572161FCC21D200A9F394 /* DictionaryProtocol.swift in Sources */,
-				3EFA61811F9D660100FBC94F /* DeviceCell.swift in Sources */,
 				3E9572181FCC286B00A9F394 /* FirebaseHelper.swift in Sources */,
 				3EC9D7491FAD4BB3008E440D /* String.swift in Sources */,
 				3EF22F8F1F95BBC200AF4B19 /* HomeTabViewController.swift in Sources */,
 				3E58CC311F95B6C30010236A /* AppDelegate.swift in Sources */,
-				3EF22F901F95BBC200AF4B19 /* DevicesViewController.swift in Sources */,
+				E981C14B2000CAA6005F0638 /* NetworkBridge.swift in Sources */,
 				3ED8131E1FABDC4D001F73D0 /* UIViewControllerExtensions.swift in Sources */,
 				3EEC66CE1FBE8F1C0033551C /* AppMeta.swift in Sources */,
-				3EF7EDA11FA96CA000C1B0E9 /* AddFavoriteViewController.swift in Sources */,
 				3EEC66CC1FBE8E660033551C /* UIAlertController.swift in Sources */,
 				3E0F7D951FAF0E4200352058 /* MQTTDelegate.swift in Sources */,
-				3EFA61861F9DF45800FBC94F /* HubCommandHelper.swift in Sources */,
 				3E7C24011FD13FE4001D4A5E /* SetupViewController.swift in Sources */,
-				3EF7ED9E1FA954FD00C1B0E9 /* AddColorViewController.swift in Sources */,
+				E981C150200196B6005F0638 /* UIView.swift in Sources */,
 				3EFA617F1F9D649700FBC94F /* DeviceStore.swift in Sources */,
 				3E9C42051FA6930200CB2166 /* ColorStore.swift in Sources */,
-				E986C4771FEB9B5D00766B27 /* RemoveColorViewController.swift in Sources */,
 				3E0F7D931FAF0AE700352058 /* NetworkFacade.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
