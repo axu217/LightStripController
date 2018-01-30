@@ -54,7 +54,6 @@ class ChangeUUIDViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        view.backgroundColor = UIColor(rgb: 0xE8ECEE)
         newUUIDTextField.delegate = self
         self.navigationItem.title = ChangeUUIDViewController.navTitle
     }

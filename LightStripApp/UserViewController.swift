@@ -30,6 +30,15 @@ class UserViewController: UIViewController {
     }
     
 
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated);
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 
 
     
@@ -38,11 +47,7 @@ class UserViewController: UIViewController {
         
         logoutButton.layer.cornerRadius = 5
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
+
     
     
 }
