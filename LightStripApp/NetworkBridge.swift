@@ -141,9 +141,11 @@ class NetworkBridge {
         }
     }
     
+    
+    /*
     static func setDeviceSchedule(device: Device, weekDays: [Bool], startTime: ) {
     
-    }
+    }*/
 }
 
 

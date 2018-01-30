@@ -1,7 +1,0 @@
-version: "Apple Swift version 4.0.1 (swiftlang-900.0.68 clang-900.0.38)"
-options: "4e3f96d80dff64c586c27a371d9d2bdc"
-build_time: [1512054244, 888579000]
-inputs:
-  "/Volumes/Database/iOS Projects/LightStripApp/Pods/CocoaMQTT/Source/CocoaMQTT.swift": [1508293737, 0]
-  "/Volumes/Database/iOS Projects/LightStripApp/Pods/CocoaMQTT/Source/CocoaMQTTFrame.swift": [1508293737, 0]
-  "/Volumes/Database/iOS Projects/LightStripApp/Pods/CocoaMQTT/Source/CocoaMQTTMessage.swift": [1508293737, 0]

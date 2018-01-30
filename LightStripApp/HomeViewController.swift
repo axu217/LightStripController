@@ -44,7 +44,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let dest = segue.destination as! AddDeviceViewController
             dest.deviceStore = deviceStore
         } else if segue.identifier == Constants.deviceToControlDevice {
-            let dest = segue.destination as! ControlDeviceViewController
+            let dest = segue.destination as! DevicesSubNavigationController
             dest.device = tempDevice!
         } else {
             print("error lmao")

@@ -24,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         self.firebaseDB = Firestore.firestore()
+        
+        let appearance = UINavigationBar.appearance()
+        appearance.tintColor = UIColor.black
+        //appearance.backItem?.backBarButtonItem?. = UIColor.black
 
         return true
     }

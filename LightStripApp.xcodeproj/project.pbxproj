@@ -43,6 +43,7 @@
 		E981C1542001BE63005F0638 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E981C1532001BE63005F0638 /* HomeViewController.swift */; };
 		E981C1572001C503005F0638 /* ControlDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E981C1562001C503005F0638 /* ControlDeviceViewController.swift */; };
 		E981C1592001C556005F0638 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E981C1582001C556005F0638 /* DeviceTableViewCell.swift */; };
+		E9B3B68620202AEA0067FFB2 /* DevicesSubNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B3B68520202AEA0067FFB2 /* DevicesSubNavigationController.swift */; };
 		E9C21F1620033D0900F6A65B /* IDGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C21F1520033D0900F6A65B /* IDGenerator.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		E981C1532001BE63005F0638 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E981C1562001C503005F0638 /* ControlDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlDeviceViewController.swift; sourceTree = "<group>"; };
 		E981C1582001C556005F0638 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		E9B3B68520202AEA0067FFB2 /* DevicesSubNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesSubNavigationController.swift; sourceTree = "<group>"; };
 		E9C21F1520033D0900F6A65B /* IDGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDGenerator.swift; sourceTree = "<group>"; };
 		E9F103C41FEBD48F0095A763 /* LightStripApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LightStripApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,7 +233,9 @@
 		3E800F0F1FB31AE800357D58 /* Devices */ = {
 			isa = PBXGroup;
 			children = (
+				E9B3B68420202AAD0067FFB2 /* DeviceSub */,
 				3E4FA1BB1FA7F78300FF585B /* AddDevice */,
+				E9B3B68520202AEA0067FFB2 /* DevicesSubNavigationController.swift */,
 				E981C1562001C503005F0638 /* ControlDeviceViewController.swift */,
 				E981C1582001C556005F0638 /* DeviceTableViewCell.swift */,
 			);
@@ -341,6 +345,13 @@
 			children = (
 			);
 			name = SettingsTab;
+			sourceTree = "<group>";
+		};
+		E9B3B68420202AAD0067FFB2 /* DeviceSub */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DeviceSub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -522,6 +533,7 @@
 				E93228EA1FF5F08F00C60290 /* DeviceCommand.swift in Sources */,
 				3E7C23FF1FD05469001D4A5E /* Constants.swift in Sources */,
 				E91228AA1FEE0D12003F101F /* UISegmentedControl.swift in Sources */,
+				E9B3B68620202AEA0067FFB2 /* DevicesSubNavigationController.swift in Sources */,
 				3E93AFE11FBA88E10074A4E5 /* HubCommand.swift in Sources */,
 				3E800F121FB31B6600357D58 /* ChangeUUIDViewController.swift in Sources */,
 				E981C1451FFF4858005F0638 /* NetworkActual.swift in Sources */,
