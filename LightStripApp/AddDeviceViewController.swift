@@ -36,7 +36,7 @@ class AddDeviceViewController: UIViewController {
     }
     
     @IBAction func back(sender: UIButton!) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func checkLink() {
@@ -79,12 +79,15 @@ class AddDeviceViewController: UIViewController {
         super.viewWillAppear(true)
         let name = NSNotification.Name(rawValue: Constants.message)
         NotificationCenter.default.addObserver(self, selector: #selector(receivedMessage(notification:)), name: name, object: nil)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
+        
+        
     }
   
 

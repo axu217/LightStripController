@@ -20,7 +20,7 @@ enum LightStripCommandType {
 enum LightStripSetMode {
     case gradient
     case solid
-    case dynamic
+    case blink
 }
 
 

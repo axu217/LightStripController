@@ -30,10 +30,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false);
+        super.viewWillDisappear(animated)
+    }
+    
+
 
     
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     
@@ -44,7 +53,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let dest = segue.destination as! AddDeviceViewController
             dest.deviceStore = deviceStore
         } else if segue.identifier == Constants.deviceToControlDevice {
-            let dest = segue.destination as! DevicesSubNavigationController
+            let dest = segue.destination as! ControlDeviceViewController
             dest.device = tempDevice!
         } else {
             print("error lmao")
@@ -55,6 +64,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tempDevice = device
         self.performSegue(withIdentifier: Constants.deviceToControlDevice, sender: self)
     }
+    
 }
 
 extension HomeViewController {

@@ -11,6 +11,15 @@ import UIKit
 class ControlDeviceViewController: UIViewController {
 
     var device: Device!
+    
+    @IBOutlet var mondayButton: UIButton!
+    @IBOutlet var tuesdayButton: UIButton!
+    @IBOutlet var wednesdayButton: UIButton!
+    @IBOutlet var thursdayButton: UIButton!
+    @IBOutlet var fridayButton: UIButton!
+    @IBOutlet var saturdayButton: UIButton!
+    @IBOutlet var sundayButton: UIButton!
+    
     @IBOutlet var deviceTitle: UILabel!
     @IBOutlet var deviceOnlineStatusLabel: UILabel!
     
@@ -23,22 +32,23 @@ class ControlDeviceViewController: UIViewController {
     @IBOutlet var deviceEndTimeButton: UIButton!
     
     @IBAction func back(sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: animated);
+        self.navigationController?.setNavigationBarHidden(false, animated: false);
         super.viewWillDisappear(animated)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
         
         deviceTitle.text = device.name
         
@@ -60,40 +70,31 @@ class ControlDeviceViewController: UIViewController {
                     self.deviceColorButton.backgroundColor = color
                 }
                 
-            case .dynamic:
+            case .blink:
                 self.deviceModeButton.setTitle("Dynamic", for: .normal)
                 NetworkFacade.getDeviceSpeed {speed in
                     self.deviceSpeedButton.setTitle("\(speed)", for: .normal)
                 }
-                
+
             case .gradient:
-                self.deviceModeButton.setTitle("Gradient", for: .normal)
-                NetworkFacade.getDeviceSpeed{speed in
-                    self.deviceSpeedButton.setTitle("\(speed)", for: .normal)
-                }
-                
+                //dude I don't even know right now
+                let temp = "10"
             }
         }
         
-        NetworkFacade.getStatusActual(device: device)
+        NetworkFacade.getStatusActual(device: self.device)
         
         
         
         NetworkFacade.getDeviceWeekdaySchedule { weekdayArray in
-            var buildString = ""
-            let weekdayNames = ["S", "M", "T", "W", "Th", "F", "S"]
-            for (index, hasDay) in weekdayArray.enumerated() {
-                if(hasDay) {
-                    if(index != 6) {
-                        buildString = buildString + weekdayNames[index] + ", "
-                    } else {
-                        buildString = buildString + weekdayNames[index]
-                    }
-                    
-                }
-            }
+            self.sundayButton.setTitle("\(weekdayArray[0])", for: .normal)
+            self.mondayButton.setTitle("\(weekdayArray[1])", for: .normal)
+            self.tuesdayButton.setTitle("\(weekdayArray[2])", for: .normal)
+            self.wednesdayButton.setTitle("\(weekdayArray[3])", for: .normal)
+            self.thursdayButton.setTitle("\(weekdayArray[4])", for: .normal)
+            self.fridayButton.setTitle("\(weekdayArray[5])", for: .normal)
+            self.saturdayButton.setTitle("\(weekdayArray[6])", for: .normal)
             
-            self.deviceWeekdayScheduleButton.setTitle(buildString, for: .normal)
             
         }
 
@@ -101,31 +102,16 @@ class ControlDeviceViewController: UIViewController {
             self.deviceStartTimeButton.setTitle(startTime, for: .normal)
         }
         
-        
         NetworkFacade.getDeviceEndTime { endTime in
             self.deviceEndTimeButton.setTitle(endTime, for: .normal)
         }
-        NetworkFacade.getScheduleActual(device: device)
+        
+        NetworkFacade.getScheduleActual(device: self.device)
         
         
         
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
